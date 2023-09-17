@@ -21,13 +21,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 80%;
-	height: 9vh;
+	height: 6vh;
 	background-color: $secondary-color;
-	margin: 20px auto;
-    padding: 0px 60px;
+	margin: 30px auto;
+	padding: 0px 60px;
 	border-radius: 10px;
 	box-shadow: 0px 0px 10px 10px $shadow-color;
-    overflow: hidden;
+	overflow: hidden;
 
 	&__items {
 		width: 80%;
@@ -37,31 +37,83 @@ body {
 	}
 
 	&__item {
+		position: relative;
 		height: 50px;
 		padding: 20px;
 		margin: 5px;
 		// top: 50%;
 		// left: 50%;
 		// transform: translate(-50%, -50%);
-        line-height: 10px;
-        font-size: 19px;
-		color: $pure-white;
+		line-height: 10px;
+		font-size: 19px;
+		color: $main-white;
 		text-decoration: none;
+		outline-color: $main-white;
+		outline-width: 1px;
+		&--logo {
+			background-image: url(../img/logo_200x200.png);
+			background-size: cover;
+			height: 130px;
+			min-width: 130px;
+			transition: transform 0.3s;transition: transform 0.3s;
+		}
+		// &--logo:hover {
+		// 	transform: scale(1.1);
+		// }
 	}
 
 	&__user {
-		width: 20%;
+		width: 25%;
 		display: flex;
 		align-items: center;
-        justify-content: space-evenly;
-        &--cart {
-            i {
-                font-size: 30px;
-                color: $pure-white;
-            }
-        }
-	}
-	&__logo {
-	    height: 120px;
+		justify-content: space-evenly;
+		&--cart {
+			padding: 15px;
+			transition: transform 0.3s;
+			i {
+				font-size: 30px;
+				color: $main-white;
+			}
+		}
+		&--cart:hover {
+			transform: scale(1.3);
+		}
+
+		&--search {
+			position: relative;
+			display: flex;
+			align-items: center;
+			// transition: transform 0.3s;
+			input {
+				width: 200px;
+				height: 40px;
+				padding: 10px;
+				font-size: 17px;
+				background-color: $menu-color;
+				border: none;
+				border-radius: 10px;
+				color: $main-white;
+				
+				&::placeholder {
+					color: $main-white;
+					font-size: 17px;
+				}
+
+				
+			}
+			// &:hover {
+			// 	transform: scale(1.1);
+			// }
+			i {
+				position: absolute;
+				right: 0;
+				// margin-right: 5px;
+				font-size: 25px;
+				color: $main-white;
+				padding: 7px;
+				cursor: pointer;
+			}
+		}
+		
 	}
 }
