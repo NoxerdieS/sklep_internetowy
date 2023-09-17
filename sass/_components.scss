@@ -1,0 +1,39 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.link {
+	position: relative;
+	text-decoration: none;
+}
+
+.link,
+.link::after,
+.link::before {
+	transition: 0.3s;
+}
+
+.link-animation::before,
+.link-animation::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid #fff;
+}
+
+.link-animation::before {
+	right: 50%;
+}
+
+.link-animation::after {
+	left: 50%;
+}
+
+.link-animation:hover::before,
+.link-animation:hover::after {
+	width: 50%;
+}
+
