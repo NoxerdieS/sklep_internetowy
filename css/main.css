@@ -45,11 +45,21 @@
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
+  color: #d4d4d4;
   background-color: #313866;
+}
+
+a {
+  text-decoration: none;
 }
 
 .nav {
@@ -77,9 +87,8 @@ body {
   padding: 20px;
   margin: 5px;
   line-height: 10px;
-  font-size: 19px;
+  font-size: 1.9rem;
   color: #d4d4d4;
-  text-decoration: none;
   outline-color: #d4d4d4;
   outline-width: 1px;
 }
@@ -88,21 +97,20 @@ body {
   background-size: cover;
   height: 130px;
   min-width: 130px;
-  transition: transform 0.3s;
-  transition: transform 0.3s;
 }
 .nav__user {
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding-left: 30px;
 }
 .nav__user--cart {
   padding: 15px;
   transition: transform 0.3s;
 }
 .nav__user--cart i {
-  font-size: 30px;
+  font-size: 3rem;
   color: #d4d4d4;
 }
 .nav__user--cart:hover {
@@ -117,7 +125,7 @@ body {
   width: 200px;
   height: 40px;
   padding: 10px;
-  font-size: 17px;
+  font-size: 1.7rem;
   background-color: #887ac9;
   border: none;
   border-radius: 10px;
@@ -125,17 +133,120 @@ body {
 }
 .nav__user--search input::-moz-placeholder {
   color: #d4d4d4;
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 .nav__user--search input::placeholder {
   color: #d4d4d4;
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 .nav__user--search i {
   position: absolute;
   right: 0;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #d4d4d4;
   padding: 7px;
   cursor: pointer;
+}
+
+.login {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/sunrise-982013_1920.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+.login__shadow {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(49, 56, 102, 0.5);
+}
+.login__field {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  background-color: rgba(49, 56, 102, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px #282d50;
+}
+.login__field--logo {
+  margin-bottom: 20px;
+}
+.login__field--logo img {
+  height: 100px;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.login__form--input {
+  height: 45px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  background: none;
+  border-bottom: 2px solid #974EC3;
+  text-align: center;
+  color: #d4d4d4;
+  font-size: 2rem;
+  outline-color: #974EC3;
+}
+.login__form--input::-moz-placeholder {
+  font-size: 1.8rem;
+  padding-left: 20px;
+  color: #a3a3a3;
+}
+.login__form--input::placeholder {
+  font-size: 1.8rem;
+  padding-left: 20px;
+  color: #a3a3a3;
+}
+.login__form--options {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  white-space: nowrap;
+}
+.login__form--options .remember_label {
+  font-size: 1.8rem;
+  margin-left: 30px;
+  margin-right: 5px;
+}
+.login__form--options .remember_box {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.login__form--options a {
+  font-size: 1.8rem;
+  color: #974EC3;
+}
+.login__form--send {
+  width: 60%;
+  height: 15%;
+  background-color: #974EC3;
+  font-size: 2rem;
+  color: #d4d4d4;
+  margin: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline-color: #974EC3;
+}
+.login__form p {
+  font-size: 1.6rem;
+}
+.login__form p a {
+  color: #974EC3;
 }/*# sourceMappingURL=main.css.map */

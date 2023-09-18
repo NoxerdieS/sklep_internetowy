@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/bec5797acb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Zaloguj się</title>
+</head>
+<body>
+    <div class="login">
+        <div class="login__shadow"></div>
+        <div class="login__field">
+            <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
+            <form action="post" class="login__form">
+                <!-- <label for="email">Wprowadź e-mail lub login:</label> -->
+                <input type="text" name="email" id="email" placeholder="Wprowadź email lub login:" class="login__form--input">
+                <!-- <label for="password">Wprowadź hasło:</label> -->
+                <input type="password" name="password" id="password" placeholder="Wprowadź hasło:" class="login__form--input">
+                <div class="login__form--options">
+                    <a href="">Zapomniałeś hasła?</a>
+                    <label for="remember" class="remember_label">Zapamiętaj mnie:</label>
+                    <input type="checkbox" id="remember" class="remember_box">
+                </div>
+                <input type="submit" value="Zaloguj się" class="login__form--send">
+                <p>Nie posiadasz jeszcze konta? <a href="#register_page">Zarejestruj się!</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

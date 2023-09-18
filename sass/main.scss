@@ -9,12 +9,24 @@
 	padding: 0;
 }
 
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Roboto', sans-serif;
+	color: $main-white;
 	background-color: $main-color;
 }
+
+a{
+	text-decoration: none;
+}
+
+// NAV
 
 .nav {
 	display: flex;
@@ -45,9 +57,8 @@ body {
 		// left: 50%;
 		// transform: translate(-50%, -50%);
 		line-height: 10px;
-		font-size: 19px;
+		font-size: 1.9rem;
 		color: $main-white;
-		text-decoration: none;
 		outline-color: $main-white;
 		outline-width: 1px;
 		&--logo {
@@ -55,11 +66,7 @@ body {
 			background-size: cover;
 			height: 130px;
 			min-width: 130px;
-			transition: transform 0.3s;transition: transform 0.3s;
 		}
-		// &--logo:hover {
-		// 	transform: scale(1.1);
-		// }
 	}
 
 	&__user {
@@ -67,11 +74,12 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
+		padding-left: 30px;
 		&--cart {
 			padding: 15px;
 			transition: transform 0.3s;
 			i {
-				font-size: 30px;
+				font-size: 3rem;
 				color: $main-white;
 			}
 		}
@@ -88,7 +96,7 @@ body {
 				width: 200px;
 				height: 40px;
 				padding: 10px;
-				font-size: 17px;
+				font-size: 1.7rem;
 				background-color: $menu-color;
 				border: none;
 				border-radius: 10px;
@@ -96,22 +104,141 @@ body {
 				
 				&::placeholder {
 					color: $main-white;
-					font-size: 17px;
+					font-size: 1.7rem;
 				}
 
 				
 			}
-			// &:hover {
-			// 	transform: scale(1.1);
-			// }
 			i {
 				position: absolute;
 				right: 0;
-				// margin-right: 5px;
-				font-size: 25px;
+				font-size: 2.5rem;
 				color: $main-white;
 				padding: 7px;
 				cursor: pointer;
+			}
+		}
+		
+	}
+}
+
+
+// LOGIN
+
+.login {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	background-image: url(../img/sunrise-982013_1920.jpg);
+	background-size: cover;
+	background-position: bottom;
+
+	&__shadow {
+		height: 100%;
+		width: 100%;
+		background-color: rgba($color: $main-color, $alpha: 0.5);
+	}
+
+	&__field {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 400px;
+		height: 500px;
+		padding: 20px;
+		background-color: rgba($color: $main-color, $alpha: 0.7);
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px 5px $shadow-color;
+
+		&--logo {
+			margin-bottom: 20px;
+			img {
+				height: 100px;
+			}
+		}
+		
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+
+		// label {
+		// 	font-size: 2.3rem;
+		// 	margin: 5px;
+		// }
+
+
+		
+
+		&--input {
+			height: 45px;
+			width: 100%;
+			border-radius: 10px;
+			border: none;
+			margin-bottom: 15px;
+			background: none;
+			border-bottom: 2px solid $third-color;
+			text-align: center;
+			color: $main-white;
+			font-size: 2rem;
+			outline-color: $third-color;
+
+			&::placeholder {
+				font-size: 1.8rem;
+				padding-left: 20px;
+				color: $darker-white;
+			}
+		}
+
+		&--options {
+			display: flex;
+			align-items: center;
+			height: 50px;
+			width: 100%;
+			white-space: nowrap;
+
+			.remember_label {
+				font-size: 1.8rem;
+				margin-left: 30px;
+				margin-right: 5px;
+			}
+
+			.remember_box {
+				height: 25px;
+				width: 25px;
+				cursor: pointer;
+			}
+			a {
+				font-size: 1.8rem;
+				color: $third-color;
+			}
+
+		}
+		&--send {
+			width: 60%;
+			height: 15%;
+			background-color: $third-color;
+			font-size: 2rem;
+			color: $main-white;
+			margin: 15px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			outline-color: $third-color;
+		}
+
+		p {
+			font-size: 1.6rem;
+
+			a {
+				color: $third-color;
 			}
 		}
 		
