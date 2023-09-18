@@ -203,12 +203,10 @@ a {
 }
 .login__form--input::-moz-placeholder {
   font-size: 1.8rem;
-  padding-left: 20px;
   color: #a3a3a3;
 }
 .login__form--input::placeholder {
   font-size: 1.8rem;
-  padding-left: 20px;
   color: #a3a3a3;
 }
 .login__form--options {
@@ -216,7 +214,7 @@ a {
   align-items: center;
   height: 50px;
   width: 100%;
-  white-space: nowrap;
+  line-height: 50px;
 }
 .login__form--options .remember_label {
   font-size: 1.8rem;

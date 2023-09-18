@@ -164,11 +164,6 @@ a {
 		align-items: center;
 		height: 100%;
 
-		// label {
-		// 	font-size: 2.3rem;
-		// 	margin: 5px;
-		// }
-
 		&--input {
 			height: 45px;
 			width: 100%;
@@ -184,7 +179,6 @@ a {
 
 			&::placeholder {
 				font-size: 1.8rem;
-				padding-left: 20px;
 				color: $darker-white;
 			}
 		}
@@ -194,7 +188,8 @@ a {
 			align-items: center;
 			height: 50px;
 			width: 100%;
-			white-space: nowrap;
+			line-height: 50px;
+			// white-space: nowrap;
 
 			.remember_label {
 				font-size: 1.8rem;
