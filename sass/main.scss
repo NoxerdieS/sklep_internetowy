@@ -33,7 +33,7 @@ a {
 	align-items: center;
 	justify-content: center;
 	width: 80%;
-	height: 6vh;
+	height: 7vh;
 	background-color: $secondary-color;
 	margin: 30px auto;
 	padding: 0px 60px;
@@ -143,9 +143,9 @@ a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 400px;
+		width: 450px;
 		height: 500px;
-		padding: 20px;
+		padding: 25px 40px;
 		background-color: rgba($color: $main-color, $alpha: 0.7);
 		border-radius: 10px;
 		box-shadow: 0px 0px 10px 5px $shadow-color;
@@ -156,12 +156,20 @@ a {
 				height: 100px;
 			}
 		}
+		p {
+			font-size: 1.6rem;
+
+			a {
+				color: $third-color;
+			}
+		}
 	}
 
 	&__form {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 15px;
 		height: 100%;
 
 		&--input {
@@ -189,7 +197,6 @@ a {
 			height: 50px;
 			width: 100%;
 			line-height: 50px;
-			// white-space: nowrap;
 
 			.remember_label {
 				font-size: 1.8rem;
@@ -221,12 +228,6 @@ a {
 			outline-color: $third-color;
 		}
 
-		p {
-			font-size: 1.6rem;
-
-			a {
-				color: $third-color;
-			}
-		}
+		
 	}
 }
