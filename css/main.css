@@ -252,7 +252,7 @@ a {
 }
 
 .register__field {
-  width: 600px;
+  width: 650px;
   height: 600px;
 }
 .register__form {
@@ -261,5 +261,10 @@ a {
   flex-wrap: wrap;
 }
 .register__form--input {
+  width: 47%;
+}
+.register__form--send {
   width: 50%;
+  height: 10%;
+  margin: 0px;
 }/*# sourceMappingURL=main.css.map */
