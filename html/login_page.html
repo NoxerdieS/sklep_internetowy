@@ -18,41 +18,22 @@
   </head>
   <body>
     <div class="login">
-      <div class="login__shadow"></div>
-      <div class="login__field">
-        <a href="../index.html" class="login__field--logo"
-          ><img src="../img/logo_transparent.png" alt="Logo firmy"
-        /></a>
-        <form method="post" class="login__form">
-          <input
-            type="text"
-            name="login"
-            id="login"
-            placeholder="Wprowadź email lub login:"
-            class="login__form--input"
-          />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Wprowadź hasło:"
-            class="login__form--input"
-          />
-          <div class="login__form--options">
-            <a href="">Zapomniałeś hasła?</a>
-            <label for="remember" class="remember_label"
-              >Zapamiętaj mnie:</label
-            >
-            <input type="checkbox" id="remember" class="remember_box" />
-          </div>
-          <input type="submit" value="Zaloguj się" class="login__form--send" />
-        </form>
-        <p class="login__field--paragraph">
-          Nie posiadasz jeszcze konta?
-          <a href="./register_page.html">Zarejestruj się!</a>
-        </p>
-      </div>
+        <div class="login__shadow"></div>
+        <div class="login__field">
+            <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
+            <form method="post" class="login__form" id="login_form">
+                <input type="text" name="login" id="login" placeholder="Wprowadź email lub login:" class="login__form--input">
+                <input type="password" name="password" id="password" placeholder="Wprowadź hasło:" class="login__form--input">
+                <div class="login__form--options">
+                    <a href="">Zapomniałeś hasła?</a>
+                    <label for="remember" class="remember_label">Zapamiętaj mnie:</label>
+                    <input type="checkbox" id="remember" class="remember_box">
+                </div>
+                <input type="submit" value="Zaloguj się" class="login__form--send" id="login_form_send">
+            </form>
+            <p class="login__field--paragraph">Nie posiadasz jeszcze konta? <a href="./register_page.html">Zarejestruj się!</a></p>
+        </div>
     </div>
     <script src="../js/script.js"></script>
-  </body>
+</body>
 </html>
