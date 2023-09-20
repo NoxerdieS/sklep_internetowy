@@ -67,7 +67,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 7vh;
+  height: 65px;
   background-color: #614faf;
   margin: 30px auto;
   padding: 0px 60px;
@@ -249,4 +249,17 @@ a {
   border-radius: 8px;
   cursor: pointer;
   outline-color: #974EC3;
+}
+
+.register__field {
+  width: 600px;
+  height: 600px;
+}
+.register__form {
+  height: 400px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.register__form--input {
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */
