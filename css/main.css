@@ -151,6 +151,7 @@ a {
 .login {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -160,15 +161,17 @@ a {
   background-position: bottom;
 }
 .login__shadow {
+  position: absolute;
   height: 100%;
   width: 100%;
   background-color: rgba(49, 56, 102, 0.5);
 }
 .login__field {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 450px;
   height: 500px;
   padding: 25px 40px;
@@ -182,22 +185,25 @@ a {
 .login__field--logo img {
   height: 100px;
 }
-.login__field p {
-  font-size: 1.6rem;
+.login__field--paragraph {
+  display: flex;
+  gap: 5px;
+  font-size: 1.7rem;
 }
-.login__field p a {
+.login__field--paragraph a {
   color: #974EC3;
 }
 .login__form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: space-around;
   height: 100%;
+  width: 100%;
 }
 .login__form--input {
   height: 45px;
-  width: 100%;
+  width: 85%;
   border-radius: 10px;
   border: none;
   margin-bottom: 15px;
@@ -216,17 +222,20 @@ a {
   font-size: 1.8rem;
   color: #a3a3a3;
 }
+.login__form--checkbox {
+  display: flex;
+  gap: 5px;
+}
 .login__form--options {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 50px;
   width: 100%;
-  line-height: 50px;
+  gap: 20px;
 }
 .login__form--options .remember_label {
   font-size: 1.8rem;
-  margin-left: 30px;
-  margin-right: 5px;
 }
 .login__form--options .remember_box {
   height: 25px;
@@ -240,11 +249,10 @@ a {
 }
 .login__form--send {
   width: 60%;
-  height: 15%;
+  height: 10%;
   background-color: #974EC3;
   font-size: 2rem;
   color: #d4d4d4;
-  margin: 15px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -267,4 +275,40 @@ a {
   width: 50%;
   height: 10%;
   margin: 0px;
+}
+
+@media (max-width: 576px) {
+  .login__field {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    padding: 40px 30px;
+  }
+  .login__field--paragraph {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login__form {
+    gap: 10px;
+  }
+  .login__form--options {
+    gap: 20px;
+    height: 50px;
+    line-height: normal;
+    flex-wrap: wrap;
+  }
+  .login__form--options .remember_label {
+    font-size: 2rem;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .login__form--options .remember_box {
+    height: 25px;
+    width: 25px;
+    accent-color: #974EC3;
+    cursor: pointer;
+  }
+  .login__form--options a {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=main.css.map */
