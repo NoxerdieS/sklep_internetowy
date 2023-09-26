@@ -31,6 +31,14 @@ a {
 	color: $error-red;
 }
 
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 // NAV
 
 .nav {
@@ -271,7 +279,6 @@ a {
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
-		margin-bottom: 15px;
 
 		&--input {
 			width: 47%;
@@ -281,6 +288,7 @@ a {
 			display: flex;
 			gap: 7px;
 			width: 47%;
+			
 
 			&--1 {
 				width: 25%;
@@ -299,6 +307,10 @@ a {
 			margin: 0px;
 		}
 	}
+}
+
+.visible {
+	visibility: visible;
 }
 
 @media (max-width: 576px) {

@@ -18,18 +18,18 @@
             <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
             <form method="post" class="login__form register__form" id="register_form"> 
                 <input type="text" name="name" id="name-register" placeholder="Imię:" class="login__form--input register__form--input">
-                <p class="register__form--error error">Niepoprawne imie</p>
+                <p class="register__form--error error error-name">Niepoprawne imie</p>
                 <input type="text" name="lastname" id="lastname-register" placeholder="Nazwisko:" class="login__form--input register__form--input">
-                <p class="register__form--error error">Niepoprawne nazwisko</p>
+                <p class="register__form--error error error-lastname">Niepoprawne nazwisko</p>
                 <input type="email" name="email" id="email-register" placeholder="Email:" class="login__form--input register__form--input">
-                <p class="register__form--error error">Niepoprawny email</p>
+                <p class="register__form--error error error-email">Niepoprawny email</p>
                 <input type="text" name="login" id="login-register" placeholder="Login:" class="login__form--input register__form--input">
-                <p class="register__form--error error">Zbyt długi login</p>
+                <p class="register__form--error error error-login">Za krótki login</p>
                 <input type="password" name="password" id="password-register" placeholder="Hasło:" class="login__form--input register__form--input">
-                <p class="register__form--error error">Hasło musi mieć co najmniej 8 znaków</p>
+                <p class="register__form--error error error-password">Hasło musi mieć co najmniej 8 znaków</p>
                 <div class="register__form--number">
-                    <input type="text" name="phone-code" id="phone-code" placeholder="+48" class="login__form--input register__form--number--1">
-                    <input type="text" name="phone" id="phone-register" placeholder="Numer telefonu:" class="login__form--input register__form--number--2">
+                    <input type="number" name="phone-code" id="phone-code" placeholder="+48" class="login__form--input register__form--number--1">
+                    <input type="number" name="phone" id="phone-register" placeholder="Numer telefonu:" class="login__form--input register__form--number--2">
                 </div>
                 <p class="register__form--error error">Niepoprawny numer</p>
                 <input type="text" name="address" id="address-register" placeholder="Ulica i numer:" class="login__form--input register__form--input">
