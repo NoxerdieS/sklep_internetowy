@@ -46,19 +46,11 @@ const checkMail = (email) => {
 	}
 };
 
+const nameTable = ['name', 'lastname', 'email', 'login', 'password', 'phone_code', 'phone', 'address', 'postcode', 'city', 'country'];
+let result;
 const register = async (e) => {
-	formData.append('name', registerForm.elements['name'].value);
-	formData.append('lastname', registerForm.elements['lastname'].value);
-	formData.append('email', registerForm.elements['email'].value);
-	formData.append('login', registerForm.elements['login'].value);
-	formData.append('password', registerForm.elements['password'].value);
-	formData.append('phone_code', registerForm.elements['phone-code'].value);
-	formData.append('phone', registerForm.elements['phone'].value);
-	formData.append('address', registerForm.elements['address'].value);
-	formData.append('postcode', registerForm.elements['postcode'].value);
-	formData.append('city', registerForm.elements['city'].value);
-	formData.append('country', registerForm.elements['country'].value);
-	const res = fetch('http://localhost/sklep_internetowy/php/register.php', {
+	nameTable.forEach((element) => formData.append(element, registerForm.elements[element].value))
+	fetch('http://localhost/sklep_internetowy/php/register.php', {
 		method: 'POST',
 		body: formData,
 	})
@@ -66,7 +58,7 @@ const register = async (e) => {
 			return response.text();
 		})
 		.then(function (body) {
-			console.log(body);
+			result = body
 		});
 };
 
@@ -87,10 +79,9 @@ const checkErrors = () => {
 
 registerButton.addEventListener('click', (e) => {
 	e.preventDefault();
-	checkForm([username, pass, pass2, email]);
-	checkLength(username, 3);
-	checkLength(pass, 8);
-	checkPassword(pass, pass2);
+	checkForm([name, lastname, email, login, password]);
+	checkLength(login, 3);
+	checkLength(password, 8);
 	checkMail(email);
 	checkErrors();
 });

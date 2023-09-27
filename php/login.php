@@ -1,5 +1,6 @@
 <?php
     require_once('dblogin.php');
+    session_start();
     $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
     function cleanData($data){
         $data = trim($data);
@@ -12,10 +13,13 @@
 
     $key = $pdo -> query('select pass from user where login like "'.$login.'";') -> fetchColumn();
     if(empty($key)){
-        echo 'Podany użytkownik nie istnieje';
+        $_SESSION['loggedIn'] = false;
+        echo 0;
     }else if(password_verify($password, $key)){
-        echo 'success';
+        $_SESSION['loggedIn'] = true;
+        echo 1;
     }else{
-        echo 'fail';
+        $_SESSION['loggedIn'] = false;
+        echo 0;
     }
 ?>

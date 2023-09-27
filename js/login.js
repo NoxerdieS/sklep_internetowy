@@ -1,3 +1,4 @@
+let result;
 const login = async (e) => {
   e.preventDefault();
   const formData = new FormData();
@@ -12,9 +13,12 @@ const login = async (e) => {
     return response.text();
   })
   .then(function (body) {
-    console.log(body);
-  });
-  
+    result = body;
+    if (result == '0'){
+      const errorMsg = document.querySelector('.error');
+      // tu dopisz
+    }
+  });  
 }
   const loginButton = document.querySelector('#login_form_send');
   loginButton.addEventListener('click', login);
