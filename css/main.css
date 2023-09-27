@@ -276,6 +276,11 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   outline-color: #974EC3;
 }
+.login__form--remindParagraph {
+  visibility: hidden;
+  font-size: 2rem;
+  color: #d857e9;
+}
 
 .register__field {
   width: 650px;

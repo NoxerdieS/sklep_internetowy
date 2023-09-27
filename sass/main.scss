@@ -232,12 +232,9 @@ input::-webkit-inner-spin-button {
 			height: 10px;
 			width: 100%;
 			gap: 20px;
-			// line-height: 50px;
 
 			.remember_label {
 				font-size: 1.8rem;
-				// margin-left: 30px;
-				// margin-right: 5px;
 			}
 
 			.remember_box {
@@ -263,6 +260,12 @@ input::-webkit-inner-spin-button {
 			cursor: pointer;
 			outline-color: $third-color;
 		}
+
+    &--remindParagraph {
+      visibility: hidden;
+      font-size: 2rem;
+      color: $bright-text-color;
+    }
 	}
 }
 
