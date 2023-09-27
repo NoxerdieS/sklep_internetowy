@@ -304,7 +304,7 @@ input::-webkit-inner-spin-button {
   width: 25%;
 }
 .register__form--number--2 {
-  width: 75%;
+  width: 100%;
 }
 .register__form--error {
   visibility: hidden;
@@ -313,7 +313,7 @@ input::-webkit-inner-spin-button {
 .register__form--send {
   width: 50%;
   height: 10%;
-  margin: 0px;
+  margin-top: 5px;
 }
 
 .visible {

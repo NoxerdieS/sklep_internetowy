@@ -2,9 +2,14 @@ const registerButton = document.querySelector('#register_form_send');
 const registerForm = document.querySelector('#register_form');
 const name = document.querySelector('#name-register');
 const lastname = document.querySelector('#lastname-register');
+const phone = document.querySelector('#phone-register');
 const email = document.querySelector('#email-register');
 const login = document.querySelector('#login-register');
 const password = document.querySelector('#password-register');
+const password2 = document.querySelector('#password2-register');
+const address = document.querySelector('#address-register');
+const postcode = document.querySelector('#postcode-register');
+const city = document.querySelector('#city-register');
 const formData = new FormData();
 
 const showError = (input, name) => {
@@ -35,21 +40,43 @@ const checkLength = (input, min) => {
 	}
 };
 
+const checkPassword = (pass1, pass2) => {
+	if (pass1.value !== pass2.value) {
+		showError(pass2, pass2.name);
+	} else {
+		clearError(pass2, pass2.name);
+	}
+};
+
 const checkMail = (email) => {
 	const re =
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	if (re.test(email.value)) {
-		clearError(email);
+		clearError(email, email.name);
 	} else {
 		showError(email, email.name);
 	}
 };
 
-const nameTable = ['name', 'lastname', 'email', 'login', 'password', 'phone_code', 'phone', 'address', 'postcode', 'city', 'country'];
-let result;
+const checkPhone = (phone) => {
+	const re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/;
+	if (re.test(phone.value)) {
+		const formBox = phone.parentElement.parentElement;
+		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
+		errorMsg.classList.remove('visible');
+	} else {
+		const formBox = phone.parentElement.parentElement;
+		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
+		errorMsg.classList.add('visible');
+	}
+}
+
 const register = async (e) => {
-	nameTable.forEach((element) => formData.append(element, registerForm.elements[element].value))
+	const nameTable = ['name', 'lastname', 'email', 'phone_code', 'phone', 'login', 'password', 'password2', 'address', 'postcode', 'city'];
+	let result;
+	nameTable.forEach((element) => {
+		FormData.append(element, registerForm.elements[element].value)})
 	fetch('http://localhost/sklep_internetowy/php/register.php', {
 		method: 'POST',
 		body: formData,
@@ -58,7 +85,7 @@ const register = async (e) => {
 			return response.text();
 		})
 		.then(function (body) {
-			result = body
+			result = body;
 		});
 };
 
@@ -79,9 +106,11 @@ const checkErrors = () => {
 
 registerButton.addEventListener('click', (e) => {
 	e.preventDefault();
-	checkForm([name, lastname, email, login, password]);
+	checkForm([name, lastname, email, login, password, address, postcode, city]);
 	checkLength(login, 3);
 	checkLength(password, 8);
+	checkPassword(password, password2);
 	checkMail(email);
+	checkPhone(phone);
 	checkErrors();
 });

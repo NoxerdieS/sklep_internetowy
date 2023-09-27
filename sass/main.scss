@@ -297,7 +297,7 @@ input::-webkit-inner-spin-button {
 				width: 25%;
 			}
 			&--2 {
-				width: 75%;
+				width: 100%;
 			}
 		}
 		&--error {
@@ -307,7 +307,7 @@ input::-webkit-inner-spin-button {
 		&--send {
 			width: 50%;
 			height: 10%;
-			margin: 0px;
+			margin-top: 5px;
 		}
 	}
 }

@@ -18,7 +18,6 @@
     $address = cleanData($_POST['address']);
     $postcode = cleanData($_POST['postcode']);
     $city = cleanData($_POST['city']);
-    $country = cleanData($_POST['country']);
 
     $stmt = $pdo -> query('Select login from user where login like "'.$login.'";');
     if($stmt -> rowCount() > 0){
