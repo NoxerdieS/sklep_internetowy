@@ -31,12 +31,10 @@ a {
 	color: $error-red;
 }
 
-
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 // NAV
@@ -229,7 +227,7 @@ input::-webkit-inner-spin-button {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 10px;
+			height: 40px;
 			width: 100%;
 			gap: 20px;
 
@@ -261,17 +259,56 @@ input::-webkit-inner-spin-button {
 			outline-color: $third-color;
 		}
 
-    &--remindParagraph {
-      visibility: hidden;
-      font-size: 2rem;
-      color: $bright-text-color;
-    }
+		&--remindParagraph {
+			visibility: hidden;
+			font-size: 2rem;
+			color: $bright-text-color;
+		}
 	}
 }
 
 // REGISTER
 
 .register {
+	&__popup {
+		visibility: hidden;
+		position: absolute;
+		height: 150px;
+		width: 40%;
+		background-color: $third-color;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px 5px $shadow-color;
+
+		&--container {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+
+			button {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 50px;
+				width: 50px;
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+			i {
+				color: $main-white;
+				font-size: 2.8rem;
+			}
+		}
+
+		&--p {
+			font-size: 2rem;
+		}
+	}
 	&__field {
 		width: 650px;
 		height: 630px;
@@ -291,11 +328,7 @@ input::-webkit-inner-spin-button {
 			display: flex;
 			gap: 7px;
 			width: 47%;
-			
 
-			&--1 {
-				width: 25%;
-			}
 			&--2 {
 				width: 100%;
 			}
@@ -312,11 +345,27 @@ input::-webkit-inner-spin-button {
 	}
 }
 
+// REMIND
+
+.remind {
+	&__field {
+		width: 450px;
+		height: 400px;
+	}
+
+	&__form {
+		&--send {
+			height: 50px;
+		}
+	}
+}
+
 .visible {
 	visibility: visible;
 }
 
-@media (max-width: 576px) {
+
+@media (max-width: 768px) {
 	.login {
 		&__field {
 			height: 100%;
@@ -333,7 +382,6 @@ input::-webkit-inner-spin-button {
 		&__form {
 			justify-content: space-evenly;
 			&--options {
-				// gap: 30px;
 				height: 80px;
 				line-height: normal;
 				flex-wrap: wrap;
@@ -358,74 +406,12 @@ input::-webkit-inner-spin-button {
 
 	.register {
 		height: 1000px;
+		width: 100%;
 		overflow: scroll;
-		&__field {
-			width: 100%;
-			height: 100%;
+
+		&__popup {
+			width: 80%;
 		}
-
-		&__form {
-			flex-direction: column;
-			height: 100%;
-			width: 100%;
-			flex-wrap: nowrap;
-
-			&--input {
-				width: 80%;
-			}
-
-			&--number {
-				display: flex;
-				gap: 7px;
-				width: 60%;
-			}
-		}
-	}
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-	.login {
-		&__field {
-			height: 100%;
-			width: 100%;
-			border-radius: 0px;
-			padding: 40px 30px;
-			&--paragraph {
-				flex-direction: column;
-				align-items: center;
-				font-size: 2rem;
-			}
-		}
-
-		&__form {
-			justify-content: space-evenly;
-			&--options {
-				// gap: 30px;
-				height: 80px;
-				line-height: normal;
-				flex-wrap: wrap;
-				.remember_label {
-					font-size: 2rem;
-					margin-left: 0px;
-					margin-right: 0px;
-				}
-
-				.remember_box {
-					height: 25px;
-					width: 25px;
-					accent-color: $third-color;
-					cursor: pointer;
-				}
-				a {
-					font-size: 2rem;
-				}
-			}
-		}
-	}
-
-	.register {
-		height: 1000px;
-		overflow: scroll;
 		&__field {
 			width: 100%;
 			height: 100%;
@@ -442,9 +428,7 @@ input::-webkit-inner-spin-button {
 			}
 
 			&--number {
-				display: flex;
-				gap: 7px;
-				width: 60%;
+				width: 70%;
 			}
 		}
 	}

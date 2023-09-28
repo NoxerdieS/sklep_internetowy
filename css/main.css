@@ -248,7 +248,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10px;
+  height: 40px;
   width: 100%;
   gap: 20px;
 }
@@ -282,6 +282,42 @@ input::-webkit-inner-spin-button {
   color: #d857e9;
 }
 
+.register__popup {
+  visibility: hidden;
+  position: absolute;
+  height: 150px;
+  width: 40%;
+  background-color: #974EC3;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px #282d50;
+}
+.register__popup--container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.register__popup--container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.register__popup--container i {
+  color: #d4d4d4;
+  font-size: 2.8rem;
+}
+.register__popup--p {
+  font-size: 2rem;
+}
 .register__field {
   width: 650px;
   height: 630px;
@@ -300,9 +336,6 @@ input::-webkit-inner-spin-button {
   gap: 7px;
   width: 47%;
 }
-.register__form--number--1 {
-  width: 25%;
-}
 .register__form--number--2 {
   width: 100%;
 }
@@ -316,11 +349,19 @@ input::-webkit-inner-spin-button {
   margin-top: 5px;
 }
 
+.remind__field {
+  width: 450px;
+  height: 400px;
+}
+.remind__form--send {
+  height: 50px;
+}
+
 .visible {
   visibility: visible;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .login__field {
     height: 100%;
     width: 100%;
@@ -356,64 +397,11 @@ input::-webkit-inner-spin-button {
   }
   .register {
     height: 1000px;
+    width: 100%;
     overflow: scroll;
   }
-  .register__field {
-    width: 100%;
-    height: 100%;
-  }
-  .register__form {
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    flex-wrap: nowrap;
-  }
-  .register__form--input {
+  .register__popup {
     width: 80%;
-  }
-  .register__form--number {
-    display: flex;
-    gap: 7px;
-    width: 60%;
-  }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-  .login__field {
-    height: 100%;
-    width: 100%;
-    border-radius: 0px;
-    padding: 40px 30px;
-  }
-  .login__field--paragraph {
-    flex-direction: column;
-    align-items: center;
-    font-size: 2rem;
-  }
-  .login__form {
-    justify-content: space-evenly;
-  }
-  .login__form--options {
-    height: 80px;
-    line-height: normal;
-    flex-wrap: wrap;
-  }
-  .login__form--options .remember_label {
-    font-size: 2rem;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .login__form--options .remember_box {
-    height: 25px;
-    width: 25px;
-    accent-color: #974EC3;
-    cursor: pointer;
-  }
-  .login__form--options a {
-    font-size: 2rem;
-  }
-  .register {
-    height: 1000px;
-    overflow: scroll;
   }
   .register__field {
     width: 100%;
@@ -429,8 +417,6 @@ input::-webkit-inner-spin-button {
     width: 70%;
   }
   .register__form--number {
-    display: flex;
-    gap: 7px;
-    width: 60%;
+    width: 70%;
   }
 }/*# sourceMappingURL=main.css.map */
