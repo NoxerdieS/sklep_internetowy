@@ -1,6 +1,6 @@
 <?php
-$host = 'localhost';
-$db = 'sklep';
-$user = 'root';
-$pass = '';
+    $host = 'localhost';
+    $db = 'sklep';
+    $user = 'root';
+    $pass = '';
 ?>
