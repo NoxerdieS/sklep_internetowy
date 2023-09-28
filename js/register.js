@@ -1,6 +1,6 @@
 const registerButton = document.querySelector('#register_form_send');
 const registerForm = document.querySelector('#register_form');
-const name = document.querySelector('#name-register');
+const firstname = document.querySelector('#name-register');
 const lastname = document.querySelector('#lastname-register');
 const phone = document.querySelector('#phone-register');
 const email = document.querySelector('#email-register');
@@ -72,11 +72,19 @@ const checkPhone = (phone) => {
 	}
 }
 
-const register = async (e) => {
-	const nameTable = ['name', 'lastname', 'email', 'phone_code', 'phone', 'login', 'password', 'password2', 'address', 'postcode', 'city'];
+const register = async () => {
 	let result;
-	nameTable.forEach((element) => {
-		FormData.append(element, registerForm.elements[element].value)})
+	formData.append('name', firstname.value);
+	formData.append('lastname', lastname.value);
+	formData.append('email', email.value);
+	formData.append('phone', phone.value);
+	formData.append('login', login.value);
+	formData.append('password', password.value);
+	formData.append('address', address.value);
+	formData.append('postcode', postcode.value);
+	formData.append('city', city.value);
+	console.log(formData.values())
+	
 	fetch('http://localhost/sklep_internetowy/php/register.php', {
 		method: 'POST',
 		body: formData,
@@ -106,7 +114,7 @@ const checkErrors = () => {
 
 registerButton.addEventListener('click', (e) => {
 	e.preventDefault();
-	checkForm([name, lastname, email, login, password, address, postcode, city]);
+	checkForm([firstname, lastname, email, login, password, address, postcode, city]);
 	checkLength(login, 3);
 	checkLength(password, 8);
 	checkPassword(password, password2);

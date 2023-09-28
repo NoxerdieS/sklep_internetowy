@@ -12,12 +12,16 @@
     $password = cleanData($_POST['password']);
 
     $key = $pdo -> query('select pass from user where login like "'.$login.'";') -> fetchColumn();
+    $isActive = $pdo -> query('select pass from user where login like "'.$login.'";') -> fetchColumn();
     if(empty($key)){
         $_SESSION['loggedIn'] = false;
         echo 0;
+    }else if($isActive == 0){
+        $_SESSION['loggedIn'] = false;
+        echo 1;
     }else if(password_verify($password, $key)){
         $_SESSION['loggedIn'] = true;
-        echo 1;
+        echo '../index.html';
     }else{
         $_SESSION['loggedIn'] = false;
         echo 0;

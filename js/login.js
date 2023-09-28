@@ -17,6 +17,10 @@ const login = async (e) => {
     if (result == '0'){
       const errorMsg = document.querySelector('.error');
       // tu dopisz
+    }else if(result == '1'){
+      // info o konieczności aktywacji konta
+    }else{
+      location.replace(result);
     }
   });  
 }
