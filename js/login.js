@@ -14,13 +14,14 @@ const login = async (e) => {
 		})
 		.then(function (body) {
 			result = body;
+			console.log(result);
+			const errorMsg = document.querySelector('.error');
 			if (result == '0') {
-				const errorMsg = document.querySelector('.error');
 				errorMsg.textContent = 'Wprowadzono nieprawidłowe dane';
-        errorMsg.style.display = 'block';
+        		errorMsg.style.display = 'block';
 			} else if (result == '1') {
 				errorMsg.textContent = 'Konto nie jest aktywne';
-        errorMsg.style.display = 'block';
+        		errorMsg.style.display = 'block';
 			} else {
 				location.replace(result);
 			}
