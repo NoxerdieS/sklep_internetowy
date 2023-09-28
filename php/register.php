@@ -8,6 +8,7 @@
     require 'PHPMailer/src/SMTP.php';
     
     require_once('dblogin.php');
+    require_once('maillogin.php');
     $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
     
     function cleanData($data){
@@ -39,12 +40,12 @@
         $sql = 'Insert into user(mail, login, pass, firstname, lastname, address_id, telephone, isAdmin, isActive, activationHash) values(?, ?, ?, ?, ?, ?, ?, 0, 0, ?)';
         $pdo -> prepare($sql) -> execute([$email, $login, $password, $name, $lastname, $address_id, $phone, $activationHash]);
         $mail -> isSMTP();
-        $mail->Host = 'mail.cba.pl';
+        $mail->Host = $mailhost;
         $mail ->SMTPAuth = true;
         $mail ->Username = 'sunrise@jseroka.j.pl';
-        $mail ->Password = 'SklepSunrise123';
+        $mail ->Password = $mailpassword;
         $mail ->SMTPSecure = 'STARTTLS';
-        $mail ->Port = 587;
+        $mail ->Port = $mailport;
 
         $mail -> setFrom('sunrise@jseroka.j.pl', 'Sklep Sunrise');
         $mail -> addAddress($email);
