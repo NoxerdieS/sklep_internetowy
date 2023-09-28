@@ -10,6 +10,8 @@ const password2 = document.querySelector('#password2-register');
 const address = document.querySelector('#address-register');
 const postcode = document.querySelector('#postcode-register');
 const city = document.querySelector('#city-register');
+const popUp = document.querySelector('.register__popup');
+const popUpCloseBtn = document.querySelector('.register__popup--closeBtn');
 const formData = new FormData();
 
 const showError = (input, name) => {
@@ -60,17 +62,16 @@ const checkMail = (email) => {
 };
 
 const checkPhone = (phone) => {
-	const re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/;
-	if (re.test(phone.value)) {
-		const formBox = phone.parentElement.parentElement;
-		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
-		errorMsg.classList.remove('visible');
-	} else {
+	if (phone.value.length<11) {
 		const formBox = phone.parentElement.parentElement;
 		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
 		errorMsg.classList.add('visible');
+	} else {
+		const formBox = phone.parentElement.parentElement;
+		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
+		errorMsg.classList.remove('visible');
 	}
-}
+};
 
 const register = async () => {
 	let result;
@@ -83,8 +84,7 @@ const register = async () => {
 	formData.append('address', address.value);
 	formData.append('postcode', postcode.value);
 	formData.append('city', city.value);
-	console.log(formData.values())
-	
+
 	fetch('http://localhost/sklep_internetowy/php/register.php', {
 		method: 'POST',
 		body: formData,
@@ -94,6 +94,10 @@ const register = async () => {
 		})
 		.then(function (body) {
 			result = body;
+			if (result === 'success') {
+				popUp.style.visibility = 'visible';
+				registerButton.disabled = true;
+			}
 		});
 };
 
@@ -112,9 +116,23 @@ const checkErrors = () => {
 	}
 };
 
+const closePopUp = () => {
+	popUp.style.visibility = 'hidden';
+	registerButton.disabled = false;
+};
+
 registerButton.addEventListener('click', (e) => {
 	e.preventDefault();
-	checkForm([firstname, lastname, email, login, password, address, postcode, city]);
+	checkForm([
+		firstname,
+		lastname,
+		email,
+		login,
+		password,
+		address,
+		postcode,
+		city,
+	]);
 	checkLength(login, 3);
 	checkLength(password, 8);
 	checkPassword(password, password2);
@@ -122,3 +140,20 @@ registerButton.addEventListener('click', (e) => {
 	checkPhone(phone);
 	checkErrors();
 });
+
+phone.addEventListener('input', () => {
+	let value = phone.value;
+	value = value.replace(/\D+/g, '');
+	if (value.length > 3) {
+		value = value.slice(0, 3) + ' ' + value.slice(3);
+	}
+	if (value.length > 7) {
+		value = value.slice(0, 7) + ' ' + value.slice(7);
+	}
+	if (value.length > 11) {
+		value = value.slice(0, 11);
+	}
+	phone.value = value;
+});
+
+popUpCloseBtn.addEventListener('click', closePopUp);
