@@ -31,16 +31,11 @@ a {
   color: $error-red;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 // NAV
 
 .nav {
   &__mobile {
+    display: none;
     &--bars {
       position: absolute;
       right: 0;
@@ -49,7 +44,6 @@ input::-webkit-inner-spin-button {
       background: none;
       cursor: pointer;
       i {
-        // margin: 20px;
         padding: 20px;
         font-size: 3rem;
         color: $main-white;
@@ -57,51 +51,47 @@ input::-webkit-inner-spin-button {
     }
   }
   &__desktop {
+    position: relative;
     display: flex;
-    display: none;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     height: 65px;
     background-color: $secondary-color;
     margin: 30px auto;
-    padding: 0px 60px;
+    padding: 0px 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 10px $shadow-color;
     overflow: hidden;
   }
 
   &__items {
-    width: 80%;
+    position: absolute;
+    left: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
   }
 
   &__item {
-    position: relative;
-    height: 50px;
-    padding: 20px;
-    margin: 5px;
-    line-height: 10px;
-    font-size: 1.9rem;
+    padding: 10px 20px;
+    font-size: 2rem;
     color: $main-white;
     outline-color: $main-white;
     outline-width: 1px;
     &--logo {
-      background-image: url(../img/logo_with_brandname.png);
+      background-image: url(../img/logo_transparent.png);
       background-size: cover;
-      height: 130px;
-      min-width: 130px;
+      height: 55px;
+      width: 55px;
     }
   }
 
   &__user {
-    width: 25%;
+    position: absolute;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding-left: 30px;
     &--cart {
       padding: 15px;
       transition: transform 0.3s;
@@ -450,6 +440,35 @@ input::-webkit-inner-spin-button {
       &--number {
         width: 70%;
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    &__item {
+      padding: 10px;
+      font-size: 1.7rem;
+    }
+
+    &__user {
+      &--cart {
+        i {
+
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    &__mobile {
+      display: block;
+    }
+    &__desktop {
+      display: none;
     }
   }
 }

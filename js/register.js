@@ -62,7 +62,7 @@ const checkMail = (email) => {
 };
 
 const checkPhone = (phone) => {
-	if (phone.value.length<11) {
+	if (phone.value.length < 11) {
 		const formBox = phone.parentElement.parentElement;
 		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
 		errorMsg.classList.add('visible');
@@ -71,6 +71,32 @@ const checkPhone = (phone) => {
 		const errorMsg = formBox.querySelector(`.error-${phone.name}`);
 		errorMsg.classList.remove('visible');
 	}
+};
+const checkPhoneNumber = () => {
+	let value = phone.value;
+	value = value.replace(/\D+/g, '');
+	if (value.length > 3) {
+		value = value.slice(0, 3) + ' ' + value.slice(3);
+	}
+	if (value.length > 7) {
+		value = value.slice(0, 7) + ' ' + value.slice(7);
+	}
+	if (value.length > 11) {
+		value = value.slice(0, 11);
+	}
+	phone.value = value;
+};
+
+const checkPostCodeNumber = () => {
+	let value = postcode.value;
+	value = value.replace(/\D+/g, '');
+	if (value.length > 2) {
+		value = value.slice(0, 2) + '-' + value.slice(2);
+	}
+	if (value.length > 6) {
+		value = value.slice(0, 6);
+	}
+	postcode.value = value;
 };
 
 const register = async () => {
@@ -136,25 +162,13 @@ registerButton.addEventListener('click', (e) => {
 	]);
 	checkLength(login, 3);
 	checkLength(password, 8);
+	checkLength(postcode, 6);
 	checkPassword(password, password2);
 	checkMail(email);
 	checkPhone(phone);
 	checkErrors();
 });
 
-phone.addEventListener('input', () => {
-	let value = phone.value;
-	value = value.replace(/\D+/g, '');
-	if (value.length > 3) {
-		value = value.slice(0, 3) + ' ' + value.slice(3);
-	}
-	if (value.length > 7) {
-		value = value.slice(0, 7) + ' ' + value.slice(7);
-	}
-	if (value.length > 11) {
-		value = value.slice(0, 11);
-	}
-	phone.value = value;
-});
-
+phone.addEventListener('input', checkPhoneNumber);
+postcode.addEventListener('input', checkPostCodeNumber);
 popUpCloseBtn.addEventListener('click', closePopUp);
