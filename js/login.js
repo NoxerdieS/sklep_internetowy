@@ -23,6 +23,7 @@ const login = async (e) => {
 				errorMsg.textContent = 'Konto nie jest aktywne';
         		errorMsg.style.display = 'block';
 			} else {
+				localStorage.setItem('status', 'loggedIn');
 				location.replace(result);
 			}
 		});
