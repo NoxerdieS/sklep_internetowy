@@ -8,9 +8,9 @@
         $data = htmlspecialchars($data);
         return $data;
     }
+
     $login = cleanData($_POST['login']);
     $password = cleanData($_POST['password']);
-
     $key = $pdo -> query('select pass from user where login like "'.$login.'";') -> fetchColumn();
     $isActive = $pdo -> query('select isActive from user where login like "'.$login.'";') -> fetchColumn();
     if(empty($key)){

@@ -1,10 +1,24 @@
 let result;
+const loginForm = document.querySelector('#login_form');
+const rememberMe = document.querySelector('#remember');
+$loginCookie = document.cookie
+	.split("; ")
+	.find((row) => row.startsWith("login="))
+	.split("=")[1];
+if($loginCookie != ''){
+	loginForm.elements['login'].value = $loginCookie;
+	rememberMe.checked = true;
+}
 const login = async (e) => {
 	e.preventDefault();
 	const formData = new FormData();
-	const loginForm = document.querySelector('#login_form');
 	formData.append('login', loginForm.elements['login'].value);
 	formData.append('password', loginForm.elements['password'].value);
+	if(rememberMe.checked){
+		document.cookie = "login="+loginForm.elements['login'].value;
+	}else{
+		document.cookie = "login= "
+	}
 	fetch('http://localhost/sklep_internetowy/php/login.php', {
 		method: 'POST',
 		body: formData,
