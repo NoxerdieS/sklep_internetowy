@@ -42,15 +42,15 @@
         $mail -> isSMTP();
         $mail->Host = $mailhost;
         $mail ->SMTPAuth = true;
-        $mail ->Username = 'sunrise@jseroka.j.pl';
+        $mail ->Username = 'noreply@sunrise.j.pl';
         $mail ->Password = $mailpassword;
         $mail ->SMTPSecure = 'STARTTLS';
         $mail ->Port = $mailport;
 
-        $mail -> setFrom('sunrise@jseroka.j.pl', 'Sklep Sunrise');
+        $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
         $mail -> addAddress($email);
-        $mail -> Subject = 'Activate your account';
-        $mail -> Body = 'http://localhost/sklep_internetowy/php/authorize.php/?login='.$login.'&activationHash='.$activationHash;
+        $mail -> Subject = 'Aktywuj swoje konto w sklepie Sunrise';
+        $mail -> Body = 'Aktywuj swoje konto klikając w ten link: http://localhost/sklep_internetowy/php/authorize.php/?login='.$login.'&activationHash='.$activationHash;
         $mail -> send();
         echo "success";
     }
