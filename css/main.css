@@ -124,15 +124,24 @@ a {
   justify-content: space-evenly;
 }
 .nav__user--cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
   transition: transform 0.3s;
+  text-wrap: nowrap;
+}
+.nav__user--cart p {
+  color: #d4d4d4;
+  font-size: 1.7rem;
 }
 .nav__user--cart i {
   font-size: 3rem;
   color: #d4d4d4;
 }
 .nav__user--cart:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .nav__user--search {
   position: relative;

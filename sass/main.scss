@@ -93,15 +93,24 @@ a {
     align-items: center;
     justify-content: space-evenly;
     &--cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 15px;
       transition: transform 0.3s;
+      text-wrap: nowrap;
+      p {
+        color: $main-white;
+        font-size: 1.7rem;
+      }
       i {
         font-size: 3rem;
         color: $main-white;
       }
     }
     &--cart:hover {
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
 
     &--search {
