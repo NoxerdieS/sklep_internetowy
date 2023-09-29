@@ -20,12 +20,14 @@ const checkPassword = (pass1, pass2) => {
 const remember_password = async () => {
 	formData.append('email', email);
 	formData.append('activationHash', activationHash);
-	formData.append('password', password);
+	formData.append('password', password.value);
 	fetch('http://localhost/sklep_internetowy/php/remember_password.php', {
 		method: 'POST',
 		body: formData,
 	}).then(function (response) {
-		console.log(response.text());
+		return response.text();
+	}).then(function (body){
+		location.replace(body);
 	})
 }
 const checkErrors = () => {

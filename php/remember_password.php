@@ -4,14 +4,16 @@
 
     $email = $_POST['email'];
     $activationHash = $_POST['activationHash'];
-    $password = $_POST['password'];
+    $passw = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $key = $pdo -> query('select activationHash from user where email like "'.$email.'";') -> fetchColumn();
+    $key = $pdo -> query('select activationHash from user where mail like "'.$email.'";') -> fetchColumn();
 
     if(empty($key) || $activationHash != $key){
-        header('Location: ../index.html');
+        echo '../index.html';
     }else{
-        $pdo -> query('update user set pass = "'.$password.'" where email like "'.$email.';');
-        header('Location: ../html/login_page.html');
+        $sql = 'update user set pass = ? where mail like ?;';
+        $pdo ->prepare($sql) -> execute([$password, $email]);
+        echo '../html/login_page.html';
     }
 ?>
