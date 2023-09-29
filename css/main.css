@@ -73,8 +73,22 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.nav {
+.nav__mobile--bars {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.nav__mobile--bars i {
+  padding: 20px;
+  font-size: 3rem;
+  color: #d4d4d4;
+}
+.nav__desktop {
   display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 80%;
@@ -197,6 +211,10 @@ input::-webkit-inner-spin-button {
   padding: 10px 20px;
   font-size: 3.5rem;
   color: #d4d4d4;
+  transition: transform 0.3s;
+}
+.login__field--back:hover {
+  transform: scale(0.8);
 }
 .login__field--logo img {
   height: 100px;
@@ -287,6 +305,7 @@ input::-webkit-inner-spin-button {
   position: absolute;
   height: 150px;
   width: 40%;
+  padding: 20px;
   background-color: #974EC3;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 5px #282d50;
