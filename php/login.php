@@ -22,6 +22,7 @@
             echo 1;
         }else{
             $_SESSION['loggedIn'] = true;
+            $_SESSION['login'] = $login;
             echo '../index.html';
         }
     }else{
