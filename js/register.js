@@ -94,6 +94,7 @@ const register = async () => {
 		})
 		.then(function (body) {
 			result = body;
+			console.log(result);
 			if (result === 'success') {
 				popUp.style.visibility = 'visible';
 				registerButton.disabled = true;

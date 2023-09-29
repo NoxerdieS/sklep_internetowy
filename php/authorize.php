@@ -5,12 +5,12 @@
     $login = $_GET['login'];
     $activationHash = $_GET['activationHash'];
 
-    $userInfo = $pdo -> query('select login, activationHash from user where login like "'.$login.'";') -> fetch();
+    $userInfo = $pdo -> query('select login, activationHash, isActive from user where login like "'.$login.'";') -> fetch();
     if(empty($userInfo) || $userInfo['activationHash'] == ""){
-        header('../html/register.html');
-    }else if($userInfo['login'] == $login && $userInfo['activationHash'] == $activationHash){
+        header('Location: http://localhost/sklep_internetowy/html/register.html');
+    }else if($userInfo['login'] == $login && $userInfo['activationHash'] == $activationHash && $userInfo['isActive'] == 0){
             $sql = 'update user set isActive = true where login like ?;';
             $pdo -> prepare($sql) -> execute([$login]);
     }
-    header('http://localhost/sklep_internetowy/index.html');
+    header('Location: http://localhost/sklep_internetowy/index.html');
 ?>
