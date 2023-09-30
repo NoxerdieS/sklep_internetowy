@@ -6,11 +6,11 @@ fetch('http://localhost/sklep_internetowy/php/checkUser.php')
 	})
 	.then(function (body) {
 		result = body;
-		console.log(result);
+		// console.log(result);
 		if (result == '0') {
 			window.location.replace('../html/login_page.html');
 		} else {
 			console.log(result);
-			p.textContent = result;
+			p.textContent = `Jesteś zalogowany jako ${result}`;
 		}
 	});
