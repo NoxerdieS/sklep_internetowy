@@ -1,4 +1,4 @@
-fetch('http://localhost/sklep_internetowy/php/logout.php')
+fetch('../php/logout.php')
 .then((response) => {
     return response.text();
 }).then((body) => {

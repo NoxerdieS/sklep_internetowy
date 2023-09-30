@@ -111,7 +111,7 @@ const register = async () => {
 	formData.append('postcode', postcode.value);
 	formData.append('city', city.value);
 
-	fetch('http://localhost/sklep_internetowy/php/register.php', {
+	fetch('../php/register.php', {
 		method: 'POST',
 		body: formData,
 	})

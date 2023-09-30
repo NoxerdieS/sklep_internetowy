@@ -1,6 +1,6 @@
 const loginBtn = document.querySelector('.login-btn');
 let result;
-fetch('http://localhost/sklep_internetowy/php/checkUser.php')
+fetch('../php/checkUser.php')
 .then(function (response){
     return response.text();
 }).then(function (body){

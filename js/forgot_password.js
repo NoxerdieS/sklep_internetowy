@@ -13,7 +13,7 @@ const closePopUp = () => {
 const forgot_password = (e) => {
 	e.preventDefault();
 	formData.append('email', email.value);
-	fetch('http://localhost/sklep_internetowy/php/forgot_password.php', {
+	fetch('../php/forgot_password.php', {
 		method: 'POST',
 		body: formData,
 	})

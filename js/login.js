@@ -22,7 +22,7 @@ const login = async (e) => {
 	}else{
 		document.cookie = "sunriseLogin= "
 	}
-	fetch('http://localhost/sklep_internetowy/php/login.php', {
+	fetch('../php/login.php', {
 		method: 'POST',
 		body: formData,
 	})

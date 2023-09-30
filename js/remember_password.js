@@ -21,7 +21,7 @@ const remember_password = async () => {
 	formData.append('email', email);
 	formData.append('activationHash', activationHash);
 	formData.append('password', password.value);
-	fetch('http://localhost/sklep_internetowy/php/remember_password.php', {
+	fetch('../php/remember_password.php', {
 		method: 'POST',
 		body: formData,
 	})
