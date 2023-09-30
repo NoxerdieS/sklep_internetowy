@@ -10,6 +10,17 @@ const closePopUp = () => {
 	actionBtn.disabled = false;
 };
 
+const checkMail = (email) => {
+	const re =
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if (re.test(email.value)) {
+		clearError(email, email.name);
+	} else {
+		showError(email, email.name);
+	}
+};
+
 const forgot_password = (e) => {
 	e.preventDefault();
 	formData.append('email', email.value);
@@ -34,5 +45,24 @@ const forgot_password = (e) => {
 			}
 		});
 };
-actionBtn.addEventListener('click', forgot_password);
+
+const checkErrors = () => {
+	const allInputs = document.querySelectorAll('p');
+	let errorCount = 0;
+
+	allInputs.forEach((el) => {
+		if (el.classList.contains('visible')) {
+			errorCount++;
+		}
+	});
+
+	if (errorCount === 0) {
+		forgot_password();
+	}
+};
+
+actionBtn.addEventListener('click', () =>{
+    checkMail(email);
+    checkErrors();
+});
 popUpCloseBtn.addEventListener('click', closePopUp);

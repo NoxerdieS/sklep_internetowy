@@ -1,6 +1,6 @@
 <?php
     $host = 'localhost';
-    $db = 'sklep';
-    $user = 'root';
-    $pass = '';
+    $db = 'jseroka';
+    $user = 'jseroka';
+    $pass = 'SklepSunrise123';
 ?>
