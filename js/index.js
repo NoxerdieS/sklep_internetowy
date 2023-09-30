@@ -5,7 +5,6 @@ fetch('../php/checkUser.php')
     return response.text();
 }).then(function (body){
     result = body;
-	console.log(result);
 	if (result == "0") {
 		loginBtn.innerHTML =
 		'<i class="fa-solid fa-right-to-bracket"></i><p>Zaloguj się</p>';

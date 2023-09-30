@@ -23,7 +23,7 @@
         }else{
             $_SESSION['loggedIn'] = true;
             $_SESSION['login'] = $login;
-            echo '../index.html';
+            echo '../user_panel.html';
         }
     }else{
         $_SESSION['loggedIn'] = false;

@@ -33,13 +33,12 @@ const forgot_password = (e) => {
 		})
 		.then(function (body) {
 			result = body;
-			console.log(result);
 			if (result === 'success') {
 				error.style.visibility = 'hidden';
 				error.textContent = '';
 				popUp.style.visibility = 'visible';
 				actionBtn.disabled = true;
-			} else if (result === '      0') {
+			} else if (result === '0') {
 				error.style.visibility = 'visible';
 				error.textContent = 'Nie istnieje konto z podanym adresem email';
 			}
