@@ -124,6 +124,10 @@ const register = async () => {
 			if (result === 'success') {
 				popUp.style.visibility = 'visible';
 				registerButton.disabled = true;
+			} else if(result === 'Podany login jest już zajęty') {
+				const loginError = document.querySelector('.error-login')
+				loginError.textContent = 'Podany login jest zajęty'
+				loginError.classList.add('visible');
 			}
 		});
 };
