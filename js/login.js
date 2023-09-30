@@ -1,10 +1,13 @@
 let result;
 const loginForm = document.querySelector('#login_form');
 const rememberMe = document.querySelector('#remember');
-$loginCookie = document.cookie
-	.split("; ")
-	.find((row) => row.startsWith("login="))
-	.split("=")[1];
+$loginCookie = document.cookie.split("; ").find((row) => row.startsWith("sunriseLogin="));
+console.log($loginCookie);
+if($loginCookie != undefined){
+	$loginCookie = $loginCookie.split("=")[1];
+}else{
+	$loginCookie = '';
+}
 if($loginCookie != ''){
 	loginForm.elements['login'].value = $loginCookie;
 	rememberMe.checked = true;
@@ -15,9 +18,9 @@ const login = async (e) => {
 	formData.append('login', loginForm.elements['login'].value);
 	formData.append('password', loginForm.elements['password'].value);
 	if(rememberMe.checked){
-		document.cookie = "login="+loginForm.elements['login'].value;
+		document.cookie = "sunriseLogin="+loginForm.elements['login'].value;
 	}else{
-		document.cookie = "login= "
+		document.cookie = "sunriseLogin= "
 	}
 	fetch('http://localhost/sklep_internetowy/php/login.php', {
 		method: 'POST',
