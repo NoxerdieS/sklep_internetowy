@@ -11,19 +11,19 @@
 
     $login = cleanData($_POST['login']);
     $password = cleanData($_POST['password']);
-    $key = $pdo -> query('select pass from user where login like "'.$login.'";') -> fetchColumn();
-    $isActive = $pdo -> query('select isActive from user where login like "'.$login.'";') -> fetchColumn();
-    if(empty($key)){
+    $userInfo = $pdo -> query('select pass, isAdmin, isActive from user where login like "'.$login.'";') -> fetch();
+    if(empty($userInfo['pass'])){
         $_SESSION['loggedIn'] = false;
         echo 0;
-    }else if(password_verify($password, $key)){
-        if($isActive == 0){
+    }else if(password_verify($password, $userInfo['pass'])){
+        if($userInfo['isActive'] == 0){
             $_SESSION['loggedIn'] = false;
             echo 1;
         }else{
             $_SESSION['loggedIn'] = true;
             $_SESSION['login'] = $login;
-            echo '../user_panel.html';
+            $_SESSION['isAdmin'] = $userInfo['isAdmin'];
+            echo '../html/user_panel.php';
         }
     }else{
         $_SESSION['loggedIn'] = false;

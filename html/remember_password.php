@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
+  header('Location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -21,9 +27,9 @@
     <div class="login">
         <div class="login__shadow"></div>
         <div class="login__field">
-          <a href="../index.html" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
+          <a href="../index.php" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
           <form method="post" class="login__form" id="login_form">
-              <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
+              <a href="../index.php" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
                 <input type="password" name="password" id="password" placeholder="Wprowadź nowe hasło:" class="login__form--input">
                 <input type="password" name="password2" id="password2" placeholder="Powtórz hasło:" class="login__form--input">
                 <p class="login__form--error error">Hasła się nie zgadzają</p>

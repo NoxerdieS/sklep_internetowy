@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
+  header('Location: ../index.html');
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -21,21 +27,21 @@
     <div class="login">
         <div class="login__shadow"></div>
         <div class="login__field">
-          <a href="../index.html" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
+          <a href="../index.php" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
           <form method="post" class="login__form" id="login_form">
-              <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
+              <a href="../index.php" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
                 <input type="text" name="login" id="login" placeholder="Wprowadź email lub login:" class="login__form--input">
                 <input type="password" name="password" id="password" placeholder="Wprowadź hasło:" class="login__form--input">
                 <p class="login__form--error error"></p>
                 <div class="login__form--options">
-                    <a href="./forgot_password.html">Zapomniałeś hasła?</a>
+                    <a href="./forgot_password.php">Zapomniałeś hasła?</a>
                     <div class="login__form--checkbox">
                       <label for="remember" class="remember_label">Zapamiętaj mnie:</label>
                       <input type="checkbox" id="remember" class="remember_box" value="1">
                     </div>
                 </div>
                 <input type="submit" value="Zaloguj się" class="login__form--send" id="login_form_send">
-                <div class="login__field--paragraph"><p>Nie posiadasz jeszcze konta? </p><a href="./register_page.html">Zarejestruj się!</a>
+                <div class="login__field--paragraph"><p>Nie posiadasz jeszcze konta? </p><a href="./register_page.php">Zarejestruj się!</a>
                 </div>    
               </form>
         </div>

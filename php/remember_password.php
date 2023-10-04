@@ -10,10 +10,10 @@
     $key = $pdo -> query('select activationHash from user where mail like "'.$email.'";') -> fetchColumn();
 
     if(empty($key) || $activationHash != $key){
-        echo '../index.html';
+        echo '../index.php';
     }else{
         $sql = 'update user set pass = ? where mail like ?;';
         $pdo ->prepare($sql) -> execute([$password, $email]);
-        echo '../html/login_page.html';
+        echo '../html/login_page.php';
     }
 ?>

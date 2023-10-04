@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || $_SESSION['isAdmin']){
+  header('Location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -21,12 +27,10 @@
     <div class="login remind">
         <div class="login__shadow"></div>
         <div class="login__field remind__field">
-            <a href="../index.html" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
-          <p style="font-size: 2.5rem;">Tu będzie panel użytkownika</p>
-          <p class="test" style="font-size: 2rem;"></p>
+            <a href="../index.php" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
+          <p style="font-size: 2.5rem;">Tu będzie panel administratora</p>
         </div>
       </div>
     </div>
 </body>
-<script src="../js/user_panel.js"></script>
 </html>

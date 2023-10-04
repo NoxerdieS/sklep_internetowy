@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -28,7 +31,7 @@
     </nav>
     <nav class="nav__desktop">
       <div class="nav__items">
-        <a href="./index.html" class="nav__item nav__item--logo"></a>
+        <a href="./index.php" class="nav__item nav__item--logo"></a>
         <a href="#laptops" class="nav__item link link-animation">Laptopy</a>
         <a href="#smartphones" class="nav__item link link-animation"
           >Smartfony</a
@@ -46,11 +49,16 @@
         <a href="#cart" class="nav__user--cart"
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
-        <a href="./html/login_page.html" class="nav__user--cart login-btn"
-          ><i class="fa-solid fa-right-to-bracket"></i
-        ><p>Zaloguj się</p></a>
+        <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
+          <a href="./php/logout.php" class="nav__user--cart login-btn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <p>Wyloguj się</p></a> 
+        <?php else: ?>
+          <a href="./html/login_page.php" class="nav__user--cart login-btn">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <p>Zaloguj się</p></a>
+        <?php endif; ?>
       </div>
     </nav>
-    <script src="./js/index.js"></script>
   </body>
 </html>

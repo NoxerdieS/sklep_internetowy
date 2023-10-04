@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
+  header('Location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -15,15 +21,15 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Zaloguj się</title>
+    <title>Przypomnij hasło</title>
   </head>
   <body>
     <div class="login remind">
         <div class="login__shadow"></div>
         <div class="login__field remind__field">
-          <a href="./login_page.html" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
+          <a href="./login_page.php" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
           <form method="post" class="login__form" id="login_form">
-              <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
+              <a href="../index.php" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
                 <input type="text" name="email" id="email" placeholder="Wprowadź adres email:" class="login__form--input">
                 <p class="register__form--error error"></p>
                 <input type="submit" value="Przypomnij hasło" class="login__form--send remind__form--send" id="login_form_send">
