@@ -29,9 +29,9 @@
 
     $mail = new PHPMailer();
 
-    $stmt = $pdo -> query('Select login from user where login like "'.$login.'";');
+    $stmt = $pdo -> query('Select login from user where login like "'.$login.'" or mail like "'.$email.'";');
     if($stmt -> rowCount() > 0){
-        echo 'Podany login jest już zajęty';
+        echo 'Podany login lub email jest już zajęty';
     }else{
         $activationHash = password_hash(mt_rand(10000, 99999), PASSWORD_DEFAULT);
         $sql = 'insert into address(city, postal, address) values(?, ?, ?);';

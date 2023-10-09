@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || $_SESSION['isAdmin']){
+if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION['isAdmin']){
   header('Location: ../index.php');
 }
 ?>

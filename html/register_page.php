@@ -22,8 +22,8 @@
         <div class="login__shadow"></div>
         
         <div class="login__field register__field">
-            <a href="./login_page.html" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
-            <a href="../index.html" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
+            <a href="./login_page.php" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.php" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
             <form method="post" class="login__form register__form" id="register_form"> 
                 <input type="text" name="name" id="name-register" placeholder="Imię:" class="login__form--input register__form--input">
                 <p class="register__form--error error error-name">Niepoprawne imie</p>
