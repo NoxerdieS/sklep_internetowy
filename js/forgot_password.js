@@ -5,14 +5,6 @@ const popUp = document.querySelector('.register__popup');
 const popUpCloseBtn = document.querySelector('.register__popup--closeBtn');
 const error = document.querySelector('.error');
 
-const showError = (input) => {
-	error.classList.add('visible');
-};
-
-const clearError = (input, name) => {
-	error.classList.remove('visible');
-};
-
 const closePopUp = () => {
 	popUp.style.visibility = 'hidden';
 	actionBtn.disabled = false;
@@ -23,9 +15,11 @@ const checkMail = (email) => {
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	if (re.test(email.value)) {
-		clearError(email);
+		error.style.visibility = 'hidden';
+		error.textContent = '';
 	} else {
-		showError(email);
+		error.style.visibility = 'visible';
+		error.textContent = 'Niepoprawny adres email';
 	}
 };
 
@@ -52,23 +46,7 @@ const forgot_password = () => {
 		});
 };
 
-const checkErrors = () => {
-	const allInputs = document.querySelectorAll('p');
-	let errorCount = 0;
-
-	allInputs.forEach((el) => {
-		if (el.classList.contains('visible')) {
-			errorCount++;
-		}
-	});
-
-	if (errorCount === 0) {
-		forgot_password();
-	}
-};
-
-actionBtn.addEventListener('click', () =>{
-    checkMail(email);
-    checkErrors();
+actionBtn.addEventListener('click', () => {
+	checkMail(email);
 });
 popUpCloseBtn.addEventListener('click', closePopUp);
