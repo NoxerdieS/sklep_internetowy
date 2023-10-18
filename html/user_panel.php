@@ -63,10 +63,11 @@
     </nav>
     <main class="user">
           <section class="user__menu">
-            <a href="" class="user__menu--item"></a>
-            <a href="" class="user__menu--item"></a>
-            <a href="" class="user__menu--item"></a>
-            <a href="" class="user__menu--item"></a>
+            <a href="" class="user__menu--item link two">Zamówiena</a>
+            <a href="" class="user__menu--item link two">Zwroty i reklamacje</a>
+            <a href="" class="user__menu--item link two">Opinie</a>
+            <a href="" class="user__menu--item link two">Dane do zamówienia</a>
+            <a href="" class="user__menu--item link two">Ustawienia konta</a>
           </section>
           <section class="user__section"></section>
     </main>

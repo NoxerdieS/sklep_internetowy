@@ -33,6 +33,20 @@
       <div class="nav__items">
         <a href="./index.php" class="nav__item nav__item--logo"></a>
         <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
+        <div class="nav__dropdown nav__dropdown--one">
+          <div class="nav__dropdown--left">
+            <a href="" class="link link-animation">Whisky</a>
+            <a href="" class="link link-animation">Gin</a>
+            <a href="" class="link link-animation">Wódka</a>
+            <a href="" class="link link-animation">Rum</a>
+            <a href="" class="link link-animation">Tequila</a>
+          </div>
+          <div class="nav__dropdown--right">
+            <img src="./img/placeholder_image.jpg" alt="">
+            <p>Lorem ipsum, quia dol</p>
+            <p>150zł</p>
+          </div>
+        </div>
         <a href="#" class="nav__item link link-animation"
           >Wina</a
         >
@@ -62,6 +76,7 @@
           <p>Zaloguj się</p></a> -->
         <?php //endif; ?>
       </div>
+      
     </nav>
   </body>
 </html>
