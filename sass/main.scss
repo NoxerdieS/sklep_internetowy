@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -97,7 +98,8 @@ a {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 15px;
+      // padding: 10px;
+      margin: 10px;
       transition: transform 0.3s;
       text-wrap: nowrap;
       p {
@@ -377,6 +379,24 @@ a {
     &--send {
       height: 50px;
     }
+  }
+}
+
+// USER PANEL
+
+.user {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  padding: 20px 60px;
+  &__menu {
+    height: 100%;
+    width: 30%;
+    
+  }
+  &__section {
+    height: 90vh;
+    width: 70%;
   }
 }
 

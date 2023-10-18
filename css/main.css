@@ -51,6 +51,7 @@ html {
 }
 
 body {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -128,7 +129,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  margin: 10px;
   transition: transform 0.3s;
   text-wrap: nowrap;
 }
@@ -376,6 +377,21 @@ a {
 }
 .remind__form--send {
   height: 50px;
+}
+
+.user {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  padding: 20px 60px;
+}
+.user__menu {
+  height: 100%;
+  width: 30%;
+}
+.user__section {
+  height: 90vh;
+  width: 70%;
 }
 
 .visible {
