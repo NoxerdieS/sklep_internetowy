@@ -47,15 +47,15 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
         <?php //if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
-          <a href="./html/user_panel.php" class="nav__user--cart login-btn">
+          <a href="../html/user_panel.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-user"></i>
           <p>Twoje konto</p>
           </a>
-          <a href="./php/logout.php" class="nav__user--cart login-btn">
+          <a href="../php/logout.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-right-from-bracket"></i>
           <p>Wyloguj się</p></a> 
         <?php //else: ?>
-          <!-- <a href="./html/login_page.php" class="nav__user--cart login-btn">
+          <!-- <a href="../html/login_page.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-right-to-bracket"></i>
           <p>Zaloguj się</p></a> -->
         <?php //endif; ?>
