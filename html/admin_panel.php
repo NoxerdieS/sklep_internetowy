@@ -1,6 +1,6 @@
 <?php
 //session_start();
-//if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
+//if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
 //  header('Location: ../index.php');
 //}
 ?>
@@ -63,13 +63,13 @@
     </nav>
     <main class="user">
           <section class="user__menu">
-            <a href="" class="user__menu--item link two">Zarządzanie produktami</a>
-            <a href="" class="user__menu--item link two">Zarządzanie kategoriami</a>
-            <a href="" class="user__menu--item link two">Zarządzanie klientami</a>
-            <a href="" class="user__menu--item link two">Zamówienia użytkowników</a>
-            <a href="" class="user__menu--item link two">Ustawienia dostawy</a>
-            <a href="" class="user__menu--item link two">Ustawienia płatności</a>
-            <a href="" class="user__menu--item link two">Edytuj strony informacyjne</a>
+            <a href="./admin_panel/products.php" class="user__menu--item link two">Zarządzanie produktami</a>
+            <a href="./admin_panel/categories.php" class="user__menu--item link two">Zarządzanie kategoriami</a>
+            <a href="./admin_panel/customers.php" class="user__menu--item link two">Zarządzanie klientami</a>
+            <a href="./admin_panel/orders.php" class="user__menu--item link two">Zamówienia użytkowników</a>
+            <a href="./admin_panel/shipping.php" class="user__menu--item link two">Ustawienia dostawy</a>
+            <a href="./admin_panel/payment.php" class="user__menu--item link two">Ustawienia płatności</a>
+            <a href="./admin_panel/info_editor.php" class="user__menu--item link two">Edytuj strony informacyjne</a>
             
           </section>
           <section class="user__section"></section>
