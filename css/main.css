@@ -101,7 +101,7 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -170,13 +170,20 @@ a {
   position: absolute;
   display: none;
   width: 90%;
-  height: 400px;
-  left: 90px;
-  top: 75px;
-  padding: 10px;
+  top: 70px;
+  height: 420px;
   background-color: #614faf;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+.nav__dropdown--one {
+  left: 90px;
+}
+.nav__dropdown--two {
+  left: 270px;
+}
+.nav__dropdown--three {
+  left: 350px;
 }
 .nav__dropdown--left {
   display: flex;
@@ -186,10 +193,10 @@ a {
   justify-content: space-evenly;
 }
 .nav__dropdown--left a {
-  width: 100px;
+  width: 150px;
   color: #d4d4d4;
-  font-size: 20px;
-  padding: 10px 10px;
+  font-size: 2rem;
+  padding: 15px 30px;
   text-align: center;
 }
 .nav__dropdown--right {
@@ -205,7 +212,10 @@ a {
 }
 .nav__dropdown--right p {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 2.2rem;
+}
+.nav__dropdown:hover {
+  display: flex;
 }
 .nav__items {
   position: absolute;
@@ -226,6 +236,9 @@ a {
   margin: 20px;
   height: 55px;
   width: 55px;
+}
+.nav__item:hover + .nav__dropdown {
+  display: flex;
 }
 .nav__user {
   position: absolute;
@@ -587,8 +600,55 @@ a {
     padding: 10px;
     font-size: 1.7rem;
   }
+  .nav__desktop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 65px;
+    background-color: #614faf;
+    margin: 30px auto;
+    padding: 0px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px #282d50;
+  }
+  .nav__dropdown {
+    width: 80%;
+    height: 400px;
+    top: 68px;
+  }
+  .nav__dropdown--one {
+    left: 90px;
+  }
+  .nav__dropdown--two {
+    left: 230px;
+  }
+  .nav__dropdown--three {
+    left: 290px;
+  }
+  .nav__dropdown--left a {
+    font-size: 1.7rem;
+  }
+  .nav__dropdown--right img {
+    width: 130px;
+    height: 180px;
+  }
+  .nav__dropdown--right p {
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
   .nav__user--cart i {
     font-size: 2.5rem;
+  }
+  .nav__user--search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .nav__user--search input {
+    width: 140px;
   }
 }
 @media (max-width: 992px) {

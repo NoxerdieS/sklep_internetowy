@@ -47,11 +47,36 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation"
-          >Wina</a
-        >
-        <a href="#hardware" class="nav__item link link-animation">Piwa</a>
-        <a href="#" class="nav__item link link-animation">Kursy</a>
+        <a href="#" class="nav__item link link-animation wine">Wina</a>
+        <div class="nav__dropdown nav__dropdown--two">
+          <div class="nav__dropdown--left">
+            <a href="" class="link link-animation">Wytrawne</a>
+            <a href="" class="link link-animation">Słodkie</a>
+            <a href="" class="link link-animation">Półsłodkie</a>
+            <a href="" class="link link-animation">Musujące</a>
+          </div>
+          <div class="nav__dropdown--right">
+            <img src="./img/placeholder_image.jpg" alt="">
+            <p>Lorem ipsum, quia dol</p>
+            <p>150zł</p>
+          </div>
+        </div>
+        <a href="#" class="nav__item link link-animation beer">Piwa</a>
+        <div class="nav__dropdown nav__dropdown--three">
+          <div class="nav__dropdown--left">
+            <a href="" class="link link-animation">IPA</a>
+            <a href="" class="link link-animation">ALE</a>
+            <a href="" class="link link-animation">Lager</a>
+            <a href="" class="link link-animation">Stout</a>
+            <a href="" class="link link-animation">Pilzner</a>
+          </div>
+          <div class="nav__dropdown--right">
+            <img src="./img/placeholder_image.jpg" alt="">
+            <p>Lorem ipsum, quia dol</p>
+            <p>150zł</p>
+          </div>
+        </div>
+        <a href="#" class="nav__item link link-animation courses">Kursy</a>
       </div>
       <div class="nav__user">
         <div class="nav__user--search">

@@ -18,7 +18,7 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -91,13 +91,20 @@ a {
     position: absolute;
     display: none;
     width: 90%;
-    height: 400px;
-    left: 90px;
-    top: 75px;
-    padding: 10px;
+    top: 70px;
+    height: 420px;
     background-color: $secondary-color;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    &--one {
+      left: 90px;
+    }
+    &--two {
+      left: 270px;
+    }
+    &--three {
+      left: 350px;
+    }
     &--left {
       display: flex;
       width: 50%;
@@ -105,10 +112,10 @@ a {
       align-items: center;
       justify-content: space-evenly;
       a {
-        width: 100px;
+        width: 150px;
         color: $main-white;
-        font-size: 20px;
-        padding: 10px 10px;
+        font-size: 2rem;
+        padding: 15px 30px;
         text-align: center;
       }
     }
@@ -124,8 +131,12 @@ a {
       }
       p {
         margin-top: 20px;
-        font-size: 22px;
+        font-size: 2.2rem;
       }
+    }
+
+    &:hover {
+      display: flex;
     }
   }
 
@@ -148,6 +159,10 @@ a {
       margin: 20px;
       height: 55px;
       width: 55px;
+    }
+
+    &:hover + .nav__dropdown {
+      display: flex;
     }
   }
 
@@ -337,7 +352,6 @@ a {
       background-color: $third-color;
       font-size: 2rem;
       color: $main-white;
-      // margin: 15px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -556,11 +570,64 @@ a {
       padding: 10px;
       font-size: 1.7rem;
     }
+    &__desktop {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 65px;
+      background-color: $secondary-color;
+      margin: 30px auto;
+      padding: 0px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 10px $shadow-color;
+    }
+  
+    &__dropdown {
+      width: 80%;
+      height: 400px;
+      top: 68px;
+      &--one {
+        left: 90px;
+      }
+      &--two {
+        left: 230px;
+      }
+      &--three {
+        left: 290px;
+      }
+      &--left {
+        a {
+          // width: 100px;
+          font-size: 1.7rem;
+        }
+      }
+      &--right {
+        img {
+          width: 130px;
+          height: 180px;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 1.8rem;
+        }
+      }
+    }
 
     &__user {
       &--cart {
         i {
           font-size: 2.5rem;
+        }
+      }
+      &--search {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        input {
+          width: 140px;
         }
       }
     }
