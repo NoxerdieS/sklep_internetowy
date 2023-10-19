@@ -31,7 +31,7 @@
     </nav>
     <nav class="nav__desktop">
       <div class="nav__items">
-        <a href="./index.php" class="nav__item nav__item--logo"></a>
+        <a href="./index.php" class="nav__item--logo"></a>
         <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">
@@ -78,5 +78,6 @@
       </div>
       
     </nav>
+    <script src="./js/index.js"></script>
   </body>
 </html>

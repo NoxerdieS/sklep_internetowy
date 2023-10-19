@@ -168,7 +168,7 @@ a {
 }
 .nav__dropdown {
   position: absolute;
-  display: flex;
+  display: none;
   width: 90%;
   height: 400px;
   left: 90px;
@@ -517,6 +517,10 @@ a {
 
 .visible {
   visibility: visible;
+}
+
+.display-flex {
+  display: flex;
 }
 
 @media (max-width: 768px) {
