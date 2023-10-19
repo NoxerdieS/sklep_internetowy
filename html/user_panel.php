@@ -47,15 +47,15 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
         <?php //if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
-          <a href="./html/user_panel.php" class="nav__user--cart login-btn">
+          <a href="../html/user_panel.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-user"></i>
           <p>Twoje konto</p>
           </a>
-          <a href="./php/logout.php" class="nav__user--cart login-btn">
+          <a href="../php/logout.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-right-from-bracket"></i>
           <p>Wyloguj się</p></a> 
         <?php //else: ?>
-          <!-- <a href="./html/login_page.php" class="nav__user--cart login-btn">
+          <!-- <a href="../html/login_page.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-right-to-bracket"></i>
           <p>Zaloguj się</p></a> -->
         <?php //endif; ?>
@@ -63,11 +63,11 @@
     </nav>
     <main class="user">
           <section class="user__menu">
-            <a href="" class="user__menu--item link two">Zamówiena</a>
-            <a href="" class="user__menu--item link two">Zwroty i reklamacje</a>
-            <a href="" class="user__menu--item link two">Opinie</a>
-            <a href="" class="user__menu--item link two">Dane do zamówienia</a>
-            <a href="" class="user__menu--item link two">Ustawienia konta</a>
+            <a href="./user_panel/orders.php" class="user__menu--item link two">Zamówiena</a>
+            <a href="./user_panel/returns.php" class="user__menu--item link two">Zwroty i reklamacje</a>
+            <a href="./user_panel/feedback.php" class="user__menu--item link two">Opinie</a>
+            <a href="./user_panel/shipping_info.php" class="user__menu--item link two">Dane do zamówienia</a>
+            <a href="./user_panel/settings.php" class="user__menu--item link two">Ustawienia konta</a>
           </section>
           <section class="user__section"></section>
     </main>
