@@ -41,39 +41,39 @@
 
 // LINK ANIMATION 2
  
-.two::before,
-.two::after {
+.link-animation-two::before,
+.link-animation-two::after {
 	content: '';
 	position: absolute;
 	width: 0;
 	height: 0;
 }
 
-.two::before {
+.link-animation-two::before {
 	top: -1px;
 	left: -5px;
 	border-top: 0 solid #fff;
 	border-left: 0 solid #fff;
 }
-.two::after {
+.link-animation-two::after {
 	bottom: -1px;
 	right: -5px;
 	border-bottom: 0 solid #fff;
 	border-right: 0 solid #fff;
 }
 
-.two:hover::before,
-.two:hover::after {
+.link-animation-two:hover::before,
+.link-animation-two:hover::after {
 	width: 50px;
 	height: 50%;
 }
 
-.two:hover::before {
+.link-animation-two:hover::before {
 	border-top: 2px solid #fff;
 	border-left: 2px solid #fff;
 }
 
-.two:hover::after {
+.link-animation-two:hover::after {
 	border-bottom: 2px solid #fff;
 	border-right: 2px solid #fff;
 }

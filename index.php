@@ -26,8 +26,48 @@
     <title>Sklep</title>
   </head>
   <body>
-    <nav class="nav nav__mobile">
+    <nav class="nav__mobile">
       <button class="nav__mobile--bars"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav__mobileMenu">
+        <ul>
+            <li class="menu-item one">
+              <p><i class="fa-solid fa-arrow-down"></i>Alkohole mocne</p>
+                <ul class="dropdown dropdown-one">
+                    <li>Whisky</li>
+                    <li>Gin</li>
+                    <li>Wódka</li>
+                    <li>Rum</li>
+                    <li>Tequila</li>
+                </ul>
+            </li>
+            <hr>
+            <li class="menu-item two">
+                <p><i class="fa-solid fa-arrow-down"></i>Wina</p>
+                <ul class="dropdown dropdown-two">
+                    <li>Wytrawne</li>
+                    <li>Słodkie</li>
+                    <li>Półsłodkie</li>
+                    <li>Musujące</li>
+                </ul>
+            </li>
+            <hr>
+            <li class="menu-item three">
+            <i class="fa-solid fa-arrow-down"></i><p>Piwo</p>
+                <ul class="dropdown dropdown-three">
+                    <li>IPA</li>
+                    <li>ALE</li>
+                    <li>Lager</li>
+                    <li>Stout</li>
+                    <li>Pilzner</li>
+                </ul>
+            </li>
+            <hr>
+            <li class="menu-item four">
+            <p>Kursy</p>
+          </li>
+          <hr>
+        </ul>
+      </div>
     </nav>
     <nav class="nav__desktop">
       <div class="nav__items">

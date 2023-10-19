@@ -63,11 +63,11 @@
     </nav>
     <main class="user">
           <section class="user__menu">
-            <a href="./user_panel/orders.php" class="user__menu--item link two">Zamówiena</a>
-            <a href="./user_panel/returns.php" class="user__menu--item link two">Zwroty i reklamacje</a>
-            <a href="./user_panel/feedback.php" class="user__menu--item link two">Opinie</a>
-            <a href="./user_panel/shipping_info.php" class="user__menu--item link two">Dane do zamówienia</a>
-            <a href="./user_panel/settings.php" class="user__menu--item link two">Ustawienia konta</a>
+            <a href="./user_panel/orders.php" class="user__menu--item link link-animation-two">Zamówiena</a>
+            <a href="./user_panel/returns.php" class="user__menu--item link link-animation-two">Zwroty i reklamacje</a>
+            <a href="./user_panel/feedback.php" class="user__menu--item link link-animation-two">Opinie</a>
+            <a href="./user_panel/shipping_info.php" class="user__menu--item link link-animation-two">Dane do zamówienia</a>
+            <a href="./user_panel/settings.php" class="user__menu--item link link-animation-two">Ustawienia konta</a>
           </section>
           <section class="user__section"></section>
     </main>
