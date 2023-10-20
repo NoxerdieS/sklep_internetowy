@@ -141,7 +141,6 @@
           <p>Zaloguj się</p></a> -->
         <?php //endif; ?>
       </div>
-      
     </nav>
     <script src="./js/index.js"></script>
   </body>
