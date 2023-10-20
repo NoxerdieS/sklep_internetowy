@@ -581,17 +581,29 @@ a {
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
-  width: 30%;
+  width: 20%;
   border-right: 2px solid #887ac9;
 }
 .user__menu--item {
-  padding: 20px 40px;
+  width: 200px;
+  padding: 20px 5px;
   font-size: 20px;
   color: #d4d4d4;
+  text-align: center;
 }
 .user__section {
   height: 100%;
-  width: 70%;
+  width: 80%;
+}
+
+.admin__menu {
+  width: 25%;
+}
+.admin__menu--item {
+  width: 300px;
+}
+.admin__section {
+  width: 75%;
 }
 
 .visible {

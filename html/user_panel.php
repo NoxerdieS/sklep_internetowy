@@ -21,7 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Zaloguj się</title>
+    <title>Panel użytkownika</title>
   </head>
   <body>
   <nav class="nav nav__mobile">

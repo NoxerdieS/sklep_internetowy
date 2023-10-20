@@ -31,7 +31,7 @@
       <div class="nav__mobileMenu">
         <ul>
             <li class="menu-item one">
-              <p><i class="fa-solid fa-arrow-down"></i>Alkohole mocne</p>
+              <p>Alkohole mocne</p>
                 <ul class="dropdown dropdown-one">
                     <li>Whisky</li>
                     <li>Gin</li>
@@ -42,7 +42,7 @@
             </li>
             <hr>
             <li class="menu-item two">
-                <p><i class="fa-solid fa-arrow-down"></i>Wina</p>
+                <p>Wina</p>
                 <ul class="dropdown dropdown-two">
                     <li>Wytrawne</li>
                     <li>Słodkie</li>
@@ -52,7 +52,7 @@
             </li>
             <hr>
             <li class="menu-item three">
-            <i class="fa-solid fa-arrow-down"></i><p>Piwo</p>
+            <p>Piwo</p>
                 <ul class="dropdown dropdown-three">
                     <li>IPA</li>
                     <li>ALE</li>

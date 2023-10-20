@@ -541,17 +541,34 @@ a {
 		align-items: center;
 		justify-content: space-evenly;
 		height: 100%;
-		width: 30%;
+		width: 20%;
 		border-right: 2px solid $menu-color;
 		&--item {
-			padding: 20px 40px;
+			width: 200px;
+			padding: 20px 5px;
 			font-size: 20px;
 			color: $main-white;
+			text-align: center;
 		}
 	}
 	&__section {
 		height: 100%;
-		width: 70%;
+		width: 80%;
+	}
+}
+
+// ADMIN PANEL
+
+.admin {
+	&__menu {
+		width: 25%;
+		&--item {
+			width: 300px;
+		}
+	}
+
+	&__section {
+		width: 75%;
 	}
 }
 

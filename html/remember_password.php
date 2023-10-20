@@ -21,7 +21,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Zaloguj się</title>
+    <title>Przypominanie hasła</title>
   </head>
   <body>
     <div class="login">
