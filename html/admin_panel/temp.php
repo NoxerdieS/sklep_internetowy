@@ -4,14 +4,14 @@
 //  header('Location: ../index.php');
 //}
 
-// ob_start();
+ob_start();
 ?>
 
-<!-- html tutaj -->
+<p>Hello world</p>
 
 <?php
 
-// $body=ob_get_contents(); 
-// ob_end_clean();
+$body=ob_get_contents(); 
+ob_end_clean();
 
-// require "../admin_panel.php";
+require "./template.php";
