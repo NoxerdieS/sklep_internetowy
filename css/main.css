@@ -234,6 +234,7 @@ a {
   padding: 0px 30px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 10px #282d50;
+  z-index: 1;
 }
 .nav__dropdown {
   position: absolute;
@@ -610,6 +611,7 @@ a {
   width: 300px;
 }
 .admin__section {
+  height: 99%;
   width: 75%;
 }
 .admin__add {
@@ -617,13 +619,65 @@ a {
   margin: 10px auto;
   display: flex;
   align-items: center;
+  gap: 15px;
+}
+.admin__add--addBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #c452d3;
+  color: #d4d4d4;
+  font-size: 1.7rem;
+  box-shadow: 0px 0px 10px 5px #282d50;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.admin__add--addBtn:hover {
+  transform: scale(1.1);
+}
+.admin__add--search {
+  box-shadow: 0px 0px 10px 10px #282d50;
+}
+.admin__products {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .admin__product {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2em;
+  align-items: center;
   width: 95%;
   height: 120px;
+  padding: 0 15px;
   margin: 10px auto;
-  background-color: red;
+  background-color: #974EC3;
   border-radius: 8px;
+}
+.admin__product--img {
+  width: 100px;
+  height: 100px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.admin__product--name {
+  text-wrap: nowrap;
+  font-size: 2rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.admin__product--edit {
+  width: 150px;
+  height: 40px;
+  grid-column: 6/7;
+  grid-row: 1/2;
+}
+.admin__product--delete {
+  width: 150px;
+  height: 40px;
+  grid-column: 7/8;
+  grid-row: 1/2;
 }
 
 .visible {
@@ -697,20 +751,6 @@ a {
   .nav__item {
     padding: 10px;
     font-size: 1.7rem;
-  }
-  .nav__desktop {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 65px;
-    background-color: #614faf;
-    margin: 30px auto;
-    padding: 0px 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 10px #282d50;
-    z-index: 1;
   }
   .nav__dropdown {
     width: 80%;

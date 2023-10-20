@@ -126,7 +126,7 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
         <?php //if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
-          <a href="./html/user_panel.php" class="nav__user--cart login-btn">
+          <a href="admin_panel.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-user"></i>
           <p>Twoje konto</p>
           </a>
@@ -152,14 +152,51 @@
             <a href="./admin_panel/info_editor.php" class="user__menu--item admin__menu--item link link-animation-two">Edytuj strony informacyjne</a>
             
           </section>
-          <section class="user__section">
+          <section class="user__section admin__section">
             <div class="admin__add">
               <button class="admin__add--addBtn">Dodaj produkt</button>
-              <div class="nav__user--search">
+              <div class="nav__user--search admin__add--search">
                 <input type="text" placeholder="Wyszukaj..." /><i class="fa-solid fa-magnifying-glass"></i>
               </div>
             </div>
-            <div class="admin__product"></div>
+            <div class="admin__products">
+              <div class="admin__product">
+                <img src="../img/placeholder_image.jpg" alt="" class="admin__product--img">
+                <p class="admin__product--name">Przykładowa nazwa</p>
+                <button class="admin__add--addBtn admin__product--edit">Edytuj</button>
+                <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+              </div>
+              <div class="admin__product">
+                <img src="../img/placeholder_image.jpg" alt="" class="admin__product--img">
+                <p class="admin__product--name">Przykładowa nazwa</p>
+                <button class="admin__add--addBtn admin__product--edit">Edytuj</button>
+                <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+              </div>
+              <div class="admin__product">
+                <img src="../img/placeholder_image.jpg" alt="" class="admin__product--img">
+                <p class="admin__product--name">Przykładowa nazwa</p>
+                <button class="admin__add--addBtn admin__product--edit">Edytuj</button>
+                <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+              </div>
+              <div class="admin__product">
+                <img src="../img/placeholder_image.jpg" alt="" class="admin__product--img">
+                <p class="admin__product--name">Przykładowa nazwa</p>
+                <button class="admin__add--addBtn admin__product--edit">Edytuj</button>
+                <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+              </div>
+              <div class="admin__product">
+                <img src="../img/placeholder_image.jpg" alt="" class="admin__product--img">
+                <p class="admin__product--name">Przykładowa nazwa</p>
+                <button class="admin__add--addBtn admin__product--edit">Edytuj</button>
+                <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+              </div>
+              <div class="admin__product">
+                <img src="../img/placeholder_image.jpg" alt="" class="admin__product--img">
+                <p class="admin__product--name">Przykładowa nazwa</p>
+                <button class="admin__add--addBtn admin__product--edit">Edytuj</button>
+                <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+              </div>
+            </div>
           </section>
     </main>
 </body>
