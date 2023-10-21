@@ -1,8 +1,8 @@
 <?php
-//session_start();
-//if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
-//  header('Location: ../index.php');
-//}
+  session_start();
+  if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
+  header('Location: ../index.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -20,7 +20,7 @@
       src="https://kit.fontawesome.com/bec5797acb.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
     <title>Panel użytkownika</title>
   </head>
   <body>

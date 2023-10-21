@@ -135,6 +135,7 @@
       </div>
       
     </nav>
+    <div class="admin__popup--shadow"></div>
     <main class="user admin">
           <section class="user__menu admin__menu">
             <a href="./products.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie produktami</a>
@@ -155,6 +156,59 @@
             </div>
             <?=$body?>
           </section>
-    </main>
+          <div class="admin__popup">
+            <div class="admin__contentContainer">
+              <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
+              <!-- <div class="admin__formContainer"> -->
+                <div class="admin__formContainer">
+                  <label for="name">Nazwa produktu:</label>
+                  <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa produktu">
+                </div>
+
+                <div class="admin__formContainer">
+                  <label for="category">Wybierz kategorię:</label>
+                  <select type="text" name="category" id="category" class="admin__contentContainer--input" placeholder="Kategoria">
+                    <option value="whisky">whisky</option>
+                    <option value="gin">gin</option>
+                    <option value="wódka">wódka</option>
+                    <option value="rum">rum</option>
+                    <option value="tequila">tequila</option>
+                    <option value="wytrawne">wytrawne</option>
+                    <option value="słodkie">słodkie</option>
+                    <option value="półsłodkie">półsłodkie</option>
+                    <option value="IPA">IPA</option>
+                    <option value="ALE">ALE</option>
+                    <option value="lager">lager</option>
+                    <option value="stout">stout</option>
+                    <option value="pilzner">pilzner</option>
+                  </select>
+                </div>
+
+                <div class="admin__formContainer">      
+                  <label for="price">Cena:</label>
+                  <input type="text" name="price" id="price" class="admin__contentContainer--input" placeholder="Cena">
+                </div>
+
+                <div class="admin__formContainer">
+                  <label for="description">Opis produktu:</label>
+                  <textarea name="description" id="description" class="admin__contentContainer--textarea" name="category" id="category" placeholder="Opis" wrap="hard"></textarea>
+                </div>
+
+                <div class="admin__formContainer">
+                  <label for="quantity">Ilość:</label>
+                  <input type="number" name="quantity" id="quantity" class="admin__contentContainer--input" placeholder="Ilość">
+                </div>
+
+                <div class="admin__formContainer">
+                  <label for="image">Zdjęcia produktu:</label>
+                  <input type="file" name="image" id="image" class="admin__contentContainer--file">
+                </div>
+              <!-- </div> -->
+              <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
+            </div>
+          </div>
+        </main>
+        
+    <script src="../../js/admin_panel.js"></script>
 </body>
 </html>

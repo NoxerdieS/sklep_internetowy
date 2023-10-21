@@ -639,6 +639,90 @@ a {
 .admin__add--search {
   box-shadow: 0px 0px 10px 10px #282d50;
 }
+.admin__popup {
+  visibility: hidden;
+  position: absolute;
+  height: 770px;
+  width: 720px;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #614faf;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 5px #282d50;
+}
+.admin__popup--shadow {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+}
+.admin__formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin__contentContainer {
+  position: relative;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.admin__contentContainer--closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  padding: 10px;
+  font-size: 2.5rem;
+  border: none;
+  background: none;
+  color: #d4d4d4;
+  cursor: pointer;
+}
+.admin__contentContainer label {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+.admin__contentContainer--input {
+  height: 40px;
+  width: 250px;
+  padding: 0 10px;
+  font-size: 1.5rem;
+  background-color: #d4d4d4;
+  border: none;
+  border-radius: 8px;
+}
+.admin__contentContainer--textarea {
+  height: 150px;
+  width: 250px;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: #d4d4d4;
+  border: none;
+  border-radius: 8px;
+}
+.admin__contentContainer--file {
+  height: 50px;
+  width: 230px;
+  font-size: 1.5rem;
+}
+.admin__contentContainer--addProduct {
+  height: 50px;
+  width: 200px;
+  border-radius: 8px;
+  color: #d4d4d4;
+  font-size: 2rem;
+  border: none;
+  background-color: #c452d3;
+  box-shadow: 0px 0px 10px 5px #282d50;
+  cursor: pointer;
+}
 .admin__products {
   overflow: scroll;
   overflow-x: hidden;

@@ -23,7 +23,7 @@
             $_SESSION['loggedIn'] = true;
             $_SESSION['login'] = $login;
             $_SESSION['isAdmin'] = $userInfo['isAdmin'];
-            echo '../html/user_panel.php';
+            echo '../index.php';
         }
     }else{
         $_SESSION['loggedIn'] = false;

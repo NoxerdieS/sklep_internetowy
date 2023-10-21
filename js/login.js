@@ -2,7 +2,6 @@ let result;
 const loginForm = document.querySelector('#login_form');
 const rememberMe = document.querySelector('#remember');
 $loginCookie = document.cookie.split("; ").find((row) => row.startsWith("sunriseLogin="));
-console.log($loginCookie);
 if($loginCookie != undefined){
 	$loginCookie = $loginCookie.split("=")[1];
 }else{
@@ -31,7 +30,7 @@ const login = async (e) => {
 		})
 		.then(function (body) {
 			result = body;
-			console.log(result);
+			// console.log(result);
 			const errorMsg = document.querySelector('.error');
 			if (result == '0') {
 				errorMsg.textContent = 'Wprowadzono nieprawidłowe dane';
