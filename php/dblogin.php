@@ -3,4 +3,3 @@
     $db = 'jseroka';
     $user = 'root';
     $pass = '';
-?>
