@@ -1,8 +1,4 @@
 <?php
-//session_start();
-//if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
-//  header('Location: ../index.php');
-//}
 
 ob_start();
 require_once('../../php/dblogin.php');

@@ -1,8 +1,8 @@
 <?php
-//session_start();
-//if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
-//  header('Location: ../index.php');
-//}
+session_start();
+if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
+ header('Location: ../../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -137,7 +137,7 @@
   <div class="admin__popup--shadow"></div>
   <main class="user admin">
     <section class="user__menu admin__menu">
-      <a href="./products.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie produktami</a>
+      <a href="./index.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie produktami</a>
       <a href="./categories.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie kategoriami</a>
       <a href="./customers.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie klientami</a>
       <a href="./orders.php" class="user__menu--item admin__menu--item link link-animation-two">Zamówienia użytkowników</a>
@@ -155,7 +155,7 @@
       <?=$body?>
     </section>
     <div class="admin__popup">
-      <form class="admin__contentContainer" id="create-product-form">
+      <form class="admin__contentContainer" id="create-product-form" method="post">
         <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
         <!-- <div class="admin__formContainer"> -->
           <div class="admin__formContainer">

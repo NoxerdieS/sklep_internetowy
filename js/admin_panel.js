@@ -15,11 +15,9 @@ popupCloseBtn.addEventListener('click', () => {
 window.addEventListener("DOMContentLoaded", () => {
     let form = document.querySelector("#create-product-form");
     
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    form.addEventListener("submit", () => {
     
         form = document.querySelector("#create-product-form");
-    
         const formData = new FormData(form);
 
         fetch("../../php/admin_panel/add_product.php", {
@@ -31,6 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
             // res to error phpa przy dodawaniu, w 99% nie będzie
         }).then((body) => {
             console.log(body);
+            location.replace('./index.php');
         });
     });
 });
