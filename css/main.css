@@ -881,4 +881,8 @@ a {
   .nav__desktop {
     display: none;
   }
+  .user {
+    height: 100vh;
+    padding: 10px 10px;
+  }
 }/*# sourceMappingURL=main.css.map */

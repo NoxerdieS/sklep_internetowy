@@ -873,6 +873,8 @@ a {
       }
     }
   }
+
+
 }
 
 @media (max-width: 992px) {
@@ -883,5 +885,10 @@ a {
     &__desktop {
       display: none;
     }
+  }
+
+  .user {
+    height: 100vh;
+    padding: 10px 10px;
   }
 }
