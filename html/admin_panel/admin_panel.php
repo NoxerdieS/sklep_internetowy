@@ -149,61 +149,13 @@ if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmi
       <div class="admin__add">
         <button class="admin__add--addBtn">Dodaj</button>
         <div class="nav__user--search admin__add--search">
-          <input type="text" placeholder="Wyszukaj..." /><i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
       <?=$body?>
     </section>
-    <div class="admin__popup">
-      <form class="admin__contentContainer" id="create-product-form" method="post">
-        <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
-        <!-- <div class="admin__formContainer"> -->
-          <div class="admin__formContainer">
-            <label for="name">Nazwa produktu:</label>
-            <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa produktu">
-          </div>
 
-          <div class="admin__formContainer">
-            <label for="category">Wybierz kategorię:</label>
-            <select type="text" name="category" id="category" class="admin__contentContainer--input" placeholder="Kategoria">
-              <?php
-                $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                foreach($pdo -> query('select id, category_name from category;') as $row){
-                  echo '<option value="'.$row["id"].'"]>'.$row["category_name"].'</option>';
-                }
-              ?>
-            </select>
-          </div>
-
-          <div class="admin__formContainer">      
-            <label for="price">Cena:</label>
-            <input type="text" name="price" id="price" class="admin__contentContainer--input" placeholder="Cena">
-          </div>
-
-          <div class="admin__formContainer">
-            <label for="description">Opis produktu:</label>
-            <textarea name="description" id="description" class="admin__contentContainer--textarea" name="category" id="category" placeholder="Opis" wrap="hard"></textarea>
-          </div>
-
-          <div class="admin__formContainer">
-            <label for="quantity">Ilość:</label>
-            <input type="number" name="quantity" id="quantity" class="admin__contentContainer--input" placeholder="Ilość">
-          </div>
-
-          <div class="admin__formContainer">
-            <label for="image">Zdjęcia produktu:</label>
-            <input type="file" name="image" id="image" class="admin__contentContainer--file">
-          </div>
-        <!-- </div> -->
-        <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
-      </form>
-    </div>
   </main>
-      
-  <script>
-    
-  </script>
   <script src="../../js/admin_panel.js"></script>
 </body>
 </html>
