@@ -665,6 +665,11 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.admin form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .admin__contentContainer {
   position: relative;
   height: 95%;
@@ -672,6 +677,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.admin__contentContainer--userForm {
+  height: 60%;
+  width: 80%;
+  flex-wrap: wrap;
 }
 .admin__contentContainer--closeBtn {
   position: absolute;
@@ -715,6 +725,7 @@ a {
 .admin__contentContainer--addProduct {
   height: 50px;
   width: 200px;
+  margin-top: 15px;
   border-radius: 8px;
   color: #d4d4d4;
   font-size: 2rem;
@@ -752,12 +763,18 @@ a {
   grid-row: 1/2;
 }
 .admin__product--edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 150px;
   height: 40px;
   grid-column: 6/7;
   grid-row: 1/2;
 }
 .admin__product--delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 150px;
   height: 40px;
   grid-column: 7/8;

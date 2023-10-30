@@ -19,17 +19,16 @@ while ($row = $query->fetch()){
     echo $html;
 }
 ?>
-<div class="admin__popup">
+    <div class="admin__popup">
       <div class="admin__contentContainer">
         <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
         <form id="create-product-form" method="post">
             <div class="admin__formContainer">
-            <label for="name">Nazwa kategorii:</label>
-            <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa kategorii">
+                <label for="name">Nazwa kategorii:</label>
+                <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa kategorii">
             </div>
-
-            <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
         </form>
+        <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
       </div>
     </div>
 
