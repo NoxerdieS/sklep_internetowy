@@ -4,21 +4,24 @@ ob_start();
 require_once('../../php/dblogin.php');
 
 $query = $pdo -> query('select product_name, path from product inner join photos on product.photo_id=photos.id;');
-$html = '<div class="admin__products">';
-
+$html = '';
 while ($row = $query->fetch()){
     $param = http_build_query([
         'item' => $row['product_name']
+    ]);
+    $delParams = http_build_query([
+        'item' => $row['product_name'],
+        'table' => 'product',
+        'column' => 'product_name'
     ]);
 
     $html .= '<div class="admin__product">
     <img src="'.$row['path'].'" alt="" class="admin__product--img">
     <p class="admin__product--name">'.$row['product_name'].'</p>
     <a href="./edit_product.php?'.$param.'" class="admin__add--addBtn admin__product--edit">Edytuj</a>
-    <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn admin__product--delete">Usuń</a>
     </div>';
 }
-$html .= '</div>';
 echo $html;
 ?>
 <div class="admin__popup">
@@ -59,7 +62,7 @@ echo $html;
             <input type="file" name="image" id="image" class="admin__contentContainer--file">
             </div>
             <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
-          </form>
+        </form>
       </div>
     </div>
 

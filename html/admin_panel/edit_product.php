@@ -79,6 +79,3 @@ $product_info = $product_info -> fetch();
         </form>
 </div>
 </html>
-<?php
-
-?>

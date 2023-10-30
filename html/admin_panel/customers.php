@@ -6,8 +6,7 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 
 $query = $pdo -> query('select login from user');
 while ($row = $query->fetch()){
-    $html = '<div class="admin__products">
-    <div class="admin__product">
+    $html = '<div class="admin__product">
     <p class="admin__product--name">'.$row['login'].'</p>
     <button class="admin__add--addBtn admin__product--edit">Edytuj dane</button>
     <button class="admin__add--addBtn admin__product--delete">Usuń</button>

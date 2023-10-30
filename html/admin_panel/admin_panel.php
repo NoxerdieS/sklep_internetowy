@@ -149,10 +149,12 @@ if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmi
       <div class="admin__add">
         <button class="admin__add--addBtn">Dodaj</button>
         <div class="nav__user--search admin__add--search">
-          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
+      <div class="admin__products">
       <?=$body?>
+      </div>
     </section>
 
   </main>
