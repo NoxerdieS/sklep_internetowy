@@ -4,6 +4,15 @@ ob_start();
 require_once('../../php/dblogin.php');
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 
+?>
+<div class="admin__add">
+        <button class="admin__add--addBtn">Dodaj</button>
+        <div class="nav__user--search admin__add--search">
+          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+</div>
+<div class="admin__products">
+<?php
 $query = $pdo -> query('select login from user');
 while ($row = $query->fetch()){
     $html = '<div class="admin__product">
@@ -59,11 +68,13 @@ while ($row = $query->fetch()){
                 <label for="name">Miasto:</label>
                 <input type="text" name="city" id="city" class="admin__contentContainer--input" placeholder="Miasto">
             </div>
+            <div class="admin__formContainer">
+                <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
+            </div>
         </form>
-        <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
       </div>
     </div>
-
+    </div>
 <?php
 
 $body=ob_get_contents(); 

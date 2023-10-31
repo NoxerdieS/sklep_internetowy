@@ -3,7 +3,15 @@
 ob_start();
 require_once('../../php/dblogin.php');
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
-
+?>
+<div class="admin__add">
+        <button class="admin__add--addBtn">Dodaj</button>
+        <div class="nav__user--search admin__add--search">
+          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+</div>
+<div class="admin__products">
+<?php
 $query = $pdo -> query('select category_name from category;');
 while ($row = $query->fetch()){
     $delParams = http_build_query([
@@ -27,11 +35,11 @@ while ($row = $query->fetch()){
                 <label for="name">Nazwa kategorii:</label>
                 <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa kategorii">
             </div>
+            <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
         </form>
-        <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
       </div>
     </div>
-
+</div>
 <?php
 $body=ob_get_contents(); 
 ob_end_clean();

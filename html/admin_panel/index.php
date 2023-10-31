@@ -3,6 +3,15 @@
 ob_start();
 require_once('../../php/dblogin.php');
 
+?>
+<div class="admin__add">
+        <button class="admin__add--addBtn">Dodaj</button>
+        <div class="nav__user--search admin__add--search">
+          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+</div>
+<div class="admin__products">
+<?php
 $query = $pdo -> query('select product_name, path from product inner join photos on product.photo_id=photos.id;');
 $html = '';
 while ($row = $query->fetch()){
@@ -65,7 +74,7 @@ echo $html;
         </form>
       </div>
     </div>
-
+</div>
 <?php
 
 $body=ob_get_contents(); 

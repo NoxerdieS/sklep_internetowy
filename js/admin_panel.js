@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(addForm);
         let filename = window.location.pathname;
         filename = filename.substring(filename.lastIndexOf('/')+1, filename.lastIndexOf('.'))
-        fetch(`../../php/admin_panel/add_product.php?file=${filename}`, {
+        fetch(`../../php/admin_panel/add_item.php?file=${filename}`, {
             method: 'POST',
             body: formData
         })
