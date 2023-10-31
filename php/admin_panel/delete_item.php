@@ -10,12 +10,17 @@ if(!empty($_GET)){
 }
 if(isset($_POST['submit'])){
     require_once('../dblogin.php');
-    $photo_id = 0;
+    $photo_id = $address_id = 0;
     if($_SESSION['table'] == "product"){
         $sql = 'select photo_id from product where product_name like ?';
         $stmt = $pdo ->prepare($sql);
         $stmt -> execute([$_SESSION['name']]);
         $photo_id = $stmt -> fetchColumn();
+    }else if($_SESSION['table'] == 'user'){
+        $sql = 'select address_id from user where login like ?';
+        $stmt = $pdo ->prepare($sql);
+        $stmt -> execute([$_SESSION['name']]);
+        $address_id = $stmt -> fetchColumn();
     }
     $sql = 'delete from '.$_SESSION['table'].' where '.$_SESSION['column'].' like ?';
     $stmt = $pdo ->prepare($sql);
@@ -25,6 +30,11 @@ if(isset($_POST['submit'])){
         $stmt = $pdo ->prepare($sql);
         $stmt -> execute([$photo_id]);
         header('Location: ../../html/admin_panel/index.php');
+    }else if($_SESSION['table'] == 'user'){
+        $sql = 'delete from address where id = ?';
+        $stmt = $pdo ->prepare($sql);
+        $stmt -> execute([$address_id]);
+        header('Location: ../../html/admin_panel/customers.php');
     }
 }
 

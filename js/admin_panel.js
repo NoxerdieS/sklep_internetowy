@@ -17,9 +17,19 @@ searchBtn.addEventListener('click', () => {
     const formData = new FormData();
     formData.append('searchVal', searchBar.value)
     console.log(searchBar.value)
+    //  '<i class="fa-solid fa-x" id="resetSearchBar"></i>'
+    
     fetch("../../php/admin_panel/search.php", {
         method: 'POST',
         body: formData
+    }).then((res) =>{
+        return res.text();
+    }).then((body) => {
+        if(body = "") {
+            
+        }else {
+            
+        }
     })
 })
 window.addEventListener("DOMContentLoaded", () => {

@@ -15,10 +15,18 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 <?php
 $query = $pdo -> query('select login from user');
 while ($row = $query->fetch()){
+    $param = http_build_query([
+        'item' => $row['login']
+    ]);
+    $delParams = http_build_query([
+        'item' => $row['login'],
+        'table' => 'user',
+        'column' => 'login'
+    ]);
     $html = '<div class="admin__product">
     <p class="admin__product--name">'.$row['login'].'</p>
-    <button class="admin__add--addBtn admin__product--edit">Edytuj dane</button>
-    <button class="admin__add--addBtn admin__product--delete">Usuń</button>
+    <a href="./edit_customer.php?'.$param.'" class="admin__add--addBtn admin__product--edit">Edytuj dane</a>
+    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn admin__product--delete">Usuń</a>
     </div>';
     echo $html;
 }

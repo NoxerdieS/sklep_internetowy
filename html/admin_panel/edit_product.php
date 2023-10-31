@@ -30,7 +30,7 @@ $product_info = $product_info -> fetch();
     <title>Panel administratora</title>
   </head>
 <div class="admin__contentContainer">
-        <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
+        <a href="./index.php" class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></a>
         <form id="create-product-form" method="post" action="../../php/admin_panel/edit_product.php?id=<?=$product_info['id']?>" enctype="multipart/form-data">
             <div class="admin__formContainer">
             <label for="name">Nazwa produktu:</label>
