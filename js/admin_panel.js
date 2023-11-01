@@ -14,23 +14,30 @@ popupCloseBtn.addEventListener('click', () => {
 })
 searchBtn.addEventListener('click', () => {
     const searchBar = document.querySelector('#searchBar')
-    const formData = new FormData();
-    formData.append('searchVal', searchBar.value)
-    console.log(searchBar.value)
-    //  '<i class="fa-solid fa-x" id="resetSearchBar"></i>'
-    
-    fetch("../../php/admin_panel/search.php", {
-        method: 'POST',
-        body: formData
-    }).then((res) =>{
-        return res.text();
-    }).then((body) => {
-        if(body = "") {
-            
-        }else {
-            
+    const searchRes = document.querySelectorAll('.admin__product--name')
+    const adminProducts = document.querySelector('.admin__products')
+    adminProducts.innerHTML =''
+    searchRes.forEach(element =>{
+        if(element.innerHTML.includes(searchBar.value)){
+            adminProducts.appendChild(element.parentElement)
         }
     })
+
+    let searchResetBtn = document.createElement('i')
+    searchResetBtn.classList.add('fa-solid', 'fa-x')
+    searchResetBtn.setAttribute('id', 'resetSearchBtn')
+    searchBtn.replaceWith(searchResetBtn)
+    searchResetBtn = document.querySelector('#resetSearchBtn')
+    searchResetBtn.addEventListener('click', () => {
+        searchBar.value = ""
+        adminProducts.innerHTML = ""
+        searchRes.forEach(element =>{
+            adminProducts.appendChild(element.parentElement)
+        })
+        searchResetBtn.replaceWith(searchBtn)
+    })
+
+
 })
 window.addEventListener("DOMContentLoaded", () => {
     let addForm = document.querySelector("#create-product-form");
