@@ -616,7 +616,7 @@ a {
 }
 .admin__add {
   width: 95%;
-  margin: 10px auto;
+  margin: 10px 25px;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -660,6 +660,13 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 9;
 }
+.admin__formContainersBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .admin__formContainer {
   display: flex;
   flex-direction: column;
@@ -679,9 +686,8 @@ a {
   justify-content: space-evenly;
 }
 .admin__contentContainer--userForm {
-  height: 60%;
-  width: 80%;
-  flex-wrap: wrap;
+  height: 80%;
+  width: 90%;
 }
 .admin__contentContainer--closeBtn {
   position: absolute;
@@ -735,8 +741,20 @@ a {
   cursor: pointer;
 }
 .admin__products {
+  width: 100%;
   overflow: scroll;
   overflow-x: hidden;
+}
+.admin__category {
+  width: 40%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+  margin: 10px 25px;
+  background-color: #974EC3;
+  border-radius: 8px;
 }
 .admin__product {
   display: grid;
@@ -746,7 +764,7 @@ a {
   width: 95%;
   height: 120px;
   padding: 0 15px;
-  margin: 10px auto;
+  margin: 10px 25px;
   background-color: #974EC3;
   border-radius: 8px;
 }
