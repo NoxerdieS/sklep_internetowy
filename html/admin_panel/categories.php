@@ -20,7 +20,7 @@ while ($row = $query->fetch()){
         'column' => 'category_name'
     ]);
     
-    $html = '<div class="admin__product">
+    $html = '<div class="admin__category">
     <p class="admin__product--name">'.$row['category_name'].'</p>
     <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn admin__product--delete">Usuń</a>
     </div>';
