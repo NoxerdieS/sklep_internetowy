@@ -798,6 +798,13 @@ a {
   grid-column: 7/8;
   grid-row: 1/2;
 }
+.admin__payment {
+  width: 40%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 .visible {
   visibility: visible;

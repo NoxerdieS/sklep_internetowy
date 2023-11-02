@@ -781,6 +781,14 @@ a {
       grid-row: 1/2;
     }
   }
+
+  &__payment {
+    width: 40%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 .visible {
