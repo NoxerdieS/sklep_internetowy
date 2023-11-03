@@ -4,6 +4,7 @@ ob_start();
 require_once('../../php/dblogin.php');
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 ?>
+<h1 class="admin__headline">Zamówienia</h1>
 <div class="admin__products">
 <?php
 $sql = 'select order_details.id, login from order_details inner join user on user.id=order_details.user_id';
@@ -26,6 +27,7 @@ while ($row = $query->fetch()){
     echo $html;
 }
 ?>
+
     <div class="admin__popup">
       <div class="admin__contentContainer">
         <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>

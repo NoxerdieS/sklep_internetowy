@@ -4,13 +4,14 @@ ob_start();
 require_once('../../php/dblogin.php');
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 ?>
+<h1 class="admin__headline">Kategorie</h1>
 <div class="admin__add">
         <button class="admin__add--addBtn">Dodaj</button>
         <div class="nav__user--search admin__add--search">
           <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
         </div>
 </div>
-<div class="admin__products">
+<div class="admin__categories">
 <?php
 $query = $pdo -> query('select category_name from category;');
 while ($row = $query->fetch()){

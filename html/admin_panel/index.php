@@ -4,6 +4,7 @@ ob_start();
 require_once('../../php/dblogin.php');
 
 ?>
+<h1 class="admin__headline">Produkty</h1>
 <div class="admin__add">
         <button class="admin__add--addBtn">Dodaj</button>
         <div class="nav__user--search admin__add--search">

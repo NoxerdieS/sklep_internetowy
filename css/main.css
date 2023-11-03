@@ -610,6 +610,10 @@ a {
 .admin__menu--item {
   width: 300px;
 }
+.admin__headline {
+  font-size: 3rem;
+  margin: 0 auto;
+}
 .admin__section {
   height: 99%;
   width: 75%;
@@ -745,14 +749,23 @@ a {
   overflow: scroll;
   overflow-x: hidden;
 }
+.admin__categories {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 25px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 .admin__category {
-  width: 40%;
+  width: 200px;
   height: 120px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0px 15px;
-  margin: 10px 25px;
   background-color: #974EC3;
   border-radius: 8px;
 }

@@ -5,6 +5,7 @@ require_once('../../php/dblogin.php');
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 
 ?>
+<h1 class="admin__headline">Klienci</h1>
 <div class="admin__add">
         <button class="admin__add--addBtn">Dodaj</button>
         <div class="nav__user--search admin__add--search">
