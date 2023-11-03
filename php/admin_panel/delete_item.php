@@ -10,7 +10,7 @@ if(!empty($_GET)){
 }
 if(isset($_POST['submit'])){
     require_once('../dblogin.php');
-    $photo_id = $address_id = 0;
+    $photo_id = $address_id = $user_id = 0;
     if($_SESSION['table'] == "product"){
         $sql = 'select photo_id from product where product_name like ?';
         $stmt = $pdo ->prepare($sql);
@@ -35,6 +35,11 @@ if(isset($_POST['submit'])){
         $stmt = $pdo ->prepare($sql);
         $stmt -> execute([$address_id]);
         header('Location: ../../html/admin_panel/customers.php');
+    }else if($_SESSION['table'] == 'order_details'){
+        $sql = 'delete from order_product where order_id = ?';
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute([$_SESSION['name']]);
+        header('Location: ../../html/admin_panel/orders.php');
     }
 }
 

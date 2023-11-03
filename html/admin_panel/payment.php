@@ -11,13 +11,12 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 </div>
 <div class="admin__products">
 <?php
-// $query = $pdo -> query('select category_name from category;');
+
 // while ($row = $query->fetch()){
 //     $html = '<div class="admin__product admin__payment">
-//     <img src="'.$row['path'].'" alt="" class="admin__product--img">
-//     <p class="admin__product--name">'.$row['product_name'].'</p>
+//     <p class="admin__product--name">'.$row['id'].'</p>
 //     <a class="admin__add--addBtn">Edytuj</a>
-//     <button class="admin__add--addBtn">Anuluj</button>
+//     <button class="admin__add--addBtn">Usuń</button>
 //     <button class="admin__add--addBtn">Wyłącz</button>
 //     </div>';
 //     echo $html;
@@ -30,6 +29,10 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
             <div class="admin__formContainer">
                 <label for="name">Nazwa sposobu płatności:</label>
                 <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa sposobu płatności">
+            </div>
+            <div class="admin__formContainer">
+                <label for="cost">Prowizja za płatność (%):</label>
+                <input type="number" name="cost" id="cost" class="admin__contentContainer--input" placeholder="Prowizja">
             </div>
             <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
         </form>

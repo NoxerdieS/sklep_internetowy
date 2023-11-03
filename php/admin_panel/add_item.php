@@ -18,6 +18,10 @@
         }else if ($file == "categories"){
             $sql = 'insert into category(category_name) values(?)';
             $pdo -> prepare($sql) -> execute([$_POST['name']]);
+        }else if($file == 'payment'){
+            $sql = 'insert into payment(payment_name, payment_cost, isActive) values(?, ?, 1)';
+            $pdo -> prepare($sql) -> execute([$_POST['name'], $_POST['cost']/100]);
+            
         }
     }
     

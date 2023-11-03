@@ -4,24 +4,27 @@ ob_start();
 require_once('../../php/dblogin.php');
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 ?>
-<div class="admin__add">
-        <button class="admin__add--addBtn">Dodaj</button>
-        <div class="nav__user--search admin__add--search">
-          <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
-        </div>
-</div>
 <div class="admin__products">
 <?php
-// $query = $pdo -> query('select category_name from category;');
-// while ($row = $query->fetch()){
-//     $html = '<div class="admin__product">
-//     <img src="'.$row['path'].'" alt="" class="admin__product--img">
-//     <p class="admin__product--name">'.$row['product_name'].'</p>
-//     <a class="admin__add--addBtn admin__product--edit">Edytuj</a>
-//     <button class="admin__add--addBtn admin__product--delete">Anuluj</button>
-//     </div>';
-//     echo $html;
-// }
+$sql = 'select order_details.id, login from order_details inner join user on user.id=order_details.user_id';
+$query = $pdo->prepare($sql);
+$query -> execute();
+while ($row = $query->fetch()){
+    $param = http_build_query([
+        'item' => $row['id']
+    ]);
+    $delParams = http_build_query([
+        'item' => $row['id'],
+        'table' => 'order_details',
+        'column' => 'id'
+    ]);
+    $html = '<div class="admin__product">
+    <p class="admin__product--name">Nr: '.$row['id'].', User: '.$row['login'].'</p>
+    <a href="./edit_order.php?'.$param.'" class="admin__add--addBtn admin__product--edit">Edytuj</a>
+    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn admin__product--delete">Usuń</a>
+    </div>';
+    echo $html;
+}
 ?>
     <div class="admin__popup">
       <div class="admin__contentContainer">
