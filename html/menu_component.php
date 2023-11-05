@@ -101,7 +101,7 @@
           <a href="#cart" class="nav__user--cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ><p>Koszyk</p></a>
-            <a href="../user_panel/user_panel.php" class="nav__user--cart login-btn">
+            <a href="../user_panel/" class="nav__user--cart login-btn">
             <i class="fa-solid fa-user"></i>
             <p>Twoje konto</p>
             </a>

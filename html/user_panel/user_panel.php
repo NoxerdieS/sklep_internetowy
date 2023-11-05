@@ -1,8 +1,8 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
-    header('Location: ../index.php');
-  }
+session_start();
+if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
+    header('Location: ../../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -125,32 +125,36 @@
         <a href="#cart" class="nav__user--cart"
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
-        <?php //if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
-          <a href="user_panel.php" class="nav__user--cart login-btn">
+        <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
+          <a href="" class="nav__user--cart login-btn">
           <i class="fa-solid fa-user"></i>
           <p>Twoje konto</p>
           </a>
-          <a href="./php/logout.php" class="nav__user--cart login-btn">
+          <a href="../../php/logout.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-right-from-bracket"></i>
           <p>Wyloguj się</p></a> 
-        <?php //else: ?>
-          <!-- <a href="./html/login_page.php" class="nav__user--cart login-btn">
+        <?php else: ?>
+          <a href="../../php/login_page.php" class="nav__user--cart login-btn">
           <i class="fa-solid fa-right-to-bracket"></i>
-          <p>Zaloguj się</p></a> -->
-        <?php //endif; ?>
+          <p>Zaloguj się</p></a>
+        <?php endif; ?>
       </div>
       
     </nav>
     <main class="user">
           <section class="user__menu">
-            <a href="" class="user__menu--adminPanel">Panel administratora <i class="fa-solid fa-arrow-right"></i></a>
-            <a href="./user_panel/orders.php" class="user__menu--item link link-animation-two">Zamówiena</a>
-            <a href="./user_panel/returns.php" class="user__menu--item link link-animation-two">Zwroty i reklamacje</a>
-            <a href="./user_panel/feedback.php" class="user__menu--item link link-animation-two">Opinie</a>
-            <a href="./user_panel/shipping_info.php" class="user__menu--item link link-animation-two">Dane do zamówienia</a>
-            <a href="./user_panel/settings.php" class="user__menu--item link link-animation-two">Ustawienia konta</a>
+            <?php if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>
+            <a href="../admin_panel/" class="user__menu--adminPanel">Panel administratora <i class="fa-solid fa-arrow-right"></i></a>
+            <?php endif; ?>
+            <a href="./index.php" class="user__menu--item link link-animation-two">Zamówiena</a>
+            <a href="./returns.php" class="user__menu--item link link-animation-two">Zwroty i reklamacje</a>
+            <a href="./feedback.php" class="user__menu--item link link-animation-two">Opinie</a>
+            <a href="./shipping_info.php" class="user__menu--item link link-animation-two">Dane do zamówienia</a>
+            <a href="./settings.php" class="user__menu--item link link-animation-two">Ustawienia konta</a>
           </section>
-          <section class="user__section"></section>
+          <section class="user__section">
+            <?=$body?>
+          </section>
     </main>
 </body>
 </html>

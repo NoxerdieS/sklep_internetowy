@@ -128,7 +128,7 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
         <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
-          <a href="./html/user_panel/user_panel.php" class="nav__user--cart login-btn">
+          <a href="./html/user_panel/" class="nav__user--cart login-btn">
           <i class="fa-solid fa-user"></i>
           <p>Twoje konto</p>
           </a>

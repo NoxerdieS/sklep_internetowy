@@ -1,8 +1,4 @@
 <?php
-session_start();
-if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
- header('Location: ../../index.php');
-}
 ob_start();
 ?>
 <h1 class="admin__headline">Sposoby dostawy</h1>
