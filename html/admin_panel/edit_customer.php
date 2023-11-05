@@ -35,7 +35,7 @@ $address_info = $address_info -> fetch();
   </head>
   <div class="admin__contentContainer">
         <a href="./customers.php" class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></a>
-        <form class="admin__contentContainer--userForm" id="create-product-form" action="../../php/admin_panel/edit_customer.php?oldLogin=<?=$_GET['item']?>&address=<?=$user_info['address_id']?>" method="post">
+        <form class="admin__contentContainer--userForm" id="create-product-form" action="../../php/admin_panel/edit_customer.php?oldLogin=<?=$login?>&address=<?=$user_info['address_id']?>" method="post">
             <div class="admin__formContainer">
                 <label for="name">Imię:</label>
                 <input type="text" name="firstname" id="firstname" class="admin__contentContainer--input" placeholder="Imię" value="<?=$user_info['firstname']?>">
@@ -77,13 +77,19 @@ $address_info = $address_info -> fetch();
                 <input type="text" name="city" id="city" class="admin__contentContainer--input" placeholder="Miasto" value="<?=$address_info['city']?>">
             </div>
             <div class="admin__formContainer">
-                <label for="name">isAdmin:</label>
-                <input type="text" name="isAdmin" id="isAdmin" class="admin__contentContainer--input" placeholder="isAdmin" value="<?=$user_info['isAdmin']?>">
-            </div>
-            <div class="admin__formContainer">
-                <label for="name">isActive:</label>
-                <input type="text" name="isActive" id="isActive" class="admin__contentContainer--input" placeholder="isActive" value="<?=$user_info['isActive']?>">
-            </div>
+                    <label for="isAdmin">isAdmin:</label>
+                    <select name="isAdmin" id="isAdmin" class="admin__contentContainer--input">
+                        <option value="0">Nie</option>
+                        <option value="1">Tak</option>
+                    </select>
+                </div>
+                <div class="admin__formContainer">
+                    <label for="name">isActive:</label>
+                    <select name="isActive" id="isActive" class="admin__contentContainer--input">
+                        <option value="1">Tak</option>
+                        <option value="0">Nie</option>
+                    </select>
+                </div>
             <div class="admin__formContainer">
                 <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
             </div>

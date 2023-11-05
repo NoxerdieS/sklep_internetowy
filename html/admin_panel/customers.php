@@ -87,7 +87,7 @@ while ($row = $query->fetch()){
                 </div>
                 <div class="admin__formContainer">
                     <label for="name">isActive:</label>
-                    <select name="isAdmin" id="isAdmin" class="admin__contentContainer--input">
+                    <select name="isActive" id="isActive" class="admin__contentContainer--input">
                         <option value="1">Tak</option>
                         <option value="0">Nie</option>
                     </select>

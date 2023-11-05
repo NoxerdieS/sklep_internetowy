@@ -22,6 +22,10 @@
             $sql = 'insert into payment(payment_name, payment_cost, isActive) values(?, ?, 1)';
             $pdo -> prepare($sql) -> execute([$_POST['name'], $_POST['cost']/100]);
             
+        }else if($file == 'shipping'){
+            $sql = 'insert into shipping(shipper_name, shipping_cost, isActive) values(?, ?, 1)';
+            $pdo -> prepare($sql) -> execute([$_POST['name'], $_POST['cost']/100]);
+            
         }
     }
     

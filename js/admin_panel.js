@@ -51,10 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
             method: 'POST',
             body: formData
         })
-        .then((res) =>{
-            return res.text();
-            // res to error phpa przy dodawaniu, w 99% nie będzie
-        }).then((body) => {
+        .then(() =>{
             window.location.reload()
         })
     })

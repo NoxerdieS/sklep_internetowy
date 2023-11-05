@@ -40,6 +40,10 @@ if(isset($_POST['submit'])){
         $stmt = $pdo -> prepare($sql);
         $stmt -> execute([$_SESSION['name']]);
         header('Location: ../../html/admin_panel/orders.php');
+    }else if($_SESSION['table'] == 'shipping'){
+        header('Location: ../../html/admin_panel/shipping.php');
+    }else if($_SESSION['table'] == 'payment'){
+        header('Location: ../../html/admin_panel/payment.php');
     }
 }
 
@@ -66,7 +70,7 @@ if(isset($_POST['submit'])){
 <body>
     <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
         <div class="admin__formContainer">
-            <p class="admin__product--name">Czy na pewno chcesz usunąć tą pozycję?</p>
+            <p class="admin__product--name">Czy na pewno chcesz usunąć tę pozycję?</p>
             <input type="text" name="name" id="name" class="admin__contentContainer--input"  value="<?=$_SESSION['name']?>" readonly>
             <br>
             <input type="submit" name="submit" class="admin__add--addBtn" value="Tak">

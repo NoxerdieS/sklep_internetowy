@@ -13,15 +13,25 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 <div class="admin__products">
 <?php
 
-// while ($row = $query->fetch()){
-//     $html = '<div class="admin__product admin__payment">
-//     <p class="admin__product--name">'.$row['id'].'</p>
-//     <a class="admin__add--addBtn">Edytuj</a>
-//     <button class="admin__add--addBtn">Usuń</button>
-//     <button class="admin__add--addBtn">Wyłącz</button>
-//     </div>';
-//     echo $html;
-// }
+$sql = 'select id, payment_name, isActive from payment';
+$query = $pdo -> prepare($sql);
+$query -> execute();
+while ($row = $query->fetch()){
+    $param = http_build_query([
+      'item' => $row['payment_name']
+    ]);
+    $delParams = http_build_query([
+      'item' => $row['payment_name'],
+      'table' => 'payment',
+      'column' => 'payment_name'
+    ]);
+    $html = '<div class="admin__product admin__payment">
+    <p class="admin__product--name">'.$row['payment_name'].'</p>
+    <a href="./edit_payment.php?'.$param.'" class="admin__add--addBtn">Edytuj</a>
+    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn">Usuń</a>
+    </div>';
+    echo $html;
+}
 ?>
     <div class="admin__popup">
       <div class="admin__contentContainer">
