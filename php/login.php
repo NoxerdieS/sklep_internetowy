@@ -23,7 +23,11 @@
             $_SESSION['loggedIn'] = true;
             $_SESSION['login'] = $login;
             $_SESSION['isAdmin'] = $userInfo['isAdmin'];
-            echo '../index.php';
+            if($_SESSION['isAdmin'] == 1){
+                echo '../html/admin_panel/';
+            }else{
+                echo '../html/user_panel/';
+            }
         }
     }else{
         $_SESSION['loggedIn'] = false;
