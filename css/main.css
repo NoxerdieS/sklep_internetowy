@@ -590,11 +590,23 @@ a {
   border-right: 2px solid #887ac9;
 }
 .user__menu--item {
-  width: 200px;
+  width: 250px;
   padding: 20px 5px;
   font-size: 20px;
   color: #d4d4d4;
   text-align: center;
+}
+.user__menu--adminPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 250px;
+  padding: 20px;
+  color: #d4d4d4;
+  font-size: 2rem;
+  background-color: #974EC3;
+  border-radius: 8px;
 }
 .user__section {
   display: flex;

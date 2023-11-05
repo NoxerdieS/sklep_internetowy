@@ -547,11 +547,24 @@ a {
 		width: 20%;
 		border-right: 2px solid $menu-color;
 		&--item {
-			width: 200px;
+			width: 250px;
 			padding: 20px 5px;
 			font-size: 20px;
 			color: $main-white;
 			text-align: center;
+		}
+
+		&--adminPanel {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 50px;
+			width: 250px;
+			padding: 20px;
+			color: $main-white;
+			font-size: 2rem;
+			background-color: $third-color;
+			border-radius: 8px;
 		}
 	}
 	&__section {

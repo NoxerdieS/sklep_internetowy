@@ -143,6 +143,7 @@
     </nav>
     <main class="user">
           <section class="user__menu">
+            <a href="" class="user__menu--adminPanel">Panel administratora <i class="fa-solid fa-arrow-right"></i></a>
             <a href="./user_panel/orders.php" class="user__menu--item link link-animation-two">Zamówiena</a>
             <a href="./user_panel/returns.php" class="user__menu--item link link-animation-two">Zwroty i reklamacje</a>
             <a href="./user_panel/feedback.php" class="user__menu--item link link-animation-two">Opinie</a>
