@@ -10,7 +10,7 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
           <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
         </div>
 </div>
-<div class="admin__products">
+<div class="admin__categories">
 <?php
 
 $sql = 'select id, payment_name, isActive from payment';
@@ -25,10 +25,10 @@ while ($row = $query->fetch()){
       'table' => 'payment',
       'column' => 'payment_name'
     ]);
-    $html = '<div class="admin__product admin__payment">
+    $html = '<div class="admin__category admin__payment">
     <p class="admin__product--name">'.$row['payment_name'].'</p>
-    <a href="./edit_payment.php?'.$param.'" class="admin__add--addBtn">Edytuj</a>
-    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn">Usuń</a>
+    <a href="./edit_payment.php?'.$param.'" class="admin__add--addBtn admin__payment--btn">Edytuj</a>
+    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn admin__payment--btn">Usuń</a>
     </div>';
     echo $html;
 }
