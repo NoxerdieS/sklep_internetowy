@@ -1,6 +1,6 @@
-const email = document.querySelector("#email");
-const actionBtn = document.querySelector("#login_form_send");
-const popUp = document.querySelector(".register__popup");
+const emailInput = document.querySelector("#email");
+const actionBtn = document.querySelector("#remind_form_send");
+const popUp = document.querySelector(".remind__popup");
 const popUpCloseBtn = document.querySelector(".register__popup--closeBtn");
 const error = document.querySelector(".error");
 
@@ -13,7 +13,7 @@ const checkMail = (email) => {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  if (re.test(email.value)) {
+  if (re.test(email)) {
     error.style.visibility = "hidden";
     error.textContent = "";
     return true;
@@ -26,7 +26,7 @@ const checkMail = (email) => {
 
 const forgot_password = () => {
   const formData = new FormData();
-  formData.append("email", email.value);
+  formData.append("email", emailInput.value);
   fetch("../php/forgot_password.php", {
     method: "POST",
     body: formData,
@@ -50,10 +50,10 @@ const forgot_password = () => {
 
 popUpCloseBtn.addEventListener("click", closePopUp);
 
-document.querySelector("#login_form").addEventListener("submit", (e) => {
+const form = document.querySelector("#login_form")
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (checkMail(email)) {
+  if (checkMail(emailInput.value)) {
     forgot_password();
-  }
-});
+  }});

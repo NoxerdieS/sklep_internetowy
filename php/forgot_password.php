@@ -36,6 +36,6 @@
         $mail -> send();
         echo "success";
     }else{
-        echo 1;
+        echo "0";
     }
 ?>
