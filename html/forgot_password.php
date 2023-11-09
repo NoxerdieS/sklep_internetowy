@@ -32,8 +32,8 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
               <a href="../index.php" class="login__field--logo"><img src="../img/logo_transparent.png" alt="Logo firmy"></a>
                 <input type="text" name="email" id="email" placeholder="Wprowadź adres email:" class="login__form--input">
                 <p class="register__form--error error"></p>
+                <input type="submit" value="Przypomnij hasło" class="login__form--send remind__form--send" id="login_form_send">
             </form>
-            <input type="submit" value="Przypomnij hasło" class="login__form--send remind__form--send" id="login_form_send">
         </div>
         <div class="remind__popup register__popup">
           <div class="register__popup--container">

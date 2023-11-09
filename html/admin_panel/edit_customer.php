@@ -33,7 +33,7 @@ $address_info = $address_info -> fetch();
     <link rel="stylesheet" href="../../css/main.css" />
     <title>Panel administratora</title>
   </head>
-  <div class="admin__contentContainer">
+  <div class="admin__editContainer">
         <a href="./customers.php" class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></a>
         <form class="admin__contentContainer--userForm" id="create-product-form" action="../../php/admin_panel/edit_customer.php?oldLogin=<?=$login?>&address=<?=$user_info['address_id']?>" method="post">
             <div class="admin__formContainer">
