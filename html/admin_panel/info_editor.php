@@ -3,7 +3,7 @@ ob_start();
 ?>
 <h1 class="admin__headline">Sposoby dostawy</h1>
 <div class="admin__add">
-        <button class="admin__add--addBtn">Dodaj</button>
+        <a href="./add_info_page.php" class="admin__add--addBtn">Dodaj</a>
         <div class="nav__user--search admin__add--search">
           <input type="text" placeholder="Wyszukaj..." id="searchBar"/><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
         </div>
@@ -25,7 +25,7 @@ while ($row = $query->fetch()){
     ]);
     $html = '<div class="admin__product">
     <p class="admin__product--name">'.$row['name'].'</p>
-    <a href="./edit_page.php?'.$param.'" class="admin__add--addBtn">Edytuj</a>
+    <a href="./add_page.php?'.$param.'" class="admin__add--addBtn">Edytuj</a>
     <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn">Usuń</a>
     </div>';
     echo $html;
