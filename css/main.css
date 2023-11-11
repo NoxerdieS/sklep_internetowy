@@ -223,17 +223,19 @@ a {
   visibility: visible;
 }
 .nav__desktop {
-  position: relative;
-  display: flex;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
-  justify-content: center;
   width: 90%;
   height: 65px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #614faf;
   margin: 30px auto;
   padding: 0px 30px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 10px #282d50;
+  box-shadow: 0px 0px 10px 2px #282d50;
   z-index: 1;
 }
 .nav__dropdown {
@@ -288,8 +290,8 @@ a {
   display: flex;
 }
 .nav__items {
+  grid-column: 1/4;
   position: absolute;
-  left: 20px;
   display: flex;
   align-items: center;
 }
@@ -303,7 +305,6 @@ a {
 .nav__item--logo {
   background-image: url(../img/logo_transparent.png);
   background-size: cover;
-  margin: 20px;
   height: 55px;
   width: 55px;
 }
@@ -327,6 +328,7 @@ a {
   text-wrap: nowrap;
 }
 .nav__user--cart p {
+  margin: 0;
   color: #d4d4d4;
   font-size: 1.7rem;
 }
@@ -368,6 +370,48 @@ a {
   color: #d4d4d4;
   padding: 7px;
   cursor: pointer;
+}
+
+.header {
+  height: 60vh;
+  width: 100%;
+}
+.header__img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/sunrise-982013_1920.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.header__img--shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -10;
+}
+.header__img--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__img--text h1 {
+  font-size: 4rem;
+}
+.header__img--text p {
+  font-size: 2rem;
+}
+.header__img--text a {
+  font-size: 2rem;
+  height: 40px;
+  width: 150px;
+  text-align: center;
 }
 
 .login {

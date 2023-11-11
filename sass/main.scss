@@ -143,17 +143,23 @@ a {
 		}
 	}
 	&__desktop {
-		position: relative;
-		display: flex;
+		// position: relative;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		position: absolute;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
 		align-items: center;
-		justify-content: center;
 		width: 90%;
 		height: 65px;
+		left: 50%;
+		transform: translateX(-50%);
 		background-color: $secondary-color;
 		margin: 30px auto;
 		padding: 0px 30px;
 		border-radius: 10px;
-		box-shadow: 0px 0px 10px 10px $shadow-color;
+		box-shadow: 0px 0px 10px 2px $shadow-color;
 		z-index: 1;
 	}
 
@@ -211,8 +217,9 @@ a {
 	}
 
 	&__items {
+		grid-column: 1/4;
 		position: absolute;
-		left: 20px;
+		// left: 20px;
 		display: flex;
 		align-items: center;
 	}
@@ -226,7 +233,7 @@ a {
 		&--logo {
 			background-image: url(../img/logo_transparent.png);
 			background-size: cover;
-			margin: 20px;
+			// margin: 20px;
 			height: 55px;
 			width: 55px;
 		}
@@ -251,6 +258,7 @@ a {
 			transition: transform 0.3s;
 			text-wrap: nowrap;
 			p {
+				margin: 0;
 				color: $main-white;
 				font-size: 1.7rem;
 			}
@@ -293,6 +301,56 @@ a {
 			}
 		}
 	}
+}
+
+// HEADER
+
+.header {
+	height: 60vh;
+	width: 100%;
+	&__img{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		background-image: url(../img/sunrise-982013_1920.jpg);
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center;
+		z-index: 0;
+
+		&--shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: #000000, $alpha: 0.2);
+			z-index: -10;
+		}
+
+		&--text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			// color: $main-white;
+			h1 {
+				font-size: 4rem;
+			}
+
+			p{
+				font-size: 2rem;
+			}
+
+			a {
+				font-size: 2rem;
+				height: 40px;
+				width: 150px;
+				text-align: center;
+			}
+		}
+	}
+
 }
 
 // LOGIN

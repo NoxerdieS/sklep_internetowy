@@ -22,6 +22,7 @@
       src="https://kit.fontawesome.com/bec5797acb.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
     <title>Sklep</title>
   </head>
@@ -69,6 +70,7 @@
         </ul>
       </div>
     </nav>
+    <!-- <div style="position: absolute; width: 100%;"> -->
     <nav class="nav__desktop">
       <div class="nav__items">
         <a href="./index.php" class="nav__item--logo"></a>
@@ -142,6 +144,21 @@
         <?php endif; ?>
       </div>
     </nav>
+        <!-- </div> -->
+    <header class="header">
+      <div class="header__img">
+				<div class="header__img--shadow"></div>
+				<div class="header__img--text">
+					<h1 data-aos="fade-up" data-aos-delay="200">Sunrise</h1>
+					<p data-aos="fade-up" data-aos-delay="400">Tu znajdziesz to czego szukasz</p>
+					<a data-aos="fade-up" data-aos-delay="600" href="#" type="button" class="btn btn-outline-light"
+						>Poznaj nas</a
+					>
+				</div>
+			</div>
+    </header>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
