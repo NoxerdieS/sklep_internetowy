@@ -28,7 +28,7 @@
       <script type="module">
         import * as mdParser from "../../js/markdown_parser.js"
         const content = document.querySelector("#content")
-        fetch("./privacy.md")
+        fetch("./'.$_POST['filename'].'.md")
         .then((res)=>{
             return res.text()
         }).then((body)=>{
@@ -37,3 +37,9 @@
       </script>
     </html>';
     fwrite($file, $content);
+    fclose($file);
+    require_once('../dblogin.php');
+    $sql = 'insert into info_pages(name, path) values(?, ?)';
+    $path = '../info_pages/'.$_POST['filename'];
+    $stmt = $pdo ->prepare($sql);
+    $stmt -> execute([$_POST['name'], $path]);

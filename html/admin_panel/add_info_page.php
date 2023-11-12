@@ -32,7 +32,9 @@
 </head>
 <body>
     <a href="./info_editor.php" class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></a>
-    <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Tytuł">
+    <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Nazwa pliku">
+    <input type="text" id="name" class="admin__contentContainer--input" placeholder="Tytuł">
+
     <div id="editorjs"></div>
     <button id="submitBtn" class="admin__contentContainer--addProduct">Zatwierdź</button>
 </body>
@@ -80,8 +82,10 @@
                 output += '\r\n'
             });
             const filename = document.querySelector('#filename')
+            const name = document.querySelector('#name')
             let formData = new FormData()
             formData.append('filename', filename.value)
+            formData.append('name', name.value)
             formData.append('output', output)
             fetch('../../php/admin_panel/add_info_page.php', {
                 method: 'post',
