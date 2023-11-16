@@ -1,4 +1,9 @@
 <?php
+    $text = $_POST['text'];
+    $filename = $_POST['filename'];
+    $name = $_POST['name'];
+
+    file_put_contents('../info_pages/'.$filename, $text);
     $file = fopen("../../html/info_pages/".$_POST['filename'].".md", "w");
     fwrite($file, $_POST['output']);
     fclose($file);
@@ -25,16 +30,23 @@
       <body>
         <div id="content"></div>
       </body>
-      <script type="module">
-        import * as mdParser from "../../js/markdown_parser.js"
-        const content = document.querySelector("#content")
-        fetch("./'.$_POST['filename'].'.md")
-        .then((res)=>{
-            return res.text()
-        }).then((body)=>{
-            content.innerHTML = mdParser.replaceMarkdown(body)
+      <script>
+      fetch("../info_pages/'.$_POST['filename'].'")
+      .then((res) => {
+        return res.json()
+      }).then((body) =>{
+        const editor = new EditorJS({
+            holder: \'editorjs\',
+            autofocus: true,
+            tools: {
+                header: Header,
+                list: List,
+                paragraph: Paragraph
+            },
+            data: body
         })
-      </script>
+      })
+  </script>
     </html>';
     fwrite($file, $content);
     fclose($file);
