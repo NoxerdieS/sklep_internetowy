@@ -77,7 +77,10 @@
             fetch('../../php/admin_panel/edit_info_page.php', {
                 method: 'POST',
                 body: formData
-            })
+            }).then(
+                window.location.replace('./info_editor.php')
+            )
+
         })
     })
 </script>

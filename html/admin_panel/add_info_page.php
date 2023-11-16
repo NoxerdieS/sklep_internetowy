@@ -63,7 +63,9 @@
             fetch('../../php/admin_panel/add_info_page.php', {
                 method: 'POST',
                 body: formData
-            })
+            }).then(
+                window.location.replace('./info_editor.php')
+            )
         })
     })
 </script>
