@@ -43,7 +43,7 @@
           </ul>
         </div>
       </nav>
-      <nav class="nav__desktop">
+      <nav class="nav__desktop nav__panelMenu">
         <div class="nav__items">
           <a href="../../index.php" class="nav__item--logo"></a>
           <a href="#" class="nav__item link link-animation">Alkohole mocne</a>

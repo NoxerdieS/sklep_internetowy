@@ -10,26 +10,26 @@
 }
 
 /* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #d4d4d4 #313866;
-}
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #d4d4d4 #121217;
+  }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 10px;
-}
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 13px;
+  }
 
-*::-webkit-scrollbar-track {
-  background: #313866;
-}
+  *::-webkit-scrollbar-track {
+    background: #121217;
+  }
 
-*::-webkit-scrollbar-thumb {
-  background-color: #d4d4d4;
-  border-radius: 9px;
-  border: 0px solid #ffffff;
-}
+  *::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 12px;
+    border: 0px solid #ffffff;
+  }
 
 html {
   font-size: 62.5%;
@@ -142,6 +142,7 @@ a {
       visibility: visible;
     }
   }
+
   &__desktop {
     // position: relative;
     // display: flex;
@@ -159,8 +160,12 @@ a {
     margin: 30px auto;
     padding: 0px 30px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px $shadow-color;
+    // box-shadow: 0px 0px 10px 2px $shadow-color;
     z-index: 1;
+  }
+
+  &__panelMenu {
+	position: relative;
   }
 
   &__dropdown {
@@ -281,7 +286,7 @@ a {
         height: 40px;
         padding: 10px;
         font-size: 1.7rem;
-        background-color: $menu-color;
+        background-color: $third-color;
         border: none;
         border-radius: 10px;
         color: $main-white;
@@ -666,7 +671,7 @@ a {
       background-color: $bright-button-color;
       color: $main-white;
       font-size: 1.7rem;
-      box-shadow: 0px 0px 10px 5px #282d50;
+    //   box-shadow: 0px 0px 10px 5px #282d50;
       cursor: pointer;
       transition: transform 0.2s;
 
@@ -676,7 +681,7 @@ a {
     }
 
     &--search {
-      box-shadow: 0px 0px 10px 10px #282d50;
+    //   box-shadow: 0px 0px 10px 10px #282d50;
     }
   }
   &__popup {

@@ -9,7 +9,7 @@ if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../img/logo_transparent.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/logo_transparent.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -67,9 +67,9 @@ if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']){
         </ul>
       </div>
     </nav>
-    <nav class="nav__desktop">
+    <nav class="nav__desktop nav__panelMenu">
       <div class="nav__items">
-        <a href="../index.php" class="nav__item--logo"></a>
+        <a href="../../index.php" class="nav__item--logo"></a>
         <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">

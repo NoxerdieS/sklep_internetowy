@@ -95,22 +95,22 @@
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-  scrollbar-width: auto;
-  scrollbar-color: #d4d4d4 #313866;
+  scrollbar-width: none;
+  scrollbar-color: #d4d4d4 #121217;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 13px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #313866;
+  background: #121217;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #d4d4d4;
-  border-radius: 9px;
+  border-radius: 12px;
   border: 0px solid #ffffff;
 }
 
@@ -125,7 +125,7 @@ body {
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   color: #d4d4d4;
-  background-color: #404258;
+  background-color: #121217;
 }
 
 a {
@@ -166,7 +166,7 @@ a {
   right: 0;
   height: 100vh;
   width: 450px;
-  background-color: #474E68;
+  background-color: #24242d;
   z-index: -1;
 }
 .nav__mobileMenu hr {
@@ -231,12 +231,14 @@ a {
   height: 65px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #474E68;
+  background-color: #24242d;
   margin: 30px auto;
   padding: 0px 30px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 2px #282d50;
   z-index: 1;
+}
+.nav__panelMenu {
+  position: relative;
 }
 .nav__dropdown {
   position: absolute;
@@ -244,7 +246,7 @@ a {
   width: 90%;
   top: 70px;
   height: 420px;
-  background-color: #474E68;
+  background-color: #24242d;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -350,7 +352,7 @@ a {
   height: 40px;
   padding: 10px;
   font-size: 1.7rem;
-  background-color: #887ac9;
+  background-color: #363644;
   border: none;
   border-radius: 10px;
   color: #d4d4d4;
@@ -441,7 +443,7 @@ a {
   width: 450px;
   height: 500px;
   padding: 25px 40px;
-  background-color: rgba(64, 66, 88, 0.9);
+  background-color: rgba(18, 18, 23, 0.9);
   border-radius: 10px;
 }
 .login__field--back {
@@ -481,11 +483,11 @@ a {
   border-radius: 10px;
   border: none;
   background: none;
-  border-bottom: 2px solid #50577A;
+  border-bottom: 2px solid #363644;
   text-align: center;
   color: #d4d4d4;
   font-size: 2rem;
-  outline-color: #50577A;
+  outline-color: #363644;
 }
 .login__form--input::-moz-placeholder {
   font-size: 1.8rem;
@@ -516,7 +518,7 @@ a {
 .login__form--options .remember_box {
   height: 25px;
   width: 25px;
-  accent-color: #50577A;
+  accent-color: #363644;
   cursor: pointer;
 }
 .login__form--options a {
@@ -526,13 +528,13 @@ a {
 .login__form--send {
   width: 60%;
   height: 10%;
-  background-color: #50577A;
+  background-color: #363644;
   font-size: 2rem;
   color: #d4d4d4;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  outline-color: #50577A;
+  outline-color: #363644;
 }
 .login__form--remindParagraph {
   visibility: hidden;
@@ -546,7 +548,7 @@ a {
   height: 150px;
   width: 40%;
   padding: 20px;
-  background-color: #50577A;
+  background-color: #363644;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 5px #282d50;
 }
@@ -648,7 +650,7 @@ a {
   padding: 20px;
   color: #d4d4d4;
   font-size: 2rem;
-  background-color: #50577A;
+  background-color: #363644;
   border-radius: 8px;
 }
 .user__section {
@@ -685,18 +687,14 @@ a {
   height: 40px;
   border: none;
   border-radius: 10px;
-  background-color: #c452d3;
+  background-color: #64647d;
   color: #d4d4d4;
   font-size: 1.7rem;
-  box-shadow: 0px 0px 10px 5px #282d50;
   cursor: pointer;
   transition: transform 0.2s;
 }
 .admin__add--addBtn:hover {
   transform: scale(1.1);
-}
-.admin__add--search {
-  box-shadow: 0px 0px 10px 10px #282d50;
 }
 .admin__popup {
   visibility: hidden;
@@ -706,7 +704,7 @@ a {
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #474E68;
+  background-color: #24242d;
   border-radius: 8px;
   z-index: 10;
   box-shadow: 0px 0px 10px 5px #282d50;
@@ -795,7 +793,7 @@ a {
   color: #d4d4d4;
   font-size: 2rem;
   border: none;
-  background-color: #c452d3;
+  background-color: #64647d;
   box-shadow: 0px 0px 10px 5px #282d50;
   cursor: pointer;
 }
@@ -821,7 +819,7 @@ a {
   align-items: center;
   justify-content: space-around;
   padding: 0px 15px;
-  background-color: #50577A;
+  background-color: #363644;
   border-radius: 8px;
 }
 .admin__product {
@@ -833,7 +831,7 @@ a {
   height: 120px;
   padding: 0 15px;
   margin: 10px 25px;
-  background-color: #50577A;
+  background-color: #363644;
   border-radius: 8px;
 }
 .admin__product--img {
@@ -917,7 +915,7 @@ a {
   .login__form--options .remember_box {
     height: 25px;
     width: 25px;
-    accent-color: #50577A;
+    accent-color: #363644;
     cursor: pointer;
   }
   .login__form--options a {
