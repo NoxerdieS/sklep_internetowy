@@ -3,6 +3,11 @@
     if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
      header('Location: ../../index.php');
     }
+    require_once('../../php/dblogin.php');
+    $sql = 'select id, name, filename, path from info_pages where filename like ?';
+    $query = $pdo ->prepare($sql);
+    $query ->execute([$_GET['item']]);
+    $query = $query -> fetch();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -32,21 +37,30 @@
 </head>
 <body>
     <a href="./info_editor.php" class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></a>
-    <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Nazwa pliku">
-    <input type="text" id="name" class="admin__contentContainer--input" placeholder="Tytuł">
+    <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Nazwa pliku" value="<?=$query['filename']?>" disabled>
+    <input type="text" id="name" class="admin__contentContainer--input" placeholder="Tytuł" value="<?=$query['name']?>" disabled>
 
     <div id="editorjs"></div>
     <button id="submitBtn" class="admin__contentContainer--addProduct">Zatwierdź</button>
 </body>
 <script>
-    const editor = new EditorJS({
-        holder: 'editorjs',
-        autofocus: true,
-        tools: {
-            header: Header,
-            list: List,
-            paragraph: Paragraph
-        },
+    let editor
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    fetch(`../info_pages/${urlParams.get('item')}`)
+    .then((res) => {
+        return res.json()
+    }).then((body) =>{
+        editor = new EditorJS({
+            holder: 'editorjs',
+            autofocus: true,
+            tools: {
+                header: Header,
+                list: List,
+                paragraph: Paragraph
+            },
+            data: body
+        })
     })
     const submitBtn = document.querySelector('#submitBtn')
     submitBtn.addEventListener('click', () => {
@@ -60,11 +74,10 @@
             formData.append("filename", filename.value);
             formData.append("name", name.value);
             formData.append("text", JSON.stringify(outputData));
-            fetch('../../php/admin_panel/add_info_page.php', {
+            fetch('../../php/admin_panel/edit_info_page.php', {
                 method: 'POST',
                 body: formData
             })
         })
     })
 </script>
-</html>

@@ -11,21 +11,21 @@ ob_start();
 <div class="admin__products">
 <?php
 require_once("../../php/dblogin.php");
-$sql = 'select id, name, path from info_pages';
+$sql = 'select id, name, filename, path from info_pages';
 $query = $pdo ->prepare($sql);
 $query ->execute();
 while ($row = $query->fetch()){
     $param = http_build_query([
-      'item' => $row['name']
+      'item' => $row['filename']
     ]);
     $delParams = http_build_query([
-      'item' => $row['name'],
+      'item' => $row['filename'],
       'table' => 'info_pages',
       'column' => 'name'
     ]);
     $html = '<div class="admin__product">
     <p class="admin__product--name">'.$row['name'].'</p>
-    <a href="./add_page.php?'.$param.'" class="admin__add--addBtn">Edytuj</a>
+    <a href="./edit_info_page.php?'.$param.'" class="admin__add--addBtn">Edytuj</a>
     <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn">Usuń</a>
     </div>';
     echo $html;

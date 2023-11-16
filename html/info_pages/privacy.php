@@ -14,20 +14,32 @@
       src="https://kit.fontawesome.com/bec5797acb.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/underline@latest"></script>
     <link rel="stylesheet" href="../../css/main.css" />
     <title>Panel administratora</title>
   </head>
   <body>
-    <div id="content"></div>
+    <div id="editorjs"></div>
   </body>
-  <script type="module">
-    import * as mdParser from "../../js/markdown_parser.js"
-    const content = document.querySelector('#content')
-    fetch('./privacy.md')
-    .then((res)=>{
-        return res.text()
-    }).then((body)=>{
-        content.innerHTML = mdParser.replaceMarkdown(body)
+  <script>
+    fetch(`./privacy`)
+    .then((res) => {
+        return res.json()
+    }).then((body) =>{
+        const editor = new EditorJS({
+            holder: 'editorjs',
+            tools: {
+                header: Header,
+                list: List,
+                paragraph: Paragraph
+            },
+            data: body,
+            readOnly: true
+        })
     })
   </script>
 </html>
