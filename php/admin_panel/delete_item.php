@@ -44,6 +44,12 @@ if(isset($_POST['submit'])){
         header('Location: ../../html/admin_panel/shipping.php');
     }else if($_SESSION['table'] == 'payment'){
         header('Location: ../../html/admin_panel/payment.php');
+    }else if($_SESSION['table'] == 'info_pages'){
+        $sql = 'delete from info_pages where filename = ?';
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute([$_SESSION['name']]);
+        unlink('../../html/info_pages/'.$_SESSION['name']);
+        unlink('../../html/info_pages/'.$_SESSION['name'].'.php');
     }
 }
 

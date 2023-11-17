@@ -4,14 +4,6 @@ const popupShadow = document.querySelector('.admin__popup--shadow')
 const popup = document.querySelector('.admin__popup')
 const searchBtn = document.querySelector('#searchBtn')
 
-addProductBtn.addEventListener('click', () => {
-    popup.classList.add('visible')
-    popupShadow.classList.add('visible')
-})
-popupCloseBtn.addEventListener('click', () => {
-    popup.classList.remove('visible')
-    popupShadow.classList.remove('visible')
-})
 searchBtn.addEventListener('click', () => {
     const searchBar = document.querySelector('#searchBar')
     const searchRes = document.querySelectorAll('.admin__product--name')
@@ -36,6 +28,14 @@ searchBtn.addEventListener('click', () => {
         })
         searchResetBtn.replaceWith(searchBtn)
     })
+addProductBtn.addEventListener('click', () => {
+    popup.classList.add('visible')
+    popupShadow.classList.add('visible')
+})
+popupCloseBtn.addEventListener('click', () => {
+    popup.classList.remove('visible')
+    popupShadow.classList.remove('visible')
+})
 
 
 })

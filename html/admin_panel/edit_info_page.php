@@ -69,7 +69,6 @@
             console.log(outputData)
             const filename = document.querySelector('#filename')
             const name = document.querySelector('#name')
-
             const formData = new FormData();
             formData.append("filename", filename.value);
             formData.append("name", name.value);

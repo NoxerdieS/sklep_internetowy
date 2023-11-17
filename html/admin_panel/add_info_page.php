@@ -52,7 +52,6 @@
     submitBtn.addEventListener('click', () => {
         editor.save().then((outputData) => {
             editor.clear()
-            console.log(outputData)
             const filename = document.querySelector('#filename')
             const name = document.querySelector('#name')
 
@@ -63,7 +62,7 @@
             fetch('../../php/admin_panel/add_info_page.php', {
                 method: 'POST',
                 body: formData
-            }).then(
+            }).then(                
                 window.location.replace('./info_editor.php')
             )
         })

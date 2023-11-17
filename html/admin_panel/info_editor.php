@@ -21,7 +21,7 @@ while ($row = $query->fetch()){
     $delParams = http_build_query([
       'item' => $row['filename'],
       'table' => 'info_pages',
-      'column' => 'name'
+      'column' => 'filename'
     ]);
     $html = '<div class="admin__product">
     <p class="admin__product--name">'.$row['name'].'</p>
@@ -32,6 +32,7 @@ while ($row = $query->fetch()){
 }
 ?>
 </div>
+<script src="../../js/info_editor.js"></script>
 <?php
 
 $body=ob_get_contents(); 
