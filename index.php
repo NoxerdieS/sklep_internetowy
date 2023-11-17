@@ -74,7 +74,7 @@
     <nav class="nav__desktop">
       <div class="nav__items">
         <a href="./index.php" class="nav__item--logo"></a>
-        <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
+        <a href="./html/category_pages/strong_alc.php" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">Whisky</a>

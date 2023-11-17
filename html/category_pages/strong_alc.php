@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     ></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
     <title>Sklep</title>
   </head>
   <body>
@@ -73,7 +73,7 @@
     <!-- <div style="position: absolute; width: 100%;"> -->
     <nav class="nav__desktop">
       <div class="nav__items">
-        <a href="./index.php" class="nav__item--logo"></a>
+        <a href="../../index.php" class="nav__item--logo"></a>
         <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">
@@ -130,7 +130,7 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ><p>Koszyk</p></a>
         <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']): ?>
-          <a href="./html/user_panel/" class="nav__user--cart login-btn">
+          <a href="../user_panel/" class="nav__user--cart login-btn">
           <i class="fa-solid fa-user"></i>
           <p>Twoje konto</p>
           </a>
@@ -144,12 +144,24 @@
         <?php endif; ?>
       </div>
     </nav>
-    <main class="main">
-            <section class="main__left"></section>
-            <section class="main__right"></section>
+    <main class="productCategories">
+      <section class="productCategories__left">
+        <div class="productCategories__linkContainer">
+          <h1 class="productCategories__left--headline">Kategorie</h1>
+          <a href="#" class="productCategories__left--link">Whisky</a>
+          <a href="#" class="productCategories__left--link">Whisky</a>
+          <a href="#" class="productCategories__left--link">Whisky</a>
+          <a href="#" class="productCategories__left--link">Whisky</a>
+          <a href="#" class="productCategories__left--link">Whisky</a>
+        </div>
+          <!-- <div style="width: 300px; height: 300px;"></div> -->
+      </section>
+      <section class="productCategories__right">
+
+      </section>
     </main>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+    <script src="../..//js/index.js"></script>
   </body>
 </html>
