@@ -89,7 +89,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation wine">Wina</a>
+        <a href="./html/category_pages/wine.php" class="nav__item link link-animation wine">Wina</a>
         <div class="nav__dropdown nav__dropdown--two">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">Wytrawne</a>
@@ -103,7 +103,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation beer">Piwa</a>
+        <a href="./html/category_pages/beer.php" class="nav__item link link-animation beer">Piwa</a>
         <div class="nav__dropdown nav__dropdown--three">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">IPA</a>
@@ -118,7 +118,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation courses">Kursy</a>
+        <a href="./html/category_pages/courses.php" class="nav__item link link-animation courses">Kursy</a>
       </div>
       <div class="nav__user">
         <div class="nav__user--search">

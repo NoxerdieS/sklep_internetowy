@@ -74,7 +74,7 @@
     <nav class="nav__desktop">
       <div class="nav__items">
         <a href="../../index.php" class="nav__item--logo"></a>
-        <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
+        <a href="./strong_alc.php" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">Whisky</a>
@@ -89,7 +89,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation wine">Wina</a>
+        <a href="./wine.php" class="nav__item link link-animation wine">Wina</a>
         <div class="nav__dropdown nav__dropdown--two">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">Wytrawne</a>
@@ -103,7 +103,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation beer">Piwa</a>
+        <a href=".beer.php" class="nav__item link link-animation beer">Piwa</a>
         <div class="nav__dropdown nav__dropdown--three">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">IPA</a>
@@ -118,7 +118,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href="#" class="nav__item link link-animation courses">Kursy</a>
+        <a href="./courses.php" class="nav__item link link-animation courses">Kursy</a>
       </div>
       <div class="nav__user">
         <div class="nav__user--search">
@@ -149,15 +149,36 @@
         <div class="productCategories__linkContainer">
           <h1 class="productCategories__left--headline">Kategorie</h1>
           <a href="#" class="productCategories__left--link">Whisky</a>
-          <a href="#" class="productCategories__left--link">Whisky</a>
-          <a href="#" class="productCategories__left--link">Whisky</a>
-          <a href="#" class="productCategories__left--link">Whisky</a>
-          <a href="#" class="productCategories__left--link">Whisky</a>
+          <a href="#" class="productCategories__left--link">Gin</a>
+          <a href="#" class="productCategories__left--link">Wódka</a>
+          <a href="#" class="productCategories__left--link">Rum</a>
+          <a href="#" class="productCategories__left--link">Tequila</a>
         </div>
           <!-- <div style="width: 300px; height: 300px;"></div> -->
       </section>
       <section class="productCategories__right">
-
+        <div class="productCategories__categoryContainer">
+          <div class="productCategories__categoryContainer--element">
+            <img src="../../img/placeholder_image.jpg" alt="Whisky">
+            <p>Whisky</p>
+          </div>
+          <div class="productCategories__categoryContainer--element">
+            <img src="../../img/placeholder_image.jpg" alt="Gin">
+            <p>Gin</p>
+          </div>
+          <div class="productCategories__categoryContainer--element">
+            <img src="../../img/placeholder_image.jpg" alt="Wódka">
+            <p>Wódka</p>
+          </div>
+          <div class="productCategories__categoryContainer--element">
+            <img src="../../img/placeholder_image.jpg" alt="Rum">
+            <p>Rum</p>
+          </div>
+          <div class="productCategories__categoryContainer--element">
+            <img src="../../img/placeholder_image.jpg" alt="Tequila">
+            <p>Tequila</p>
+          </div>
+        </div>
       </section>
     </main>
     
