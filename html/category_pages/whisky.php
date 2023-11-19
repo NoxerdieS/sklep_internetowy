@@ -77,11 +77,11 @@
         <a href="./strong_alc.php" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">
-            <a href="./whisky.php" class="link link-animation">Whisky</a>
-            <a href="./gin.php" class="link link-animation">Gin</a>
-            <a href="./wodka.php" class="link link-animation">Wódka</a>
-            <a href="./rum.php" class="link link-animation">Rum</a>
-            <a href="./tequila.php" class="link link-animation">Tequila</a>
+            <a href="" class="link link-animation">Whisky</a>
+            <a href="" class="link link-animation">Gin</a>
+            <a href="" class="link link-animation">Wódka</a>
+            <a href="" class="link link-animation">Rum</a>
+            <a href="" class="link link-animation">Tequila</a>
           </div>
           <div class="nav__dropdown--right">
             <img src="./img/placeholder_image.jpg" alt="">
@@ -92,7 +92,7 @@
         <a href="./wine.php" class="nav__item link link-animation wine">Wina</a>
         <div class="nav__dropdown nav__dropdown--two">
           <div class="nav__dropdown--left">
-            <a href="./" class="link link-animation">Wytrawne</a>
+            <a href="" class="link link-animation">Wytrawne</a>
             <a href="" class="link link-animation">Słodkie</a>
             <a href="" class="link link-animation">Półsłodkie</a>
             <a href="" class="link link-animation">Musujące</a>
@@ -103,7 +103,7 @@
             <p>150zł</p>
           </div>
         </div>
-        <a href=".beer.php" class="nav__item link link-animation beer">Piwa</a>
+        <a href="./beer.php" class="nav__item link link-animation beer">Piwa</a>
         <div class="nav__dropdown nav__dropdown--three">
           <div class="nav__dropdown--left">
             <a href="" class="link link-animation">IPA</a>
@@ -145,39 +145,46 @@
       </div>
     </nav>
     <main class="productCategories">
-      <section class="productCategories__left">
-        <div class="productCategories__linkContainer">
+    <section class="products__left">
+        <!-- <div class="productCategories__linkContainer">
           <h1 class="productCategories__left--headline">Kategorie</h1>
           <a href="#" class="productCategories__left--link">Whisky</a>
           <a href="#" class="productCategories__left--link">Gin</a>
           <a href="#" class="productCategories__left--link">Wódka</a>
           <a href="#" class="productCategories__left--link">Rum</a>
           <a href="#" class="productCategories__left--link">Tequila</a>
-        </div>
+        </div> -->
           <!-- <div style="width: 300px; height: 300px;"></div> -->
       </section>
-      <section class="productCategories__right">
-        <div class="productCategories__categoryContainer">
-          <a href="./whisky.php" class="productCategories__categoryContainer--element">
-            <img src="../../img/placeholder_image.jpg" alt="Whisky">
-            <p>Whisky</p>
-          </a>
-          <a class="productCategories__categoryContainer--element">
-            <img src="../../img/placeholder_image.jpg" alt="Gin">
-            <p>Gin</p>
-          </a>
-          <a class="productCategories__categoryContainer--element">
-            <img src="../../img/placeholder_image.jpg" alt="Wódka">
-            <p>Wódka</p>
-          </a>
-          <a class="productCategories__categoryContainer--element">
-            <img src="../../img/placeholder_image.jpg" alt="Rum">
-            <p>Rum</p>
-          </a>
-          <a class="productCategories__categoryContainer--element">
-            <img src="../../img/placeholder_image.jpg" alt="Tequila">
-            <p>Tequila</p>
-          </a>
+      <section class="products__right">
+          <div class="products__sortSection">
+            <p class="products__sortSection--p">Sortowanie:</p>
+            <select name="sort" id="sort" class="products__sortSection--select">
+                <option value="Od najtańszych">Od najtańszych</option>
+                <option value="Od najdroższych">Od najdroższych</option>
+                <option value="Po nazwie rosnąco">Po nazwie rosnąco</option>
+                <option value="Po nazwie malejąco">Po nazwie malejąco</option>
+            </select>
+        </div>
+        <div class="products__productContainer">
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
         </div>
       </section>
     </main>

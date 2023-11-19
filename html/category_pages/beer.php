@@ -158,26 +158,26 @@
       </section>
       <section class="productCategories__right">
         <div class="productCategories__categoryContainer">
-          <div class="productCategories__categoryContainer--element">
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="IPA">
             <p>IPA</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </a>
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="ALE">
             <p>ALE</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </a>
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Lager">
             <p>Lager</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </diva
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Stout">
             <p>Stout</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </a>
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Pilzner">
             <p>Pilzner</p>
-          </div>
+          </a>
         </div>
       </section>
     </main>

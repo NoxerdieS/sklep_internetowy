@@ -157,22 +157,22 @@
       </section>
       <section class="productCategories__right">
         <div class="productCategories__categoryContainer">
-          <div class="productCategories__categoryContainer--element">
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Wytrawne">
             <p>Wytrawne</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </a>
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Słodkie">
             <p>Słodkie</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </a>
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Półsłodkie">
             <p>Półsłodkie</p>
-          </div>
-          <div class="productCategories__categoryContainer--element">
+          </a>
+          <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Musujące">
             <p>Musujące</p>
-          </div>
+          </a>
         </div>
       </section>
     </main>
