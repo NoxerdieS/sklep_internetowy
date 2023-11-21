@@ -169,7 +169,7 @@
           <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Lager">
             <p>Lager</p>
-          </diva
+        </a>
           <a class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Stout">
             <p>Stout</p>

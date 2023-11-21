@@ -146,6 +146,37 @@
     </nav>
     <main class="productCategories">
     <section class="products__left">
+      <h2 class="products__left--headline">Filtry</h2>
+      <h3 class="products__left--headline2">Wybierz rodzaj:</h3>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="type" id="">
+        <label for="type">Blended whisky</label>
+      </div>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="type" id="">
+        <label for="type">Blended malt whisky</label>
+      </div>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="type" id="">
+        <label for="type">Single malt whisky</label>
+      </div>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="type" id="">
+        <label for="type">Bourbon whisky</label>
+      </div>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="type" id="">
+        <label for="type">Tennesse whiskey</label>
+      </div>
+      <h3 class="products__left--headline2">Wybierz kraj:</h3>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="country" id="">
+        <label for="country">Szkocja</label>
+      </div>
+      <div class="products__left--optionBox">
+        <input type="checkbox" name="country" id="">
+        <label for="country">Irlandia</label>
+      </div>
         <!-- <div class="productCategories__linkContainer">
           <h1 class="productCategories__left--headline">Kategorie</h1>
           <a href="#" class="productCategories__left--link">Whisky</a>
