@@ -1,5 +1,6 @@
 <?php
     function generateMenu(){
+        $path = '/sklep_internetowy/html/';
         return '<nav class="nav__mobile">
         <button class="nav__mobile--bars"><i class="fa-solid fa-bars"></i></button>
         <div class="nav__mobileMenu">
@@ -46,7 +47,7 @@
       <nav class="nav__desktop nav__panelMenu">
         <div class="nav__items">
           <a href="../../index.php" class="nav__item--logo"></a>
-          <a href="#" class="nav__item link link-animation">Alkohole mocne</a>
+          <a href="'.$path.'category_pages/strong_alcohol.php" class="nav__item link link-animation">Alkohole mocne</a>
           <div class="nav__dropdown nav__dropdown--one">
             <div class="nav__dropdown--left">
               <a href="" class="link link-animation">Whisky</a>
@@ -61,7 +62,7 @@
               <p>150zł</p>
             </div>
           </div>
-          <a href="#" class="nav__item link link-animation wine">Wina</a>
+          <a href="'.$path.'category_pages/wine.php" class="nav__item link link-animation wine">Wina</a>
           <div class="nav__dropdown nav__dropdown--two">
             <div class="nav__dropdown--left">
               <a href="" class="link link-animation">Wytrawne</a>
@@ -75,7 +76,7 @@
               <p>150zł</p>
             </div>
           </div>
-          <a href="#" class="nav__item link link-animation beer">Piwa</a>
+          <a href="'.$path.'category_pages/beer.php" class="nav__item link link-animation beer">Piwa</a>
           <div class="nav__dropdown nav__dropdown--three">
             <div class="nav__dropdown--left">
               <a href="" class="link link-animation">IPA</a>
@@ -90,7 +91,7 @@
               <p>150zł</p>
             </div>
           </div>
-          <a href="#" class="nav__item link link-animation courses">Kursy</a>
+          <a href="'.$path.'category_pages/courses.php" class="nav__item link link-animation courses">Kursy</a>
         </div>
         <div class="nav__user">
           <div class="nav__user--search">
