@@ -1,7 +1,9 @@
 <?php
-    function generateMenu(){
-        $path = '/sklep_internetowy/html/';
-        return '<nav class="nav__mobile">
+session_start();
+$path = '/sklep_internetowy/html';
+ob_start();
+?>
+      <nav class="nav__mobile">
         <button class="nav__mobile--bars"><i class="fa-solid fa-bars"></i></button>
         <div class="nav__mobileMenu">
           <ul>
@@ -46,52 +48,52 @@
       </nav>
       <nav class="nav__desktop nav__panelMenu">
         <div class="nav__items">
-          <a href="../../index.php" class="nav__item--logo"></a>
-          <a href="'.$path.'category_pages/strong_alcohol.php" class="nav__item link link-animation">Alkohole mocne</a>
+          <a href="<?=$path?>/../index.php" class="nav__item--logo"></a>
+          <a href="<?=$path?>/category_pages/strong_alcohol.php" class="nav__item link link-animation">Alkohole mocne</a>
           <div class="nav__dropdown nav__dropdown--one">
             <div class="nav__dropdown--left">
-              <a href="" class="link link-animation">Whisky</a>
-              <a href="" class="link link-animation">Gin</a>
-              <a href="" class="link link-animation">Wódka</a>
-              <a href="" class="link link-animation">Rum</a>
-              <a href="" class="link link-animation">Tequila</a>
+              <a href="<?=$path?>/category_pages/whisky.php" class="link link-animation">Whisky</a>
+              <a href="<?=$path?>/category_pages/gin.php" class="link link-animation">Gin</a>
+              <a href="<?=$path?>/category_pages/wodka.php" class="link link-animation">Wódka</a>
+              <a href="<?=$path?>/category_pages/rum.php" class="link link-animation">Rum</a>
+              <a href="<?=$path?>/category_pages/tequlia.php" class="link link-animation">Tequila</a>
             </div>
             <div class="nav__dropdown--right">
-              <img src="../../img/placeholder_image.jpg" alt="">
+              <img src="<?=$path?>/../img/placeholder_image.jpg" alt="">
               <p>Lorem ipsum, quia dol</p>
               <p>150zł</p>
             </div>
           </div>
-          <a href="'.$path.'category_pages/wine.php" class="nav__item link link-animation wine">Wina</a>
+          <a href="<?=$path?>/category_pages/wine.php" class="nav__item link link-animation wine">Wina</a>
           <div class="nav__dropdown nav__dropdown--two">
             <div class="nav__dropdown--left">
-              <a href="" class="link link-animation">Wytrawne</a>
-              <a href="" class="link link-animation">Słodkie</a>
-              <a href="" class="link link-animation">Półsłodkie</a>
-              <a href="" class="link link-animation">Musujące</a>
+              <a href="<?=$path?>/category_pages/wytrawne.php" class="link link-animation">Wytrawne</a>
+              <a href="<?=$path?>/category_pages/slodkie.php" class="link link-animation">Słodkie</a>
+              <a href="<?=$path?>/category_pages/polslodkie.php" class="link link-animation">Półsłodkie</a>
+              <a href="<?=$path?>/category_pages/musujace.php" class="link link-animation">Musujące</a>
             </div>
             <div class="nav__dropdown--right">
-              <img src="../../img/placeholder_image.jpg" alt="">
+              <img src="<?=$path?>/../img/placeholder_image.jpg" alt="">
               <p>Lorem ipsum, quia dol</p>
               <p>150zł</p>
             </div>
           </div>
-          <a href="'.$path.'category_pages/beer.php" class="nav__item link link-animation beer">Piwa</a>
+          <a href="<?=$path?>/category_pages/beer.php" class="nav__item link link-animation beer">Piwa</a>
           <div class="nav__dropdown nav__dropdown--three">
             <div class="nav__dropdown--left">
-              <a href="" class="link link-animation">IPA</a>
-              <a href="" class="link link-animation">ALE</a>
-              <a href="" class="link link-animation">Lager</a>
-              <a href="" class="link link-animation">Stout</a>
-              <a href="" class="link link-animation">Pilzner</a>
+              <a href="<?=$path?>/category_pages/ipa.php" class="link link-animation">IPA</a>
+              <a href="<?=$path?>/category_pages/ale.php" class="link link-animation">ALE</a>
+              <a href="<?=$path?>/category_pages/lager.php" class="link link-animation">Lager</a>
+              <a href="<?=$path?>/category_pages/stout.php" class="link link-animation">Stout</a>
+              <a href="<?=$path?>/category_pages/pilzner.php" class="link link-animation">Pilzner</a>
             </div>
             <div class="nav__dropdown--right">
-              <img src="../../img/placeholder_image.jpg" alt="">
+              <img src="<?=$path?>/../img/placeholder_image.jpg" alt="">
               <p>Lorem ipsum, quia dol</p>
               <p>150zł</p>
             </div>
           </div>
-          <a href="'.$path.'category_pages/courses.php" class="nav__item link link-animation courses">Kursy</a>
+          <a href="<?=$path?>/category_pages/courses.php" class="nav__item link link-animation courses">Kursy</a>
         </div>
         <div class="nav__user">
           <div class="nav__user--search">
@@ -102,13 +104,15 @@
           <a href="#cart" class="nav__user--cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ><p>Koszyk</p></a>
-            <a href="../user_panel/" class="nav__user--cart login-btn">
+            <a href="<?=$path?>/user_panel/" class="nav__user--cart login-btn">
             <i class="fa-solid fa-user"></i>
             <p>Twoje konto</p>
             </a>
-            <a href="../../php/logout.php" class="nav__user--cart login-btn">
+            <a href="<?=$path?>/../php/logout.php" class="nav__user--cart login-btn">
             <i class="fa-solid fa-right-from-bracket"></i>
             <p>Wyloguj się</p></a> 
         </div>
-      </nav>';
-    }
+      </nav>
+<?php
+  $nav = ob_get_contents();
+  ob_end_clean();

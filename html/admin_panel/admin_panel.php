@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../menu_component.php';
 if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
  header('Location: ../../index.php');
 }
@@ -25,8 +25,7 @@ if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmi
   </head>
   <body>
   <?php
-    include '../menu_component.php';
-    echo generateMenu();
+    echo $nav;
   ?>
   <div class="admin__popup--shadow"></div>
   <main class="user admin">
