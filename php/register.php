@@ -50,7 +50,7 @@
         $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
         $mail -> addAddress($email);
         $mail -> Subject = 'Aktywuj swoje konto w sklepie Sunrise';
-        $mail -> Body = 'Aktywuj swoje konto klikając w ten link: http://localhost/sklep_internetowy/php/authorize.php/?login='.$login.'&activationHash='.$activationHash;
+        $mail -> Body = 'Aktywuj swoje konto klikając w ten link: http://localhost/sklep_internetowy/php/authorize.php?login='.$login.'&activationHash='.$activationHash;
         $mail -> send();
         echo "success";
     }

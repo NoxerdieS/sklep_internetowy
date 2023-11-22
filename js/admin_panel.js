@@ -28,6 +28,9 @@ searchBtn.addEventListener('click', () => {
         })
         searchResetBtn.replaceWith(searchBtn)
     })
+    
+    
+})
 addProductBtn.addEventListener('click', () => {
     popup.classList.add('visible')
     popupShadow.classList.add('visible')
@@ -36,11 +39,7 @@ popupCloseBtn.addEventListener('click', () => {
     popup.classList.remove('visible')
     popupShadow.classList.remove('visible')
 })
-
-
-})
-window.addEventListener("DOMContentLoaded", () => {
-    let addForm = document.querySelector("#create-product-form");
+let addForm = document.querySelector("#create-product-form");
     
     addForm.addEventListener("submit", () => {
         addForm = document.querySelector("#create-product-form");
@@ -55,4 +54,3 @@ window.addEventListener("DOMContentLoaded", () => {
             window.location.reload()
         })
     })
-})

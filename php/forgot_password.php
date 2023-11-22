@@ -32,7 +32,7 @@
         $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
         $mail -> addAddress($email);
         $mail -> Subject = 'Zresetuj swoje hasło w sklepie Sunrise';
-        $mail -> Body = 'Zresetuj swoje hasło klikając w ten link: http://localhost/sklep_internetowy/html/remember_password.html?email='.$email.'&activationHash='.$activationHash;
+        $mail -> Body = 'Zresetuj swoje hasło klikając w ten link: http://localhost/sklep_internetowy/html/remember_password.php?email='.$email.'&activationHash='.$activationHash;
         $mail -> send();
         echo "success";
     }else{

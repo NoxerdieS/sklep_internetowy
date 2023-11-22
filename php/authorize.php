@@ -12,5 +12,5 @@
             $sql = 'update user set isActive = true where login like ?;';
             $pdo -> prepare($sql) -> execute([$login]);
     }
-    header('Location: ../index.html');
+    header('Location: ../index.php');
 ?>
