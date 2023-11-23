@@ -36,8 +36,14 @@
         <div class="admin__editor">
             <div id="editorjs" class="admin__editor--textArea"></div>
             <div class="admin__editor--addons">
-                <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Podaj nazwę pliku">
-                <input type="text" id="name" class="admin__contentContainer--input" placeholder="Podaj tytuł">
+            <div class="admin__inputContainer">
+                <label for="filename">Nazwa pliku:</label>
+                <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Nazwa pliku">
+            </div>
+            <div class="admin__inputContainer">
+                <label for="name">Tytuł:</label>
+                <input type="text" id="name" class="admin__contentContainer--input" placeholder="Tytuł">
+            </div>
                 <button id="submitBtn" class="admin__contentContainer--addProduct">Zatwierdź</button>
                 <a href="./info_editor.php" class="linkButton">Wróć</a>
             </div>

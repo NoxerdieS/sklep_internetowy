@@ -1129,6 +1129,15 @@ a {
 .admin__editor--textArea .ce-toolbar__plus, .admin__editor--textArea .ce-toolbar__settings-btn {
   background-color: #fff;
 }
+.admin__inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.admin__inputContainer label {
+  font-size: 2.2rem;
+}
 
 .visible {
   visibility: visible;
