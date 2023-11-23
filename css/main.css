@@ -1146,6 +1146,18 @@ a {
     width: 70%;
   }
 }
+@media (max-width: 992px) {
+  .nav__mobile {
+    display: block;
+  }
+  .nav__desktop {
+    display: none;
+  }
+  .user {
+    height: 100vh;
+    padding: 10px 10px;
+  }
+}
 @media (max-width: 1200px) {
   .nav__item {
     padding: 10px;
@@ -1189,15 +1201,8 @@ a {
     width: 140px;
   }
 }
-@media (max-width: 992px) {
-  .nav__mobile {
-    display: block;
-  }
-  .nav__desktop {
-    display: none;
-  }
-  .user {
-    height: 100vh;
-    padding: 10px 10px;
+@media (max-width: 1400px) {
+  .admin__menu--item {
+    width: 230px;
   }
 }/*# sourceMappingURL=main.css.map */

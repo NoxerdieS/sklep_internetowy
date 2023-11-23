@@ -45,7 +45,7 @@ $product_info = $product_info -> fetch();
       <a href="./info_editor.php" class="user__menu--item admin__menu--item link link-animation-two">Edytuj strony informacyjne</a>
     </section>
     <section class="user__section admin__section">
-      <div class="admin__contentContainer">
+      <div class="admin__contentContainer admin__editContainer">
               <form id="create-product-form" method="post" action="../../php/admin_panel/edit_product.php?id=<?=$product_info['id']?>" enctype="multipart/form-data">
                   <div class="admin__formContainer">
                   <label for="name">Nazwa produktu:</label>
@@ -63,22 +63,22 @@ $product_info = $product_info -> fetch();
                       <?php endforeach; ?>
                   </select>
                   </div>
-      
+                  
                   <div class="admin__formContainer">      
-                  <label for="price">Cena:</label>
-                  <input type="text" name="price" id="price" class="admin__contentContainer--input" placeholder="Cena" value="<?=$product_info['price']?>">
+                    <label for="price">Cena:</label>
+                    <input type="text" name="price" id="price" class="admin__contentContainer--input" placeholder="Cena" value="<?=$product_info['price']?>">
                   </div>
-      
+                  
+                  
+                  <div class="admin__formContainer">
+                    <label for="quantity">Ilość:</label>
+                    <input type="number" name="quantity" id="quantity" class="admin__contentContainer--input" placeholder="Ilość" value="<?=$product_info['stock']?>">
+                  </div>
                   <div class="admin__formContainer">
                   <label for="description">Opis produktu:</label>
                   <textarea name="description" id="description" class="admin__contentContainer--textarea" placeholder="Opis" wrap="hard" ><?=$product_info['description']?></textarea>
                   </div>
-      
-                  <div class="admin__formContainer">
-                  <label for="quantity">Ilość:</label>
-                  <input type="number" name="quantity" id="quantity" class="admin__contentContainer--input" placeholder="Ilość" value="<?=$product_info['stock']?>">
-                  </div>
-      
+                  
                   <div class="admin__formContainer">
                   <label for="image">Zdjęcie produktu:</label>
                   <input type="file" name="image" id="image" class="admin__contentContainer--file">
@@ -90,8 +90,10 @@ $product_info = $product_info -> fetch();
                   ?>
                   <img src="<?=$img_path?>" alt="" class="admin__product--img">
                   </div>
-                  <button type="submit" class="admin__contentContainer--addProduct">Zatwierdź</button>
-                  <a href="./index.php" class="linkButton">Wróć</a>
+                  <div class="admin__formContainer">
+                      <button type="submit" class="admin__contentContainer--addProduct">Zatwierdź</button>
+                      <a href="./index.php" class="linkButton">Wróć</a>
+                    </div>
               </form>
       </div>
     </section>
