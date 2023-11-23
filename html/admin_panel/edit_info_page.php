@@ -41,8 +41,15 @@
         <div class="admin__editor">
         <div id="editorjs" class="admin__editor--textArea"></div>
             <div class="admin__editor--addons">
-                <input type="text" id="filename" class="admin__contentContainer--input" placeholder="Nazwa pliku" value="Nazwa pliku: <?=$query['filename']?>" disabled>
-                <input type="text" id="name" class="admin__contentContainer--input" placeholder="Tytuł" value="Tytuł: <?=$query['name']?>" disabled>
+                <label for="filename">
+                    Nazwa pliku:
+                </label>
+                <input type="text" name="filename" id="filename" class="admin__contentContainer--input" placeholder="Nazwa pliku" value="<?=$query['filename']?>" disabled>
+                
+                <label for="name">
+                    Tytuł:
+                </label>
+                <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Tytuł" value="<?=$query['name']?>" disabled>
                 <button id="submitBtn" class="admin__contentContainer--addProduct">Zatwierdź</button>
                 <a href="./info_editor.php" class="linkButton">Wróć</a>
             </div>
