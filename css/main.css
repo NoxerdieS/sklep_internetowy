@@ -151,6 +151,10 @@ a {
   background-color: rgb(38, 163, 201);
   box-shadow: 0px 0px 10px 5px #282d50;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+.linkButton:hover {
+  transform: scale(1.1);
 }
 
 .button {
@@ -866,6 +870,12 @@ a {
   height: 99%;
   width: 75%;
 }
+.admin__section--delete {
+  justify-content: center;
+}
+.admin__deleteSection {
+  justify-content: center;
+}
 .admin__add {
   width: 95%;
   margin: 10px 25px;
@@ -987,6 +997,10 @@ a {
   background-color: rgb(38, 163, 201);
   box-shadow: 0px 0px 10px 5px #282d50;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+.admin__contentContainer--addProduct:hover {
+  transform: scale(1.1);
 }
 .admin__editContainer {
   width: 650px;
@@ -1077,6 +1091,43 @@ a {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+}
+.admin__editorContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.admin__editorContainer--headline {
+  margin-top: 40px;
+  font-size: 3rem;
+}
+.admin__editor {
+  height: 75vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.admin__editor--addons {
+  height: 60%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.admin__editor--textArea {
+  padding: 10px;
+  width: 66%;
+  font-size: 2rem;
+  background-color: #24242d;
+  border-radius: 8px;
+}
+.admin__editor--textArea .ce-toolbar__plus, .admin__editor--textArea .ce-toolbar__settings-btn {
+  background-color: #fff;
 }
 
 .visible {

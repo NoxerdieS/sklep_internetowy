@@ -68,6 +68,11 @@ a {
 	background-color: $bright-button-color;
 	box-shadow: 0px 0px 10px 5px #282d50;
 	cursor: pointer;
+	transition: transform .3s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 }
 
 .button {
@@ -865,7 +870,16 @@ a {
 	&__section {
 		height: 99%;
 		width: 75%;
+
+		&--delete {
+			justify-content: center;
+		}
 	}
+
+	&__deleteSection {
+		justify-content: center;
+	}
+
 	&__add {
 		width: 95%;
 		margin: 10px 25px;
@@ -1000,6 +1014,11 @@ a {
 			background-color: $bright-button-color;
 			box-shadow: 0px 0px 10px 5px #282d50;
 			cursor: pointer;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 
@@ -1098,6 +1117,54 @@ a {
 			align-items: center;
 			justify-content: center;
 			font-size: 2rem;
+		}
+	}
+
+	&__editorContainer{
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&--headline {
+			margin-top: 40px;
+			font-size: 3rem;
+		}
+	}
+
+	&__editor {
+		// position: absolute;
+		height: 75vh;
+		width: 80%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+
+		&--addons {
+			height: 60%;
+			width: 25%;
+			display: flex;
+			flex-direction: column ;
+			align-items: center;
+			justify-content: space-around;
+			// gap: 10px;
+		}
+
+		&--textArea {
+			padding: 10px;
+			width: 66%;
+			font-size: 2rem;
+			background-color: $secondary-color;
+			border-radius: 8px;
+
+			.ce-toolbar__plus, .ce-toolbar__settings-btn {
+				background-color: #fff;
+			}
 		}
 	}
 }

@@ -107,7 +107,7 @@ $address_info = $address_info -> fetch();
                       </div>
                   <div class="admin__formContainer">
                       <button type="submit" class="admin__contentContainer--addProduct">Zatwierdź</button>
-                      <a href="./index.php" class="linkButton">Wróć</a>
+                      <a href="./customers.php" class="linkButton">Wróć</a>
                     </div>
               </form>
             </div>

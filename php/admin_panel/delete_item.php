@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../../html/menu_component.php';
 if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn'] || !$_SESSION["isAdmin"]){
  header('Location: ../../index.php');
 }
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
 ?>
 <!DOCTYPE html>
 <html lang="pl">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../../img/logo_transparent.png" type="image/x-icon">
@@ -72,15 +72,34 @@ if(isset($_POST['submit'])){
     ></script>
     <link rel="stylesheet" href="../../css/main.css" />
     <title>Panel administratora</title>
-</head>
-<body>
-    <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-        <div class="admin__formContainer">
-            <p class="admin__product--name">Czy na pewno chcesz usunąć tę pozycję?</p>
-            <input type="text" name="name" id="name" class="admin__contentContainer--input"  value="<?=$_SESSION['name']?>" readonly>
-            <br>
-            <input type="submit" name="submit" class="admin__add--addBtn" value="Tak">
-        </div>
-    </form>
+  </head>
+  <body>
+  <?php
+    echo $nav;
+  ?>
+  <div class="admin__popup--shadow"></div>
+  <main class="user admin">
+    <section class="user__menu admin__menu">
+      <a href="./index.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie produktami</a>
+      <a href="./categories.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie kategoriami</a>
+      <a href="./customers.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie klientami</a>
+      <a href="./orders.php" class="user__menu--item admin__menu--item link link-animation-two">Zamówienia użytkowników</a>
+      <a href="./shipping.php" class="user__menu--item admin__menu--item link link-animation-two">Ustawienia dostawy</a>
+      <a href="./payment.php" class="user__menu--item admin__menu--item link link-animation-two">Ustawienia płatności</a>
+      <a href="./info_editor.php" class="user__menu--item admin__menu--item link link-animation-two">Edytuj strony informacyjne</a>
+    </section>
+    <section class="user__section admin__section admin__section--delete">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+            <div class="admin__formContainer">
+                <p class="admin__product--name">Czy na pewno chcesz usunąć tę pozycję?</p>
+                <input type="text" name="name" id="name" class="admin__contentContainer--input"  value="<?=$_SESSION['name']?>" readonly>
+                <br>
+                <input type="submit" name="submit" class="admin__contentContainer--addProduct" value="Tak">
+                <a href="../../html/admin_panel/index.php" class="linkButton">Anuluj</a>
+            </div>
+        </form>
+      </section>
+  </main>
+  <script src="../../js/admin_panel.js"></script>
 </body>
 </html>

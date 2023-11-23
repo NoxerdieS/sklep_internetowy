@@ -63,7 +63,7 @@ $payment_info = $payment_info -> fetch();
                     </select>
             </div>
             <button type="submit" class="admin__contentContainer--addProduct">Zatwierdź</button>
-            <a href="./index.php" class="linkButton">Wróć</a>
+            <a href="./payment.php" class="linkButton">Wróć</a>
         </form>
       </div>
       </section>
