@@ -50,6 +50,7 @@ if(isset($_POST['submit'])){
         $stmt -> execute([$_SESSION['name']]);
         unlink('../../html/info_pages/'.$_SESSION['name']);
         unlink('../../html/info_pages/'.$_SESSION['name'].'.php');
+        header('Location: ../../html/admin_panel/info_editor.php');
     }
 }
 
