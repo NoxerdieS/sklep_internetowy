@@ -9,8 +9,6 @@
     $isAdmin = $_POST['isAdmin'];
     $isActive = $_POST['isActive'];
     $oldLogin = $_GET['oldLogin'];
-    var_dump($isActive);
-    var_dump($_POST);
 
     $address_id = $_GET['address'];
     $address = $_POST['address'];

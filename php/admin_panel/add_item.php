@@ -25,7 +25,19 @@
         }else if($file == 'shipping'){
             $sql = 'insert into shipping(shipper_name, shipping_cost, isActive) values(?, ?, 1)';
             $pdo -> prepare($sql) -> execute([$_POST['name'], $_POST['cost']/100]);
-            
+        }else if($file == 'customers'){
+            if($_POST['password'] == $_POST['password2']){
+                $sql = 'insert into address(city, postal, address) values(?, ?, ?)';
+                $pdo -> prepare($sql) -> execute([$_POST['city'], $_POST['postcode'], $_POST['address']]);
+                $address_id = $pdo -> lastInsertId();
+
+                $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                
+                $sql = 'insert into user(mail, login, pass, firstname, lastname, address_id, telephone, isAdmin, isActive)
+                values(?, ?, ?, ?, ?, ?, ?, ?, ?)';
+                $pdo -> prepare($sql) -> execute([$_POST['email'], $_POST['login'], $password, $_POST['firstname'], $_POST['lastname'], $address_id, $_POST['phone'], $_POST['isAdmin'], $_POST['isActive']]);
+            }
+
         }
     }
     
