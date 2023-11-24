@@ -68,7 +68,8 @@ echo $html;
             </div>
 
             <div class="admin__formContainer">
-                <label for="image">Zdjęcia produktu:</label>
+                <label for="image">Zdjęcia produktu</label>
+                (Tylko format .png)
                 <input type="file" name="image" id="image" class="admin__contentContainer--file">
             </div>
             <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
