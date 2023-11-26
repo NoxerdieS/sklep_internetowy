@@ -114,6 +114,17 @@
   border: 0px solid #ffffff;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -529,19 +540,78 @@ a {
 }
 
 .products__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   height: 100%;
   width: 30%;
+  padding: 30px;
+}
+.products__left--headline {
+  font-size: 3.2rem;
+}
+.products__left--headline2 {
+  font-size: 2.5rem;
+}
+.products__left--optionBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+.products__left--optionBox label {
+  font-size: 1.8rem;
+}
+.products__left--optionBox input {
+  width: 17px;
+  height: 17px;
+  accent-color: rgb(38, 163, 201);
+}
+.products__left--priceAdjust {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.products__left--priceAdjust input {
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  border: none;
+}
+.products__left--priceAdjust input::-moz-placeholder {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.products__left--priceAdjust input::placeholder {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.products__left--priceAdjust hr {
+  width: 20px;
+  height: 2px;
+  border: none;
+  background-color: #747a99;
+}
+.products__filtersContainer {
+  width: 225px;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  position: fixed;
 }
 .products__right {
   height: 100%;
   width: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .products__sortSection {
-  width: 80%;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: flex-start;
@@ -564,7 +634,7 @@ a {
 }
 .products__productContainer {
   height: 60%;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   gap: 17px;
@@ -713,7 +783,7 @@ a {
 .login__form--options .remember_box {
   height: 25px;
   width: 25px;
-  accent-color: #363644;
+  accent-color: rgb(38, 163, 201);
   cursor: pointer;
 }
 .login__form--options a {
@@ -1126,7 +1196,8 @@ a {
   background-color: #24242d;
   border-radius: 8px;
 }
-.admin__editor--textArea .ce-toolbar__plus, .admin__editor--textArea .ce-toolbar__settings-btn {
+.admin__editor--textArea .ce-toolbar__plus,
+.admin__editor--textArea .ce-toolbar__settings-btn {
   background-color: #fff;
 }
 .admin__inputContainer {

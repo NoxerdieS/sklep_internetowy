@@ -70,7 +70,6 @@
         </ul>
       </div>
     </nav>
-    <!-- <div style="position: absolute; width: 100%;"> -->
     <nav class="nav__desktop">
       <div class="nav__items">
         <a href="../../index.php" class="nav__item--logo"></a>
@@ -145,48 +144,48 @@
       </div>
     </nav>
     <main class="productCategories">
-    <section class="products__left">
-      <h2 class="products__left--headline">Filtry</h2>
-      <h3 class="products__left--headline2">Wybierz rodzaj:</h3>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="type" id="">
-        <label for="type">Blended whisky</label>
-      </div>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="type" id="">
-        <label for="type">Blended malt whisky</label>
-      </div>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="type" id="">
-        <label for="type">Single malt whisky</label>
-      </div>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="type" id="">
-        <label for="type">Bourbon whisky</label>
-      </div>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="type" id="">
-        <label for="type">Tennesse whiskey</label>
-      </div>
-      <h3 class="products__left--headline2">Wybierz kraj:</h3>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="country" id="">
-        <label for="country">Szkocja</label>
-      </div>
-      <div class="products__left--optionBox">
-        <input type="checkbox" name="country" id="">
-        <label for="country">Irlandia</label>
-      </div>
-        <!-- <div class="productCategories__linkContainer">
-          <h1 class="productCategories__left--headline">Kategorie</h1>
-          <a href="#" class="productCategories__left--link">Whisky</a>
-          <a href="#" class="productCategories__left--link">Gin</a>
-          <a href="#" class="productCategories__left--link">Wódka</a>
-          <a href="#" class="productCategories__left--link">Rum</a>
-          <a href="#" class="productCategories__left--link">Tequila</a>
-        </div> -->
-          <!-- <div style="width: 300px; height: 300px;"></div> -->
-      </section>
+      <section class="products__left">
+        <div class="products__filtersContainer">
+          <h2 class="products__left--headline">Filtry</h2>
+          <h3 class="products__left--headline2">Rodzaj</h3>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="type" id="blended">
+            <label for="blended">Blended whisky</label>
+          </div>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="type" id="">
+            <label for="type">Blended malt whisky</label>
+          </div>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="type" id="">
+            <label for="type">Single malt whisky</label>
+          </div>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="type" id="">
+            <label for="type">Bourbon whisky</label>
+          </div>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="type" id="">
+            <label for="type">Tennesse whiskey</label>
+          </div>
+          <h3 class="products__left--headline2">Kraj</h3>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="country" id="">
+            <label for="country">Szkocja</label>
+          </div>
+          <div class="products__left--optionBox">
+            <input type="checkbox" name="country" id="">
+            <label for="country">Irlandia</label>
+          </div>
+          <h3 class="products__left--headline2">Cena</h3>
+          <div class="products__left--priceAdjust">
+              <input type="number" id="" placeholder="od">
+              <hr>
+              <input type="number" id="" placeholder="do">
+          </div>
+          <button class="button">Zatwierdź</button>
+        </div>
+        </section>
       <section class="products__right">
           <div class="products__sortSection">
             <p class="products__sortSection--p">Sortowanie:</p>
@@ -198,6 +197,60 @@
             </select>
         </div>
         <div class="products__productContainer">
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
+          <div class="products__product">
+            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
+            <p class="products__product--name">Jack Daniels</p>
+            <p class="products__product--price">100 zł</p>
+            <a href="" class="products__product--addToCart">Dodaj do koszyka</a>
+          </div>
           <div class="products__product">
             <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
             <p class="products__product--name">Jack Daniels</p>
