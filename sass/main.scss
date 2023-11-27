@@ -553,6 +553,7 @@ a {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
+		padding-top: 30px;
 		gap: 10px;
 		position: fixed;
 	}
@@ -607,6 +608,7 @@ a {
 		background-color: $secondary-color;
 		border-radius: 8px;
 		transition: box-shadow 0.3s;
+		cursor: pointer;
 
 		&--image {
 			width: 150px;
@@ -614,11 +616,13 @@ a {
 		}
 
 		&--name {
+			color: $main-white;
 			font-size: 2.2rem;
 			margin: 0;
 		}
 
 		&--price {
+			color: $main-white;
 			font-size: 2.7rem;
 			margin: 0;
 		}
@@ -633,6 +637,7 @@ a {
 			color: $main-white;
 			background-color: $bright-button-color;
 			border-radius: 8px;
+			border: none;
 			transition: transform 0.3s;
 
 			&:hover {

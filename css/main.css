@@ -600,6 +600,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-top: 30px;
   gap: 10px;
   position: fixed;
 }
@@ -649,16 +650,19 @@ a {
   background-color: #24242d;
   border-radius: 8px;
   transition: box-shadow 0.3s;
+  cursor: pointer;
 }
 .products__product--image {
   width: 150px;
   height: 150px;
 }
 .products__product--name {
+  color: #d4d4d4;
   font-size: 2.2rem;
   margin: 0;
 }
 .products__product--price {
+  color: #d4d4d4;
   font-size: 2.7rem;
   margin: 0;
 }
@@ -672,6 +676,7 @@ a {
   color: #d4d4d4;
   background-color: rgb(38, 163, 201);
   border-radius: 8px;
+  border: none;
   transition: transform 0.3s;
 }
 .products__product--addToCart:hover {

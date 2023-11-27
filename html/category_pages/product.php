@@ -143,68 +143,14 @@
         <?php endif; ?>
       </div>
     </nav>
-    <main class="productCategories">
-      <section class="products__left">
-        <div class="products__filtersContainer">
-          <h2 class="products__left--headline">Filtry</h2>
-          <h3 class="products__left--headline2">Rodzaj</h3>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="type" id="blended">
-            <label for="blended">Blended whisky</label>
-          </div>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="type" id="">
-            <label for="type">Blended malt whisky</label>
-          </div>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="type" id="">
-            <label for="type">Single malt whisky</label>
-          </div>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="type" id="">
-            <label for="type">Bourbon whisky</label>
-          </div>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="type" id="">
-            <label for="type">Tennesse whiskey</label>
-          </div>
-          <h3 class="products__left--headline2">Kraj</h3>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="country" id="">
-            <label for="country">Szkocja</label>
-          </div>
-          <div class="products__left--optionBox">
-            <input type="checkbox" name="country" id="">
-            <label for="country">Irlandia</label>
-          </div>
-          <h3 class="products__left--headline2">Cena</h3>
-          <div class="products__left--priceAdjust">
-              <input type="number" id="" placeholder="od">
-              <hr>
-              <input type="number" id="" placeholder="do">
-          </div>
-          <button class="button">Zatwierdź</button>
+    <main class="product">
+        <div class="product__topSection">
+            <div class="product__topSection--image"></div>
+            <div class="product__topSection--specs">
+                <p class="product__topSection--headline"></p>
+                <div class="product__topSection--info"></div>
+            </div>
         </div>
-        </section>
-      <section class="products__right">
-          <div class="products__sortSection">
-            <p class="products__sortSection--p">Sortowanie:</p>
-            <select name="sort" id="sort" class="products__sortSection--select">
-                <option value="Od najtańszych">Od najtańszych</option>
-                <option value="Od najdroższych">Od najdroższych</option>
-                <option value="Po nazwie rosnąco">Po nazwie rosnąco</option>
-                <option value="Po nazwie malejąco">Po nazwie malejąco</option>
-            </select>
-        </div>
-        <div class="products__productContainer">
-          <a class="products__product">
-            <img src="../../img/placeholder_image.jpg" alt="IPA" class="products__product--image">
-            <p class="products__product--name">Jack Daniels</p>
-            <p class="products__product--price">100 zł</p>
-            <button class="products__product--addToCart">Dodaj do koszyka</button>
-          </a>
-        </div>
-      </section>
     </main>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
