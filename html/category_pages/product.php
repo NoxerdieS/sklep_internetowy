@@ -149,13 +149,13 @@
     </nav>
     <main class="product">
         <div class="product__topSection">
-            <div class="product__topSection--image">
-
+            <div class="product__image">
             </div>
-            <div class="product__topSection--specs">
-                <p class="product__topSection--headline">Nazwa produktu</p>
-                <div class="product__topSection--info">
-                  
+            <div class="product__specs">
+                <p class="product__specs__headline">Nazwa produktu</p>
+                <div class="product__specs__info">
+                    <div class="product__specs__text"></div>
+                    <div class="product__specs__price"></div>
                 </div>
             </div>
         </div>
