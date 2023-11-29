@@ -20,7 +20,7 @@ while($paramRow = $stmt -> fetchColumn()):
           ?>
           <div class="products__left--optionBox">
             <label for="<?=$row['param_value']?>">
-              <input type="checkbox" name="type" id="<?=$row['param_value']?>">
+              <input type="checkbox" name="type" id="<?=$row['param_value']?>" class="filter_checkbox">
               <?=$row['param_value']?>
           </label>
           </div>
@@ -32,7 +32,7 @@ while($paramRow = $stmt -> fetchColumn()):
               <hr>
               <input type="number" id="maxPrice" placeholder="do">
           </div>
-          <button class="button">Zatwierdź</button>
+          <button class="button" id="filterSubmit">Zatwierdź</button>
         </div>
         </section>
 <?php
