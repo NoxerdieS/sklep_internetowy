@@ -739,6 +739,36 @@ a {
 .product__specs__price--price {
   font-size: 3rem;
 }
+.product__specs__price span {
+  cursor: pointer;
+}
+.product__specs__price .number {
+  display: flex;
+}
+.product__specs__price .number .minus,
+.product__specs__price .number .plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #d4d4d4;
+  color: black;
+  border-radius: 4px;
+  font-size: 2.5rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.product__specs__price .number input {
+  height: 34px;
+  width: 50px;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .product__bottomSection {
   width: 80%;
   display: flex;
@@ -765,6 +795,24 @@ a {
 }
 .product__bottomSection img {
   width: 500px;
+}
+.product__bottomSection--table {
+  border-collapse: collapse;
+  border-radius: 8px;
+}
+.product__bottomSection--table tbody tr,
+.product__bottomSection--table tbody td {
+  width: 20%;
+  height: 40px;
+  padding: 10px;
+  font-size: 2rem;
+  text-align: center;
+  border: 3px solid #24242d;
+  border-radius: 5px;
+}
+.product__bottomSection--table tbody tr .table-headline,
+.product__bottomSection--table tbody td .table-headline {
+  font-weight: bold;
 }
 
 .reviews__box {

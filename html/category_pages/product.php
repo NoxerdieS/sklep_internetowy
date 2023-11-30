@@ -58,6 +58,11 @@
                     </div>
                     <div class="product__specs__price">
                       <p class="product__specs__price--price">120 zł</p>
+                      <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="1"/>
+                        <span class="plus">+</span>
+                      </div>
                       <a href="" class="linkButton">Dodaj do koszyka</a>
                     </div>
                 </div>
@@ -70,7 +75,28 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque lorem metus, at semper massa fringilla vel. Nam semper commodo urna, sed laoreet sapien viverra ut. Nulla facilisi. Vivamus non vulputate mauris. Maecenas in aliquam nulla, vitae vehicula massa. Vivamus eu pretium ante, eu porttitor mauris. Nam vitae vestibulum libero. Sed imperdiet magna at libero euismod placerat. Duis faucibus ut tellus ut maximus. Mauris pretium, nunc sit amet cursus sollicitudin, dui lacus mattis nisl, nec rutrum sem tellus vel magna. Phasellus mollis enim nec turpis pellentesque placerat. Cras consectetur fringilla luctus.</p>
           </div>
           <img src="../../img/whisky.png" alt="">
-
+          <table class="product__bottomSection--table">
+            <tr>
+              <td class="table-headline">Producent</td>
+              <td>Jack Daniel's</td>
+            </tr>
+            <tr>
+              <td class="table-headline">Rodzaj</td>
+              <td>Single Malt</td>
+            </tr>
+            <tr>
+              <td class="table-headline">Kraj pochodzenia</td>
+              <td>Szkocja</td>
+            </tr>
+            <tr>
+              <td class="table-headline">Moc</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <td class="table-headline">Pojemność</td>
+              <td>700 ml</td>
+            </tr>
+          </table>
           <div class="wrapper">
             <div class="reviews">
               <div class="reviews__boxes">
