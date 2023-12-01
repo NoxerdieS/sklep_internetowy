@@ -6,16 +6,36 @@ ob_start();
           <h2 class="products__left--headline">Filtry</h2>
 <?php
 require_once('../../php/dblogin.php');
-$sql = 'select distinct(param_name) from `product-params` inner join parameters on `product-params`.param_id = parameters.id';
+$sql = 'select id from category where category_name like ?';
 $stmt = $pdo -> prepare($sql);
-$stmt -> execute();
+$arr = explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$filename = pathinfo(array_pop($arr), PATHINFO_FILENAME);
+unset($arr);
+$stmt -> execute([$filename]);
+$category_id = $stmt -> fetchColumn();
+$sql = <<<SQL
+  SELECT distinct(param_name)
+  FROM `parameters`
+  WHERE id in (
+    SELECT param_id 
+    FROM `product-params`
+    WHERE product_id IN (
+      SELECT product.id
+      FROM product
+      WHERE category_id = ?
+    ) 
+  );
+SQL;
+
+$stmt = $pdo -> prepare($sql);
+$stmt -> execute([$category_id]);
 while($paramRow = $stmt -> fetchColumn()):
 ?>
           <h3 class="products__left--headline2"><?=$paramRow?></h3>
           <?php
-            $sql = 'select distinct(param_value) from `product-params` inner join parameters on `product-params`.param_id = parameters.id where param_name like ?';
+            $sql = 'select distinct(param_value) from `product-params` inner join parameters on `product-params`.param_id = parameters.id where param_name like ? and product_id IN (SELECT product.id FROM product WHERE category_id = ?)';
             $query = $pdo -> prepare($sql);
-            $query -> execute([$paramRow]);
+            $query -> execute([$paramRow, $category_id]);
             while($row = $query -> fetch()):
           ?>
           <div class="products__left--optionBox">

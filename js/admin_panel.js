@@ -3,11 +3,11 @@ const popupCloseBtn = document.querySelector('.admin__contentContainer--closeBtn
 const popupShadow = document.querySelector('.admin__popup--shadow')
 const popup = document.querySelector('.admin__popup')
 const searchBtn = document.querySelector('#searchBtn')
+const searchRes = document.querySelectorAll('.admin__product--name')
+const adminProducts = document.querySelector('.admin__products')
 
 searchBtn.addEventListener('click', () => {
     const searchBar = document.querySelector('#searchBar')
-    const searchRes = document.querySelectorAll('.admin__product--name')
-    const adminProducts = document.querySelector('.admin__products')
     adminProducts.innerHTML =''
     searchRes.forEach(element =>{
         if(element.innerHTML.includes(searchBar.value)){
