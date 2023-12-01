@@ -143,6 +143,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.8rem;
+}
+
 .error {
   font-size: 1.6rem;
   color: rgb(255, 58, 58);
@@ -181,8 +185,12 @@ a {
   cursor: pointer;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
 .nav {
-  z-index: 100;
+  z-index: 10;
 }
 .nav__mobile {
   display: none;
@@ -193,6 +201,7 @@ a {
   top: 0;
   border: none;
   background: none;
+  z-index: 10;
   cursor: pointer;
 }
 .nav__mobile--bars i {
@@ -425,7 +434,6 @@ a {
 .header {
   height: 60vh;
   width: 100%;
-  z-index: -12;
 }
 .header__img {
   position: relative;
@@ -438,19 +446,18 @@ a {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  z-index: 0;
 }
 .header__img--shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: -10;
 }
 .header__img--text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 .header__img--text h1 {
   font-size: 4rem;
@@ -463,6 +470,110 @@ a {
   height: 40px;
   width: 150px;
   text-align: center;
+  z-index: 10;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 60px;
+  height: 4px;
+  background-color: rgb(38, 163, 201);
+}
+
+.headline {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.aboutus i {
+  margin-top: 20px;
+  font-size: 40px;
+}
+.aboutus .aboutus-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.aboutus .aboutus-card-text {
+  font-size: 14px;
+}
+.aboutus .aboutus-hover {
+  transition: color 0.3s;
+}
+.aboutus .aboutus-hover:hover {
+  color: rgb(38, 163, 201);
+}
+
+.news {
+  background-color: #24242d;
+}
+.news .carousel-item {
+  position: relative;
+  height: 600px;
+}
+.news .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.news .carousel-caption p {
+  font-size: 1.5rem;
+}
+.news .carousel-indicators {
+  padding-bottom: 20px;
+}
+
+.bestsellers {
+  position: relative;
+  background-image: url("../img/alcohol-1961542_1920.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 2;
+}
+.bestsellers .card-footer {
+  font-size: 30px;
+  color: #121217;
+}
+.bestsellers .card-footer a {
+  text-decoration: none;
+}
+.bestsellers h2 {
+  z-index: 2;
+}
+.bestsellers .underline {
+  z-index: 2;
+}
+.bestsellers .card-body {
+  height: 160px;
+}
+.bestsellers .card {
+  transition: transform 0.3s;
+}
+.bestsellers .card img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bestsellers .card i {
+  padding: 10px;
+}
+.bestsellers .card:hover {
+  transform: scale(0.96);
+}
+.bestsellers .team-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.bestsellers .card-title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .productCategories {

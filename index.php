@@ -22,6 +22,7 @@
       src="https://kit.fontawesome.com/bec5797acb.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
     <title>Sklep</title>
@@ -144,19 +145,185 @@
         <?php endif; ?>
       </div>
     </nav>
-        <!-- </div> -->
     <header class="header">
       <div class="header__img">
 				<div class="header__img--shadow"></div>
 				<div class="header__img--text">
 					<h1 data-aos="fade-up" data-aos-delay="200">Sunrise</h1>
 					<p data-aos="fade-up" data-aos-delay="400">Tu znajdziesz to czego szukasz</p>
-					<a data-aos="fade-up" data-aos-delay="600" href="#" type="button" class="btn btn-outline-light"
+					<a data-aos="fade-up" data-aos-delay="600" href="#aboutus" type="button" class="btn btn-outline-light"
 						>Poznaj nas</a
 					>
 				</div>
 			</div>
     </header>
+    <main>
+    <section id="aboutus" class="aboutus py-5">
+				<div class="container">
+					<h2 class="headline">o nas</h2>
+					<div class="underline"></div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4 text-center aboutus-hover">
+							<p><i class="fa-solid fa-truck-fast"></i></p>
+							<p class="aboutus-card-title mb-1">Szybka wysyłka</p>
+							<p class="aboutus-card-text">Lorem ipsum dolor sit amet.</p>
+						</div>
+						<div class="col-sm-6 col-md-4 text-center aboutus-hover">
+							<p><i class="fa-solid fa-tag"></i></p>
+							<p class="aboutus-card-title mb-1">Najniższe ceny</p>
+							<p class="aboutus-card-text">Lorem ipsum dolor sit amet.</p>
+						</div>
+						<div class="col-sm-6 col-md-4 text-center aboutus-hover">
+							<p><i class="fa-solid fa-marker"></i></p>
+							<p class="aboutus-card-title mb-1">najwyższe standardy</p>
+							<p class="aboutus-card-text">
+								Lorem ipsum dolor sit amet.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+      <section id="news" class="news py-5">
+				<h2 class="headline">Nowości</h2>
+				<div class="underline"></div>
+
+				<div class="container pb-4">
+					<div id="carouselExampleCaptions" class="carousel slide d-none d-lg-block" data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="./img/whiskey-2171646_1920.jpg"
+									class="d-block w-100"
+									alt="Butelka whisky"
+								/>
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Nikka Whisky</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="./img/irish-whiskey-2152126_1920.jpg"
+									class="d-block w-100"
+									alt="Butelka whisky"
+								/>
+								<div class="carousel-caption d-none d-md-block">
+									<h3>Tullamore Dew</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur.
+									</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+
+					<div class="card-group d-lg-none">
+						<div class="card me-sm-3">
+							<img
+								src="./img/whiskey-2171646_1920.jpg"
+								class="card-img-top"
+								alt="Butelka whisky"
+							/>
+							<div class="card-body">
+								<h3 class="card-title">Nikka whisky</h3>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit
+									longer.
+								</p>
+							</div>
+						</div>
+						<div class="card ms-sm-3">
+							<img
+								src="./img/irish-whiskey-2152126_1920.jpg"
+								class="card-img-top"
+								alt="Butelka whiskey"
+							/>
+							<div class="card-body">
+								<h3 class="card-title">Tullamore Dew</h3>
+								<p class="card-text">
+									This card has supporting text below as a natural lead-in to
+									additional content.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+      <section id="bestsellers" class="bestsellers py-5">
+				<h2 class="headline">Bestsellery</h2>
+				<div class="underline"></div>
+				<div class="team-shadow"></div>
+				<div class="container">			
+					<div class="card-group team-carousel">
+            <div class="card mx-3">
+              <img src="./img/whisky.png" class="card-img-top" alt="Butelka whisky">
+              <div class="card-body">
+                <h5 class="card-title">Singleton</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="card mx-3">
+              <img src="./img/irish-whiskey-2152126_1920.jpg" class="card-img-top" alt="Butelka whisky">
+              <div class="card-body">
+                <h5 class="card-title">Nazwa</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="card mx-3">
+              <img src="./img/whiskey-2171646_1920.jpg" class="card-img-top" alt="Butelka whisky">
+              <div class="card-body">
+                <h5 class="card-title">Nazwa</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+				  </div>
+				</div>
+			</section>
+    </main>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
