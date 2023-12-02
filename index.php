@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../img/logo_transparent.png"
+      href="./img/logo_transparent.png"
       type="image/x-icon"
     />
 
@@ -323,7 +323,79 @@
 				  </div>
 				</div>
 			</section>
+      <div id="achievements" class="achievements p-5">
+				<h2 class="headline">osiągnięcia</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div class="row text-center achievements-list">
+						<div class="col-md-6 col-lg-4 col-xl-2 achievements">
+							<i class="ti ti-thumb-up"></i>
+							<p class="achievement-number">100%</p>
+							<p class="achievement-text">zadowolonych klientów</p>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-2 achievements">
+							<i class="ti ti-trophy"></i>
+							<p class="achievement-number">10</p>
+							<p class="achievement-text">zdobytych nagród</p>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-2 achievements">
+							<i class="ti ti-users"></i>
+							<p class="achievement-number">50</p>
+							<p class="achievement-text">pracowników</p>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-2 achievements">
+							<i class="ti ti-building-community"></i>
+							<p class="achievement-number">5</p>
+							<p class="achievement-text">nowoczesnych biur</p>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-2 achievements">
+              <i class="ti ti-truck-delivery"></i>
+							<p class="achievement-number">20</p>
+							<p class="achievement-text">umów ze znanymi dostawcami</p>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-2 achievements">
+							<i class="ti ti-share"></i>
+							<p class="achievement-number">80.000</p>
+							<p class="achievement-text">fanów na social media</p>
+						</div>
+					</div>
+				</div>
+			</div>
+      <section id="contact" class="contact py-5">
+				<h2 class="headline">kontakt</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div class="row text-center contact-us">
+						<div class="col-sm-6 col-lg-4 contact-item order-1">
+							<h3>główna siedziba</h3>
+							<p>ul. Długa 0</p>
+							<p>00-000 Kraków</p>
+							<p>+48 000 000 000</p>
+							<p>mail@mail.pl</p>
+						</div>
+						<div class="col-lg-4 order-0 order-lg-1 contact-item">
+							<h3>social media</h3>
+							<div class="social-media">
+								<a href="#"><i class="ti ti-brand-facebook"></i></a>
+								<a href="#"><i class="ti ti-brand-twitter"></i></a>
+								<a href="#"><i class="ti ti-brand-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-4 contact-item order-1">
+							<h3>siedziba w warszawie</h3>
+							<p>ul. Kwiatowa 9</p>
+							<p>00-000 Warszawa</p>
+							<p>+48 000 000 000</p>
+							<p>mail@mail.pl</p>
+						</div>
+					</div>
+				</div>
+				<div class="contact-shadow"></div>
+			</section>	
     </main>
+    <footer class="text-light py-4 text-center">
+			<p class="mb-0"> &copy; 2023 | Sunrise</p>
+		</footer>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>

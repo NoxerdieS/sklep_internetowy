@@ -190,7 +190,7 @@ p {
 }
 
 .nav {
-  z-index: 10;
+  z-index: 30;
 }
 .nav__mobile {
   display: none;
@@ -258,7 +258,7 @@ p {
   align-items: center;
   width: 100%;
   height: 400px;
-  background-color: rgb(38, 163, 201);
+  background-color: #1d1d24;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 8px;
   z-index: 10;
@@ -276,7 +276,6 @@ p {
   visibility: visible;
 }
 .nav__desktop {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
@@ -284,12 +283,13 @@ p {
   height: 65px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #24242d;
+  background-color: #1d1d24;
   margin: 30px auto;
   padding: 0px 30px;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 30;
   position: fixed;
+  box-shadow: 0px 0px 7px 5px #121217;
 }
 .nav__panelMenu {
   position: relative;
@@ -572,8 +572,73 @@ p {
 }
 .bestsellers .card-title {
   margin-bottom: 20px;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+.achievements i {
+  padding: 20px;
+  font-size: 48px;
+  color: #d4d4d4;
+  text-shadow: 0 0 5px #000;
+}
+.achievements .achievements-list {
+  padding: 20px 0;
+}
+.achievements .achievement-number {
+  font-size: 22px;
+}
+.achievements .achievement-text {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.contact {
+  position: relative;
+  background-image: url("../img/pistachios-3450670_1920.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 0;
+}
+.contact h2 {
+  color: #d4d4d4;
+  font-weight: bold;
+}
+.contact .underline {
+  background-color: #d4d4d4;
+}
+.contact .contact-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 9, 27, 0.8);
+  z-index: -5;
+}
+.contact .contact-us {
+  display: flex;
+  align-items: center;
+  color: #d4d4d4;
+}
+.contact .contact-us .contact-item {
+  margin: 30px 0;
+}
+.contact .contact-us .contact-item h3 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact .contact-us .contact-item .social-media {
+  font-size: 26px;
+}
+.contact .contact-us .contact-item .social-media a {
+  padding: 10px;
+  color: #d4d4d4;
+  text-decoration: none;
+}
+.contact .contact-us .contact-item .social-media a:hover {
+  color: rgb(38, 163, 201);
 }
 
 .productCategories {
