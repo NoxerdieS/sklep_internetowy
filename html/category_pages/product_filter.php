@@ -53,6 +53,7 @@ while($paramRow = $stmt -> fetchColumn()):
               <input type="number" id="maxPrice" placeholder="do">
           </div>
           <button class="button" id="filterSubmit">Zatwierdź</button>
+          <button class="button" id="filterReset">Zresetuj filtry</button>
         </div>
         </section>
 <?php
