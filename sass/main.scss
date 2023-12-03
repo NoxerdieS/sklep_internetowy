@@ -656,6 +656,12 @@ p {
 		}
 	}
 
+	&__products {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
 	&__product {
 		height: 100px;
 		width: 100%;

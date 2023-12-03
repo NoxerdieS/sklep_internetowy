@@ -682,6 +682,11 @@ p {
 .cart__addons a:hover {
   transform: scale(0.94);
 }
+.cart__products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .cart__product {
   height: 100px;
   width: 100%;
