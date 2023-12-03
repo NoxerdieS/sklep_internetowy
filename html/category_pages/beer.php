@@ -1,6 +1,3 @@
-<?php
-  session_start();
-?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -35,33 +32,33 @@
       <section class="productCategories__left">
         <div class="productCategories__linkContainer">
           <h1 class="productCategories__left--headline">Kategorie</h1>
-          <a href="#" class="productCategories__left--link">IPA</a>
-          <a href="#" class="productCategories__left--link">ALE</a>
-          <a href="#" class="productCategories__left--link">Lager</a>
-          <a href="#" class="productCategories__left--link">Stout</a>
-          <a href="#" class="productCategories__left--link">Pilzner</a>
+          <a href="./beer-ipa.php" class="productCategories__left--link">IPA</a>
+          <a href="./beer-ale.php" class="productCategories__left--link">ALE</a>
+          <a href="./beer-lager.php" class="productCategories__left--link">Lager</a>
+          <a href="./beer-stout.php" class="productCategories__left--link">Stout</a>
+          <a href="./beer-pilzner.php" class="productCategories__left--link">Pilzner</a>
         </div>
           <!-- <div style="width: 300px; height: 300px;"></div> -->
       </section>
       <section class="productCategories__right">
         <div class="productCategories__categoryContainer">
-          <a class="productCategories__categoryContainer--element">
+          <a href="./beer-ipa.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="IPA">
             <p>IPA</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./beer-ale.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="ALE">
             <p>ALE</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./beer-lager.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Lager">
             <p>Lager</p>
         </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./beer-stout.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Stout">
             <p>Stout</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./beer-pilzner.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Pilzner">
             <p>Pilzner</p>
           </a>
@@ -70,6 +67,6 @@
     </main>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../..//js/index.js"></script>
+    <script src="../../js/index.js"></script>
   </body>
 </html>

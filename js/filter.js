@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const filterSubmit = document.querySelector('#filterSubmit')
     const productsContainer = document.querySelector('.products__productContainer')
     const products = document.querySelectorAll('.products__product')
-
     const minPrice = document.querySelector('#minPrice')
     const maxPrice = document.querySelector('#maxPrice')
     const filterCheckboxes = document.querySelectorAll('.filter_checkbox')
@@ -27,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         const url = window.location.pathname;
-        const filename = url.substring(url.lastIndexOf('/')+1).replace('.php', '');
+        const filename = url.substring(url.lastIndexOf('-')+1).replace('.php', '');
         let formData = new FormData()
         formData.append('filters', checkedBoxes)
         formData.append('category', filename)

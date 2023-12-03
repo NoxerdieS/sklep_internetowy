@@ -10,6 +10,8 @@ $sql = 'select id from category where category_name like ?';
 $stmt = $pdo -> prepare($sql);
 $arr = explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $filename = pathinfo(array_pop($arr), PATHINFO_FILENAME);
+$arr = explode('-', $filename);
+$filename = $arr[1];
 unset($arr);
 $stmt -> execute([$filename]);
 $category_id = $stmt -> fetchColumn();

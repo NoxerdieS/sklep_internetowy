@@ -1,6 +1,3 @@
-<?php
-  // session_start();
-?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -35,33 +32,33 @@
       <section class="productCategories__left">
         <div class="productCategories__linkContainer">
           <h1 class="productCategories__left--headline">Kategorie</h1>
-          <a href="#" class="productCategories__left--link">Whisky</a>
-          <a href="#" class="productCategories__left--link">Gin</a>
-          <a href="#" class="productCategories__left--link">Wódka</a>
-          <a href="#" class="productCategories__left--link">Rum</a>
-          <a href="#" class="productCategories__left--link">Tequila</a>
+          <a href="./strong-whisky.php" class="productCategories__left--link">Whisky</a>
+          <a href="./strong-gin.php" class="productCategories__left--link">Gin</a>
+          <a href="./strong-wodka.php" class="productCategories__left--link">Wódka</a>
+          <a href="./strong-rum.php" class="productCategories__left--link">Rum</a>
+          <a href="./strong-tequila.php" class="productCategories__left--link">Tequila</a>
         </div>
           <!-- <div style="width: 300px; height: 300px;"></div> -->
       </section>
       <section class="productCategories__right">
         <div class="productCategories__categoryContainer">
-          <a href="./whisky.php" class="productCategories__categoryContainer--element">
+          <a href="./strong-whisky.php" href="./whisky.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Whisky">
             <p>Whisky</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./strong-gin.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Gin">
             <p>Gin</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./strong-wodka.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Wódka">
             <p>Wódka</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./strong-rum.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Rum">
             <p>Rum</p>
           </a>
-          <a class="productCategories__categoryContainer--element">
+          <a href="./strong-tequila.php" class="productCategories__categoryContainer--element">
             <img src="../../img/placeholder_image.jpg" alt="Tequila">
             <p>Tequila</p>
           </a>
@@ -70,6 +67,6 @@
     </main>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../..//js/index.js"></script>
+    <script src="../../js/index.js"></script>
   </body>
 </html>

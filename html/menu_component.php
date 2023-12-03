@@ -69,7 +69,7 @@ ob_start();
             <div class="nav__dropdown--left">
               <a href="<?=$path?>/category_pages/wine-dry.php" class="link link-animation">Wytrawne</a>
               <a href="<?=$path?>/category_pages/wine-sweet.php" class="link link-animation">Słodkie</a>
-              <a href="<?=$path?>/category_pages/wine-semi-sweet.php" class="link link-animation">Półsłodkie</a>
+              <a href="<?=$path?>/category_pages/wine-semisweet.php" class="link link-animation">Półsłodkie</a>
               <a href="<?=$path?>/category_pages/wine-sparkling.php" class="link link-animation">Musujące</a>
             </div>
             <div class="nav__dropdown--right">
