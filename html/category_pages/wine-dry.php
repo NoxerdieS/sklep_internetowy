@@ -37,16 +37,16 @@
           <div class="products__sortSection">
             <p class="products__sortSection--p">Sortowanie:</p>
             <select name="sort" id="sort" class="products__sortSection--select">
-                <option value="Od najtańszych">Od najtańszych</option>
-                <option value="Od najdroższych">Od najdroższych</option>
-                <option value="Po nazwie rosnąco">Po nazwie rosnąco</option>
-                <option value="Po nazwie malejąco">Po nazwie malejąco</option>
+                <option value="price-asc">Od najtańszych</option>
+                <option value="price-desc">Od najdroższych</option>
+                <option value="name-asc">Po nazwie rosnąco</option>
+                <option value="name-desc">Po nazwie malejąco</option>
             </select>
         </div>
         <div class="products__productContainer">
         <?php
           require_once('../../php/dblogin.php');
-          $sql = 'select id from category where category_name like "Whisky"';
+          $sql = 'select id from category where category_name like "wino wytrawne"';
           $stmt = $pdo -> prepare($sql);
           $stmt -> execute();
           $category_id = $stmt -> fetchColumn();
@@ -56,7 +56,7 @@
           while($row = $query -> fetch()):
         ?>
           <a class="products__product" id="<?=$row['id']?>">
-            <img src="<?=$row['path']?>" alt="IPA" class="products__product--image">
+            <img src="<?=$row['path']?>" alt="" class="products__product--image">
             <p class="products__product--name"><?=$row['product_name']?></p>
             <p class="products__product--price"><?=$row['price']?> zł</p>
             <button class="products__product--addToCart">Dodaj do koszyka</button>

@@ -75,14 +75,14 @@
     <nav class="nav__desktop">
       <div class="nav__items">
         <a href="./index.php" class="nav__item--logo"></a>
-        <a href="./html/category_pages/strong_alcohol.php" class="nav__item link link-animation">Alkohole mocne</a>
+        <a href="./html/category_pages/strong-alcohol.php" class="nav__item link link-animation">Alkohole mocne</a>
         <div class="nav__dropdown nav__dropdown--one">
           <div class="nav__dropdown--left">
-            <a href="" class="link link-animation">Whisky</a>
-            <a href="" class="link link-animation">Gin</a>
-            <a href="" class="link link-animation">Wódka</a>
-            <a href="" class="link link-animation">Rum</a>
-            <a href="" class="link link-animation">Tequila</a>
+            <a href="./html/category_pages/strong-whisky.php" class="link link-animation">Whisky</a>
+            <a href="./html/category_pages/strong-gin.php" class="link link-animation">Gin</a>
+            <a href="./html/category_pages/strong-wodka.php" class="link link-animation">Wódka</a>
+            <a href="./html/category_pages/strong-rum.php" class="link link-animation">Rum</a>
+            <a href="./html/category_pages/strong-tequila.php" class="link link-animation">Tequila</a>
           </div>
           <div class="nav__dropdown--right">
             <img src="./img/placeholder_image.jpg" alt="">
@@ -93,10 +93,10 @@
         <a href="./html/category_pages/wine.php" class="nav__item link link-animation wine">Wina</a>
         <div class="nav__dropdown nav__dropdown--two">
           <div class="nav__dropdown--left">
-            <a href="" class="link link-animation">Wytrawne</a>
-            <a href="" class="link link-animation">Słodkie</a>
-            <a href="" class="link link-animation">Półsłodkie</a>
-            <a href="" class="link link-animation">Musujące</a>
+            <a href="./html/category_pages/wine-dry.php" class="link link-animation">Wytrawne</a>
+            <a href="./html/category_pages/wine-sweet.php" class="link link-animation">Słodkie</a>
+            <a href="./html/category_pages/wine-semi-sweet.php" class="link link-animation">Półsłodkie</a>
+            <a href="./html/category_pages/wine-sparkling.php" class="link link-animation">Musujące</a>
           </div>
           <div class="nav__dropdown--right">
             <img src="./img/placeholder_image.jpg" alt="">
@@ -107,11 +107,11 @@
         <a href="./html/category_pages/beer.php" class="nav__item link link-animation beer">Piwa</a>
         <div class="nav__dropdown nav__dropdown--three">
           <div class="nav__dropdown--left">
-            <a href="" class="link link-animation">IPA</a>
-            <a href="" class="link link-animation">ALE</a>
-            <a href="" class="link link-animation">Lager</a>
-            <a href="" class="link link-animation">Stout</a>
-            <a href="" class="link link-animation">Pilzner</a>
+            <a href="./html/category_pages/beer-ipa.php" class="link link-animation">IPA</a>
+            <a href="./html/category_pages/beer-ale.php" class="link link-animation">ALE</a>
+            <a href="./html/category_pages/beer-lager.php" class="link link-animation">Lager</a>
+            <a href="./html/category_pages/beer-stout.php" class="link link-animation">Stout</a>
+            <a href="./html/category_pages/beer-pilzner.php" class="link link-animation">Pilzner</a>
           </div>
           <div class="nav__dropdown--right">
             <img src="./img/placeholder_image.jpg" alt="">
@@ -170,12 +170,12 @@
 						</div>
 						<div class="col-sm-6 col-md-4 text-center aboutus-hover">
 							<p><i class="fa-solid fa-tag"></i></p>
-							<p class="aboutus-card-title mb-1">Najniższe ceny</p>
+							<p class="aboutus-card-title mb-1">Najwyższe ceny</p>
 							<p class="aboutus-card-text">Lorem ipsum dolor sit amet.</p>
 						</div>
 						<div class="col-sm-6 col-md-4 text-center aboutus-hover">
 							<p><i class="fa-solid fa-marker"></i></p>
-							<p class="aboutus-card-title mb-1">najwyższe standardy</p>
+							<p class="aboutus-card-title mb-1">Najniższe standardy</p>
 							<p class="aboutus-card-text">
 								Lorem ipsum dolor sit amet.
 							</p>
