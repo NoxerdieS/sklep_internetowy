@@ -7,14 +7,26 @@
     if(isset($_GET['file'])){
         $file = $_GET['file'];
         if($file == "index"){
-        $path = "../../img/".$_POST["name"]."_img.png";
-        move_uploaded_file($_FILES['image']['tmp_name'], $path);
-        $sql = 'insert into photos(path) values(?)';
-        $pdo -> prepare($sql) -> execute([$path]);
-        $photo_id = $pdo -> lastInsertId();
+            $path = "../../img/".$_POST["name"]."_img.png";
+            move_uploaded_file($_FILES['image']['tmp_name'], $path);
+            $sql = 'insert into photos(path) values(?)';
+            $pdo -> prepare($sql) -> execute([$path]);
+            $photo_id = $pdo -> lastInsertId();
     
-        $sql = 'insert into product(product_name, category_id, price, description, stock, photo_id) values(?, ?, ?, ?, ?, ?)';
-        $pdo -> prepare($sql) -> execute([$_POST["name"], $_POST["category"], $_POST["price"], $_POST["description"], $_POST["quantity"], $photo_id]);
+            $sql = 'insert into product(product_name, category_id, price, description, stock, photo_id) values(?, ?, ?, ?, ?, ?)';
+            $pdo -> prepare($sql) -> execute([$_POST["name"], $_POST["category"], $_POST["price"], $_POST["description"], $_POST["quantity"], $photo_id]);
+            $i = 0;
+            $product_id = $pdo -> lastInsertId();
+            $sql_name = 'insert into parameters(param_name) values(?)';
+            $sql_value = 'insert into `product-params`(product_id, param_id, param_value) values(?, ?, ?)';
+            while(isset($_POST['param_name'.$i]) && isset($_POST['param_value'.$i])){
+                $stmt_name = $pdo -> prepare($sql_name);
+                $stmt_value = $pdo -> prepare($sql_value);
+                $stmt_name -> execute([$_POST['param_name'.$i]]);
+                $param_id = $pdo -> lastInsertId();
+                $stmt_value -> execute([$product_id, $param_id, $_POST['param_value'.$i]]);
+                $i++;
+            }
         }else if ($file == "categories"){
             $sql = 'insert into category(category_name) values(?)';
             $pdo -> prepare($sql) -> execute([$_POST['name']]);

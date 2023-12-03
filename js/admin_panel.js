@@ -39,18 +39,17 @@ popupCloseBtn.addEventListener('click', () => {
     popup.classList.remove('visible')
     popupShadow.classList.remove('visible')
 })
-let addForm = document.querySelector("#create-product-form");
-    
-    addForm.addEventListener("submit", () => {
-        addForm = document.querySelector("#create-product-form");
-        const formData = new FormData(addForm);
-        let filename = window.location.pathname;
-        filename = filename.substring(filename.lastIndexOf('/')+1, filename.lastIndexOf('.'))
-        fetch(`../../php/admin_panel/add_item.php?file=${filename}`, {
-            method: 'POST',
-            body: formData
-        })
-        .then(() =>{
-            window.location.reload()
-        })
+const addForm = document.querySelector("#create-product-form");
+
+addForm.addEventListener("submit", () => {
+    const formData = new FormData(addForm);
+    let filename = window.location.pathname;
+    filename = filename.substring(filename.lastIndexOf('/')+1, filename.lastIndexOf('.'))
+    fetch(`../../php/admin_panel/add_item.php?file=${filename}`, {
+        method: 'POST',
+        body: formData
     })
+    .then(() =>{
+        window.location.reload()
+    })
+})

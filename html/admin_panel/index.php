@@ -66,7 +66,10 @@ echo $html;
                 <label for="quantity">Ilość:</label>
                 <input type="number" name="quantity" id="quantity" class="admin__contentContainer--input" placeholder="Ilość">
             </div>
-
+            <div class="admin__formContainer">
+                    <label>Dodaj parametr</label>
+                    <b id="addParam">+</b>
+            </div>
             <div class="admin__formContainer">
                 <label for="image">Zdjęcia produktu</label>
                 (Tylko format .png)
@@ -77,6 +80,7 @@ echo $html;
       </div>
     </div>
 </div>
+<script src="../../js/add_params.js"></script>
 <?php
 
 $body=ob_get_contents(); 

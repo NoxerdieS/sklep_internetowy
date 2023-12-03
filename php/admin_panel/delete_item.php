@@ -10,12 +10,14 @@ if(!empty($_GET)){
 }
 if(isset($_POST['submit'])){
     require_once('../dblogin.php');
-    $photo_id = $address_id = $user_id = 0;
+    $photo_id = $address_id = $user_id = $product_id = 0;
     if($_SESSION['table'] == "product"){
-        $sql = 'select photo_id from product where product_name like ?';
+        $sql = 'select id, photo_id from product where product_name like ?';
         $stmt = $pdo ->prepare($sql);
         $stmt -> execute([$_SESSION['name']]);
-        $photo_id = $stmt -> fetchColumn();
+        $ids = $stmt -> fetch();
+        $product_id = $ids['id'];
+        $photo_id = $ids['$photo_id'];
     }else if($_SESSION['table'] == 'user'){
         $sql = 'select address_id from user where login like ?';
         $stmt = $pdo ->prepare($sql);
@@ -29,6 +31,9 @@ if(isset($_POST['submit'])){
         $sql = 'delete from photos where id = ?';
         $stmt = $pdo ->prepare($sql);
         $stmt -> execute([$photo_id]);
+        $sql = 'delete from `product-params` where product_id = ?';
+        $stmt = $pdo ->prepare($sql);
+        $stmt -> execute([$product_id]);
         header('Location: ../../html/admin_panel/index.php');
     }else if($_SESSION['table'] == 'user'){
         $sql = 'delete from address where id = ?';
