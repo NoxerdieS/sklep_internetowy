@@ -2,6 +2,8 @@ const mobileMenuButton = document.querySelector('.nav__mobile--bars');
 const mobileMenu = document.querySelector('.nav__mobileMenu');
 const allMobileMenuItems = document.querySelectorAll('.menu-item');
 const allMobileDropdowns = document.querySelectorAll('.dropdown');
+const promoBtn = document.querySelector('.cart__buySection--promoBtn');
+const promocodeBox = document.querySelector('#promobox');
 
 const showMenu = () => {
 	mobileMenu.classList.toggle('visible');
@@ -33,6 +35,14 @@ $(document).ready(function() {
 });
 
 mobileMenuButton.addEventListener('click', showMenu);
+promoBtn.addEventListener('click', () => {
+
+	if(promocodeBox.style.display=='flex') {
+		promocodeBox.style.display='none';
+	} else {
+		promocodeBox.style.display='flex';
+	}
+})
 allMobileMenuItems[0].addEventListener('click', showMobileMenuItems('one'));
 allMobileMenuItems[1].addEventListener('click', showMobileMenuItems('two'));
 allMobileMenuItems[2].addEventListener('click', showMobileMenuItems('three'));
