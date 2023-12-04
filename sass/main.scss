@@ -106,7 +106,6 @@ p {
 	font-size: 1.5rem;
 }
 
-
 // NAV
 
 .nav {
@@ -1218,6 +1217,117 @@ p {
 	}
 }
 
+.login-or-register {
+	position: absolute;
+	width: 1000px;
+	height: 500px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	&__login {
+		height: 450px;
+		width: 400px;
+		padding: 20px 40px;
+		background-color: $secondary-color;
+		border-radius: 8px;
+
+		form {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 20px;
+
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			input {
+				height: 45px;
+				width: 100%;
+				border-radius: 10px;
+				border: none;
+				background: none;
+				border-bottom: 2px solid $bright-color;
+				text-align: center;
+				color: $main-white;
+				font-size: 2rem;
+				outline-color: $third-color;
+			}
+
+			.remember-password {
+				color: $bright-button-color;
+				font-size: 1.5rem;
+			}
+
+			.submitBtn {
+				height: 40px;
+				width: 100%;
+				margin-top: 0;
+				transition: transform 0.3s;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+
+			.error {
+				display: none;
+			}
+		}
+	}
+
+	&__others {
+		height: 90%;
+		width: 550px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		
+		&--element {
+			height: 170px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 10px;
+
+			h2 {
+				font-size: 2.6rem;
+			}
+
+			p {
+				font-size: 1.7rem;
+				margin: 0;
+
+				i {
+					margin-right: 5px;
+				}
+			}
+
+			.noLoginBtn {
+				width: 100%;
+				color: $bright-button-color;
+				background: none;
+				box-shadow: none;
+				margin: 0;
+				border: 2px solid $bright-button-color;
+				transition: transform 0.3s, background-color 0.3s, color 0.3s;
+
+				&:hover {
+					background-color: $bright-button-color;
+					color: $main-white;
+					transform: scale(1.0);
+				}
+			}
+		}
+	}
+}
+
 .reviews {
 	&__box {
 		position: relative;
@@ -1496,7 +1606,7 @@ p {
 // USER PANEL
 
 .user {
-	height: 85vh;
+	height: 84vh;
 	width: 100%;
 	display: flex;
 	padding: 20px 60px;
@@ -1593,15 +1703,17 @@ p {
 	&__popup {
 		visibility: hidden;
 		position: absolute;
-		height: 770px;
+		height: 90%;
 		width: 720px;
-		top: 53%;
+		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background-color: $secondary-color;
 		border-radius: 8px;
-		z-index: 10;
+		z-index: 40;
 		box-shadow: 0px 0px 10px 5px #282d50;
+		overflow: scroll;
+		overflow-x: hidden;
 
 		&--shadow {
 			visibility: hidden;
@@ -1614,8 +1726,8 @@ p {
 	}
 
 	&__formContainersBox {
-		width: 100%;
-		height: 100%;
+		width: 50px;
+		height: 250px;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -1625,29 +1737,32 @@ p {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
 
-	form {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		.addParamBtn {
+			height: 30px;
+			width: 30px;
+			background: none;
+			border: 2px solid $bright-button-color;
+			color: $bright-button-color;
+			border-radius: 8px;
+		}
 	}
 
 	&__contentContainer {
 		position: relative;
-		height: 95%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
-
+		
 		&--userForm {
 			height: 80%;
-			width: 90%;
+			width: 99%;
 		}
 
 		&--closeBtn {
-			position: absolute;
+			position: fixed;
 			right: 0;
 			top: 0;
 			margin: 10px;
@@ -1667,9 +1782,9 @@ p {
 			height: 40px;
 			width: 250px;
 			padding: 0 10px;
+			background: none;
+			border: 2px solid $bright-button-color;
 			font-size: 1.5rem;
-			background-color: $main-white;
-			border: none;
 			border-radius: 8px;
 		}
 
@@ -1678,8 +1793,8 @@ p {
 			width: 250px;
 			padding: 10px;
 			font-size: 1.5rem;
-			background-color: $main-white;
-			border: none;
+			background: none;
+			border: 2px solid $bright-button-color;
 			border-radius: 8px;
 		}
 
@@ -1820,15 +1935,11 @@ p {
 	}
 
 	&__editor {
-		// position: absolute;
 		height: 75vh;
 		width: 80%;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
 
 		&--addons {
 			height: 60%;
@@ -2022,5 +2133,12 @@ p {
 				width: 230px;
 			}
 		}
+
+		// &__popup {
+		// 	height: 90%;
+		// 	width: 90%;
+		// 	top: 50%;
+			
+		// }
 	}
 }

@@ -68,7 +68,7 @@ echo $html;
             </div>
             <div class="admin__formContainer">
                     <label>Dodaj parametr</label>
-                    <b id="addParam">+</b>
+                    <button type="button" id="addParam" class="addParamBtn">+</button>
             </div>
             <div class="admin__formContainer">
                 <label for="image">Zdjęcia produktu</label>

@@ -42,14 +42,11 @@
                 <img src="../img/whisky.png" alt="" class="cart__product--img">
                 <p class="cart__product--name">Nazwa produktu</p>
                 <p class="cart__product--price">320zł</p>
-                <!-- <button id="subQuantity">-</button> -->
-                <!-- <input type="number" name="number" id="number" class="cart__product--number"> -->
                 <div class="number">
                         <span class="minus">-</span>
                         <input type="text" value="1"/>
                         <span class="plus">+</span>
                       </div>
-                <!-- <button id="addQuantity">+</button> -->
                 <button class="cart__product--delete"><i class="fa-solid fa-trash"></i></button>
             </div>
         </div>
@@ -66,7 +63,7 @@
                     <p>Łączna kwota</p>
                     <p class="price">320 zł</p>
                 </div>
-                <a href="" class="cart__priceSection--buyBtn">Przejdź do dostawy<i class="ti ti-chevron-right"></i></a>
+                <a href="./login_or_register.php" class="cart__priceSection--buyBtn">Przejdź do dostawy<i class="ti ti-chevron-right"></i></a>
             </div>
         </div>
       </section>
