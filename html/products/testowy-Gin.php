@@ -1,6 +1,3 @@
-<?php
-  // session_start();
-?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -36,67 +33,42 @@
     <title>Sklep</title>
   </head>
   <body>
-  <?php
-      include './menu_component.php';
-      echo $nav
+    <?php
+    include '../category_pages/menu_component.php';
+    echo $nav
     ?>
-    <main class="product">
+        <main class="product">
         <div class="product__topSection">
-            <div class="product__image">
-
+            <div class="product__image" style="background-image: url('../../img/testowy Gin_img.png');">
             </div>
             <div class="product__specs">
-                <p class="product__specs--headline">Nazwa produktu</p>
+                <p class="product__specs--headline">testowy Gin</p>
                 <div class="product__specs__info">
                     <div class="product__specs__text">
                       <ul>
-                        <li><b>Producent:</b> Loerm ipsum</li>
-                        <li><b>Rodzaj:</b> Loerm ipsum</li>
-                        <li><b>Kraj pochodzenia:</b> Loerm ipsum</li>
-                        <li><b>Moc:</b> Loerm ipsum</li>
-                      </ul>
+                                            </ul>
                     </div>
                     <div class="product__specs__price">
-                      <p class="product__specs__price--price">120 zł</p>
+                      <p class="product__specs__price--price">150 zł</p>
                       <div class="number">
                         <span class="minus">-</span>
-                        <input type="text" value="1"/>
+                        <input type="text" value="1" id="quantity"/>
                         <span class="plus">+</span>
                       </div>
-                      <a href="" class="linkButton">Dodaj do koszyka</a>
+                      <button href="" class="linkButton">Dodaj do koszyka</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="product__bottomSection">
-          <h2 class="product__bottomSection--headline">Lorem ipsum</h2>
+          <h2 class="product__bottomSection--headline">Opis i cechy</h2>
           <div class="product__bottomSection--text">
           <i class="fa-solid fa-wine-bottle"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque lorem metus, at semper massa fringilla vel. Nam semper commodo urna, sed laoreet sapien viverra ut. Nulla facilisi. Vivamus non vulputate mauris. Maecenas in aliquam nulla, vitae vehicula massa. Vivamus eu pretium ante, eu porttitor mauris. Nam vitae vestibulum libero. Sed imperdiet magna at libero euismod placerat. Duis faucibus ut tellus ut maximus. Mauris pretium, nunc sit amet cursus sollicitudin, dui lacus mattis nisl, nec rutrum sem tellus vel magna. Phasellus mollis enim nec turpis pellentesque placerat. Cras consectetur fringilla luctus.</p>
+            <p>teścik</p>
           </div>
-          <img src="../../img/whisky.png" alt="">
+          <img src="../../img/testowy Gin_img.png" alt="">
           <table class="product__bottomSection--table">
-            <tr>
-              <td class="table-headline">Producent</td>
-              <td>Jack Daniel's</td>
-            </tr>
-            <tr>
-              <td class="table-headline">Rodzaj</td>
-              <td>Single Malt</td>
-            </tr>
-            <tr>
-              <td class="table-headline">Kraj pochodzenia</td>
-              <td>Szkocja</td>
-            </tr>
-            <tr>
-              <td class="table-headline">Moc</td>
-              <td>40%</td>
-            </tr>
-            <tr>
-              <td class="table-headline">Pojemność</td>
-              <td>700 ml</td>
-            </tr>
-          </table>
+                    </table>
           <div class="wrapper">
             <div class="reviews">
               <div class="reviews__boxes">
@@ -167,6 +139,6 @@
 			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 		></script>
 		<script src="../../js/slick.js"></script>
-  <script src="../../js/index.js"></script>
+  <script src="../../js/product.js"></script>
   </body>
 </html>
