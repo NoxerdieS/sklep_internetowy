@@ -33,26 +33,18 @@
     <main class="cart">
       <section class="cart__left">
         <div class="cart__addons">
-            <h3>Koszyk(1)</h3> <!-- tutaj ma zliczać ilość produktów w koszyku -->
+            <h3>Koszyk  (<?=$itemCount?>)</h3>
             <a><i class="fa-solid fa-trash"></i>Wyczyść koszyk</a>
         </div>
         <div class="cart__products">
+
             <div class="cart__product">
                 <img src="../img/whisky.png" alt="" class="cart__product--img">
                 <p class="cart__product--name">Nazwa produktu</p>
                 <p class="cart__product--price">320zł</p>
-                <select name="number" id="number" class="cart__product--number">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+                <button id="subQuantity">-</button>
+                <input type="number" name="number" id="number" class="cart__product--number">
+                <button id="addQuantity">+</button>
                 <button class="cart__product--delete"><i class="fa-solid fa-trash"></i></button>
             </div>
         </div>

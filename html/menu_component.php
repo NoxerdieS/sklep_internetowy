@@ -101,16 +101,22 @@ ob_start();
               class="fa-solid fa-magnifying-glass"
             ></i>
           </div>
-          <a href="#cart" class="nav__user--cart"
+          <a href="<?=$path?>/cart.php" class="nav__user--cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ><p>Koszyk</p></a>
+          <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']):?>
             <a href="<?=$path?>/user_panel/" class="nav__user--cart login-btn">
             <i class="fa-solid fa-user"></i>
             <p>Twoje konto</p>
             </a>
             <a href="<?=$path?>/../php/logout.php" class="nav__user--cart login-btn">
             <i class="fa-solid fa-right-from-bracket"></i>
-            <p>Wyloguj się</p></a> 
+            <p>Wyloguj się</p></a>
+          <?php else:?>
+            <a href="./html/login_page.php" class="nav__user--cart login-btn">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <p>Zaloguj się</p></a>
+          <?php endif; ?>
         </div>
       </nav>
 <?php
