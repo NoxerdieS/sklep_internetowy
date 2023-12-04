@@ -54,8 +54,9 @@
           $query = $pdo -> prepare($sql);
           $query -> execute([$category_id]);
           while($row = $query -> fetch()):
+            $filename = str_replace(' ', '-', $row['product_name']);
         ?>
-          <a class="products__product" id="<?=$row['id']?>">
+          <a href="../products/<?=$filename?>.php" class="products__product" id="<?=$row['id']?>">
             <img src="<?=$row['path']?>" alt="" class="products__product--image">
             <p class="products__product--name"><?=$row['product_name']?></p>
             <p class="products__product--price"><?=$row['price']?> zł</p>
