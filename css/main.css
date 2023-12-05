@@ -1634,9 +1634,12 @@ p {
   color: rgb(38, 163, 201);
   border-radius: 8px;
 }
+.admin__formContainer select {
+  color: #d4d4d4;
+}
 .admin__contentContainer {
   position: relative;
-  height: 100%;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
