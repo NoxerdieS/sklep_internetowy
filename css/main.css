@@ -1639,7 +1639,7 @@ p {
 }
 .admin__contentContainer {
   position: relative;
-  min-height: 800px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1703,6 +1703,10 @@ p {
 }
 .admin__contentContainer--addProduct:hover {
   transform: scale(1.1);
+}
+.admin__contentContainerProduct {
+  height: auto;
+  min-height: 800px;
 }
 .admin__editContainer {
   width: 650px;

@@ -35,7 +35,7 @@ while ($row = $query->fetch()){
 echo $html;
 ?>
 <div class="admin__popup">
-      <div class="admin__contentContainer">
+      <div class="admin__contentContainer admin__contentContainerProduct">
         <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
         <form id="create-product-form" method="post">
             <div class="admin__formContainer">
