@@ -101,7 +101,7 @@ ob_start();
               class="fa-solid fa-magnifying-glass"
             ></i>
           </div>
-          <a href="<?=$path?>/cart.php" class="nav__user--cart"
+          <a href="<?=$path?>/order/cart.php" class="nav__user--cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ><p>Koszyk</p></a>
           <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']):?>

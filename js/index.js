@@ -2,8 +2,7 @@ const mobileMenuButton = document.querySelector('.nav__mobile--bars');
 const mobileMenu = document.querySelector('.nav__mobileMenu');
 const allMobileMenuItems = document.querySelectorAll('.menu-item');
 const allMobileDropdowns = document.querySelectorAll('.dropdown');
-const promoBtn = document.querySelector('.cart__buySection--promoBtn');
-const promocodeBox = document.querySelector('#promobox');
+
 
 const showMenu = () => {
 	mobileMenu.classList.toggle('visible');

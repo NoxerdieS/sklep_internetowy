@@ -56,7 +56,7 @@
           while($row = $query -> fetch()):
             $filename = str_replace(' ', '-', $row['product_name']);
         ?>
-          <a href="../products/<?$filename?>.php" class="products__product" id="<?=$row['id']?>">
+          <a href="../products/<?=$filename?>.php" class="products__product" id="<?=$row['id']?>">
             <img src="<?=$row['path']?>" alt="" class="products__product--image">
             <p class="products__product--name"><?=$row['product_name']?></p>
             <p class="products__product--price"><?=$row['price']?> zł</p>
@@ -68,5 +68,6 @@
     </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../../js/filter.js"></script>
+    <script src="../../js/category.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+const promoBtn = document.querySelector('.cart__buySection--promoBtn');
+const promocodeBox = document.querySelector('#promobox');
 promoBtn.addEventListener('click', () => {
 	if(promocodeBox.style.display=='flex') {
 		promocodeBox.style.display='none';

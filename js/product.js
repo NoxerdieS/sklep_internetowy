@@ -15,3 +15,18 @@ $(document).ready(function() {
 	});
 });
 const productQuantity = document.querySelector('#quantity')
+const productId = document.querySelector('#productId')
+const productToCart = document.querySelector('#addToCart')
+
+const formData = new FormData()
+
+productToCart.addEventListener('click', () => {
+	formData.append('id', productId.value)
+	formData.append('quantity', productQuantity.value)
+	fetch('../../php/add_to_cart.php', {
+		method: 'POST',
+		body: formData
+	}).then(
+		// wyświetl popup, o dodaniu do koszyka	
+	)
+	})
