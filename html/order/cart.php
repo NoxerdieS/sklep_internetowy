@@ -33,13 +33,14 @@
     <main class="cart">
       <section class="cart__left">
         <div class="cart__addons">
-            <h3>Koszyk  ()</h3>
+            
             <a><i class="fa-solid fa-trash"></i>Wyczyść koszyk</a>
         </div>
         <div class="cart__products">
           <?php 
             if(isset($_SESSION['cart']) || empty($_SESSION['cart'])):
-              $cart = $_SESSION['cart'];
+              $cart = $_SESSION['cart'] ?? [];
+              // var_dump($cart); die();
               require_once('../../php/dblogin.php');
               for($i = 0; $i<count($cart); $i++):
                 $item = $cart[$i];
@@ -48,13 +49,13 @@
                 $query -> execute([$item[0]]);
                 $row = $query -> fetch();
           ?>
-            <div class="cart__product">
+            <div class="cart__product" id="<?=$row['id']?>">
                 <img src="<?=$row['path']?>" alt="" class="cart__product--img">
                 <p class="cart__product--name"><?=$row['product_name']?></p>
                 <p class="cart__product--price"><?=$row['price']?> zł</p>
                 <div class="number">
                   <span class="minus">-</span>
-                  <input type="text" value="<?=$item[1]?>"/>
+                  <input class="quantity" type="text" value="<?=$item[1]?>"/>
                   <span class="plus">+</span>
                 </div>
                 <button class="cart__product--delete"><i class="fa-solid fa-trash"></i></button>
@@ -75,7 +76,7 @@
             <div class="cart__priceSection">
                 <div class="priceBox">
                     <p>Łączna kwota</p>
-                    <p class="price">320 zł</p>
+                    <p class="price"></p>
                 </div>
                 <a href="./login_or_register.php" class="cart__priceSection--buyBtn">Przejdź do dostawy<i class="ti ti-chevron-right"></i></a>
             </div>
