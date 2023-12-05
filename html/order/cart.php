@@ -33,14 +33,13 @@
     <main class="cart">
       <section class="cart__left">
         <div class="cart__addons">
-            
-            <a><i class="fa-solid fa-trash"></i>Wyczyść koszyk</a>
+          <h3>Koszyk  (<span id="productCount"></span>)</h3>
+            <a id="clearCart"><i class="fa-solid fa-trash"></i>Wyczyść koszyk</a>
         </div>
         <div class="cart__products">
           <?php 
             if(isset($_SESSION['cart']) || empty($_SESSION['cart'])):
               $cart = $_SESSION['cart'] ?? [];
-              // var_dump($cart); die();
               require_once('../../php/dblogin.php');
               for($i = 0; $i<count($cart); $i++):
                 $item = $cart[$i];

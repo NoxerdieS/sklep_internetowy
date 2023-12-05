@@ -1,4 +1,9 @@
-
+<?php
+  session_start();
+  if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
+    header('Location: ./order.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -30,17 +35,17 @@
 
         <div class="login-or-register__login">
         <a href="./cart.php" class="login__field--back"><i class="fa-solid fa-arrow-left"></i></a>
-            <form action="">
+            <form id="loginForm">
                 <h2>Zaloguj się</h2>
                     <div class="inputBox">
-                        <input type="text" placeholder="Login">
+                        <input type="text" name="login" placeholder="Login">
                         <p class="error">Pole nie może być puste</p>
                     </div>
                     <div class="inputBox">
-                        <input type="password" placeholder="Hasło">
+                        <input type="password" name="password" placeholder="Hasło">
                         <p class="error">Podane hasło jest niepoprawne</p>
                     </div>
-                    <a href="#" class="remember-password">Nie pamiętasz hasła?</a>
+                    <a href="../forgot_password.php" class="remember-password">Nie pamiętasz hasła?</a>
                     <p class="error">Podane dane są niepoprawne</p>
                 <button type="submit" class="button submitBtn">Zaloguj się</button>
             </form>
@@ -49,19 +54,16 @@
             <div class="login-or-register__others--element">
                 <h2>Zamów bez logowania</h2>
                 <p>Jeśli się nie zalogujesz, nie będziesz miał dostępu do historii zamówień.</p>
-                <a href="" class="linkButton noLoginBtn">Kontynuuj bez logowania</a>
+                <a href="./order.php" class="linkButton noLoginBtn">Kontynuuj bez logowania</a>
             </div>
             <div class="login-or-register__others--element">
                 <h2>Załóż konto</h2>
                 <p><i class="fa-solid fa-magnifying-glass"></i>Śledzenie zamówień</p>
                 <p><i class="fa-solid fa-tag"></i>Rabaty i promocje</p>
-                <a href="./register_page.php" class="linkButton noLoginBtn">Załóż konto</a>
+                <a href="../register_page.php" class="linkButton noLoginBtn">Załóż konto</a>
             </div>
         </div>
     </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../../js/order_login.js"></script>
   </body>
 </html>

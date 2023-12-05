@@ -30,7 +30,6 @@ const login = async (e) => {
 		})
 		.then(function (body) {
 			result = body;
-			// console.log(result);
 			const errorMsg = document.querySelector('.error');
 			if (result == '0') {
 				errorMsg.textContent = 'Wprowadzono nieprawidłowe dane';
@@ -38,8 +37,8 @@ const login = async (e) => {
 			} else if (result == '1') {
 				errorMsg.textContent = 'Konto nie jest aktywne';
         		errorMsg.style.display = 'block';
-			} else {
-				location.replace(result);
+			} else	{
+				location.replace('../html/user_panel/')
 			}
 		});
 };

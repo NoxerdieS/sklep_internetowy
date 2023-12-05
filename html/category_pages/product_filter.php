@@ -44,7 +44,7 @@ while($paramRow = $stmt -> fetchColumn()):
             <label for="<?=$row['param_value']?>">
               <input type="checkbox" name="type" id="<?=$row['param_value']?>" class="filter_checkbox">
               <?=$row['param_value']?>
-          </label>
+            </label>
           </div>
           <?php endwhile;?>
           <?php endwhile;?>
