@@ -1356,7 +1356,7 @@ p {
   font-size: 1.7rem;
 }
 .login__field--paragraph a {
-  color: #747a99;
+  color: rgb(38, 163, 201);
 }
 .login__form {
   display: flex;
@@ -1412,7 +1412,7 @@ p {
 }
 .login__form--options a {
   font-size: 1.8rem;
-  color: #747a99;
+  color: rgb(38, 163, 201);
 }
 .login__form--send {
   width: 60%;
@@ -1625,6 +1625,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
 .admin__formContainer .addParamBtn {
   height: 30px;
@@ -1663,7 +1664,7 @@ p {
 }
 .admin__contentContainer label {
   font-size: 2rem;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 .admin__contentContainer--input {
   height: 40px;
@@ -1707,6 +1708,10 @@ p {
 .admin__contentContainerProduct {
   height: auto;
   min-height: 800px;
+}
+.admin__contentContainerUser {
+  height: auto;
+  min-height: 1000px;
 }
 .admin__editContainer {
   width: 650px;
@@ -1844,6 +1849,147 @@ p {
 }
 .admin__inputContainer label {
   font-size: 2.2rem;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+}
+.order__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.order__right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.order__right--buySection {
+  position: fixed;
+}
+.order h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.order__delivery {
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(38, 163, 201);
+}
+.order__delivery--form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order__delivery--form .delivery-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+}
+.order__delivery--form .delivery-option input[type=radio] {
+  border: 0px;
+  width: 2rem;
+  height: 2rem;
+}
+.order__delivery--form .delivery-option label {
+  font-size: 2rem;
+  color: #d4d4d4;
+}
+.order__delivery--form .delivery-option p {
+  position: absolute;
+  font-size: 1.7rem;
+  margin: 0;
+  right: 20px;
+  color: #d4d4d4;
+}
+.order__personOption {
+  display: flex;
+  gap: 30px;
+}
+.order__personOption .person-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.order__personOption .person-option input[type=radio] {
+  border: 0px;
+  width: 2rem;
+  height: 2rem;
+}
+.order__personOption .person-option label {
+  font-size: 2rem;
+  color: #d4d4d4;
+}
+.order__address {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order__address--form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order__address--inputBox .address-input {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  font-size: 2rem;
+  color: #d4d4d4;
+  padding: 10px;
+  background: none;
+  border-radius: 10px;
+  border: 2px solid rgb(38, 163, 201);
+}
+.order__address--inputBox .address-input::-moz-placeholder {
+  font-size: 2rem;
+}
+.order__address--inputBox .address-input::placeholder {
+  font-size: 2rem;
+}
+.order__address--inputBox--error {
+  visibility: hidden;
+}
+.order__address .invoiceInfo {
+  font-size: 1.7rem;
+}
+.order__address .invoiceInfo .ti-info-circle {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+.order__address--checkboxBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.order__address--checkboxBox input[type=checkbox] {
+  border: 0px;
+  width: 2rem;
+  height: 2rem;
+}
+.order__address--checkboxBox input[type=checkbox]:checked {
+  background-color: rgb(38, 163, 201);
+}
+.order__address--checkboxBox label {
+  font-size: 1.7rem;
+  color: #d4d4d4;
+}
+.order__address--invoceData {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.order__agreements {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .visible {

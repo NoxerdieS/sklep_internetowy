@@ -1427,7 +1427,7 @@ p {
 			font-size: 1.7rem;
 
 			a {
-				color: $bright-text-color;
+				color: $bright-button-color;
 			}
 		}
 	}
@@ -1486,7 +1486,7 @@ p {
 			}
 			a {
 				font-size: 1.8rem;
-				color: $bright-text-color;
+				color: $bright-button-color;
 			}
 		}
 		&--send {
@@ -1691,7 +1691,6 @@ p {
 			background-color: $bright-button-color;
 			color: $main-white;
 			font-size: 1.7rem;
-			//   box-shadow: 0px 0px 10px 5px #282d50;
 			cursor: pointer;
 			transition: transform 0.2s;
 
@@ -1737,6 +1736,7 @@ p {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 5px;
 
 		.addParamBtn {
 			height: 30px;
@@ -1780,7 +1780,7 @@ p {
 
 		label {
 			font-size: 2rem;
-			margin: 10px 0;
+			margin-top: 10px;
 		}
 		&--input {
 			height: 40px;
@@ -1831,6 +1831,10 @@ p {
 		height: auto;
 		min-height: 800px;
 	}
+	&__contentContainerUser {
+		height: auto;
+		min-height: 1000px;
+	}
 
 	&__editContainer {
 		width: 650px;
@@ -1866,7 +1870,6 @@ p {
 		align-items: center;
 		justify-content: space-around;
 		padding: 0px 15px;
-		// margin: 0px 20px;
 		background-color: $third-color;
 		border-radius: 8px;
 	}
@@ -1982,6 +1985,171 @@ p {
 		label {
 			font-size: 2.2rem;
 		}
+	}
+}
+
+.order {
+	display: flex;
+	justify-content: center;
+	&__left {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+	}
+
+	&__right {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 400px;
+		&--buySection {
+			position: fixed;
+		}
+	}
+	
+	h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+
+	&__delivery {
+		width: 500px;
+		padding: 20px;
+		border-radius: 10px;
+		border: 2px solid $bright-button-color;
+		&--form {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			.delivery-option {
+				position: relative;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				border-radius: 10px;
+
+				input[type=radio] {
+					border: 0px;
+					width: 2rem;
+					height: 2rem;
+				}
+
+				label {
+					font-size: 2rem;
+					color: $main-white;
+				}
+
+				p{
+					position: absolute;
+					font-size: 1.7rem;
+					margin: 0;
+					right: 20px;
+					color: $main-white;
+				}
+			}
+		}
+	}
+
+	&__personOption {
+		display: flex;
+		gap: 30px;
+
+		.person-option {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 10px;
+
+			input[type=radio] {
+				border: 0px;
+				width: 2rem;
+				height: 2rem;
+			}
+
+			label {
+				font-size: 2rem;
+				color: $main-white;
+			}
+		}
+	}
+
+	&__address {
+		width: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&--form {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&--inputBox {
+			.address-input {
+				display: flex;
+				height: 50px;
+				width: 100%;
+				font-size: 2rem;
+				color: $main-white;
+				padding: 10px;
+				background: none;
+				border-radius: 10px;
+				border: 2px solid $bright-button-color;
+
+				&::placeholder {
+					font-size: 2rem;
+				}
+			}
+
+			&--error {
+				visibility: hidden;
+			}
+		}
+
+		.invoiceInfo {
+			font-size: 1.7rem;
+
+			.ti-info-circle {
+				font-size: 2rem;
+				margin-right: 5px;
+			}
+		}
+
+		&--checkboxBox {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			input[type=checkbox] {
+				border: 0px;
+				width: 2rem;
+				height: 2rem;
+
+				&:checked {
+					background-color: $bright-button-color;
+				}
+			}
+
+			label {
+				font-size: 1.7rem;
+				color: $main-white;
+			}
+		}
+
+		&--invoceData {
+			display: flex;
+			flex-direction: column;
+			display: none;
+		}
+	}
+
+	&__agreements {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
 }
 

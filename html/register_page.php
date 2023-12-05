@@ -36,7 +36,6 @@
                 <p class="register__form--error error error-email">Niepoprawny email</p>
 
                 <div class="register__form--number">
-                    <!-- <input type="number" name="phone-code" id="phone-code" placeholder="+48" class="login__form--input register__form--number--1"> -->
                     <input type="text" name="phone" id="phone-register" placeholder="Numer telefonu:" class="login__form--input register__form--number--2">
                 </div>
                 <p class="register__form--error error error-phone">Niepoprawny numer</p>

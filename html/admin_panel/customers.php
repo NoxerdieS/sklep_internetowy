@@ -34,10 +34,10 @@ while ($row = $query->fetch()){
 ?>
 
 <div class="admin__popup">
-      <div class="admin__contentContainer">
+      <div class="admin__contentContainer admin__contentContainerUser">
         <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
-        <form class="admin__contentContainer--userForm" id="create-product-form" method="post">
-            <div class="admin__formContainersBox">
+        <form class="admin__contentContainer" id="create-product-form" method="post">
+            <!-- <div class="admin__formContainersBox"> -->
                 <div class="admin__formContainer">
                     <label for="name">Imię:</label>
                     <input type="text" name="firstname" id="firstname" class="admin__contentContainer--input" placeholder="Imię">
@@ -92,7 +92,7 @@ while ($row = $query->fetch()){
                         <option value="0">Nie</option>
                     </select>
                 </div>
-            </div>
+            <!-- </div> -->
             <div class="admin__formContainer">
                 <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
             </div>
