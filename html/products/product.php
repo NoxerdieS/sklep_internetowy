@@ -52,10 +52,11 @@ while ($row = $query -> fetch()):
     ?>
     <main class="product">
         <div class="product__topSection">
+          <input type="hidden" id="productId" value="<?=$row['id']?>">
             <div class="product__image" style="background-image: url('<?=$row['path']?>');">
             </div>
             <div class="product__specs">
-                <p class="product__specs--headline"><?=$row['product_name']?></p>
+                <p id="productName" class="product__specs--headline"><?=$row['product_name']?></p>
                 <div class="product__specs__info">
                     <div class="product__specs__text">
                       <ul>
@@ -75,7 +76,7 @@ while ($row = $query -> fetch()):
                         <input type="text" value="1" id="quantity"/>
                         <span class="plus">+</span>
                       </div>
-                      <button href="" class="linkButton">Dodaj do koszyka</button>
+                      <button id="addToCart" class="linkButton">Dodaj do koszyka</button>
                     </div>
                 </div>
             </div>
@@ -99,61 +100,6 @@ while ($row = $query -> fetch()):
             </tr>
           <?php endwhile; ?>
           </table>
-          <div class="wrapper">
-            <div class="reviews">
-              <div class="reviews__boxes">
-                <div class="reviews__box">
-                  <div class="reviews__box-img">
-                    <img src="../../img/rev1.jpg" alt="Anna Nowak" />
-                  </div>
-                  <div class="reviews__box-info">
-                    <div class="reviews__box-quote">
-                      <i class="ti ti-quote"></i>
-                    </div>
-                    <p class="reviews__box-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
-                      blanditiis nulla, voluptatum natus labore at nostrum eligendi
-                      esse sapiente molestias.
-                    </p>
-                    <strong>Anna Nowak</strong>
-                  </div>
-                </div>
-                <div class="reviews__box">
-                  <div class="reviews__box-img">
-                    <img src="../../img/rev2.jpg" alt="Jan Nowak" />
-                  </div>
-                  <div class="reviews__box-info">
-                    <div class="reviews__box-quote">
-                      <i class="ti ti-quote"></i>
-                    </div>
-                    <p class="reviews__box-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
-                      blanditiis nulla, voluptatum natus labore at nostrum eligendi
-                      esse sapiente molestias.
-                    </p>
-                    <strong>Jan Nowak</strong>
-                  </div>
-                </div>
-                <div class="reviews__box">
-                  <div class="reviews__box-img">
-                    <img src="../../img/rev3.jpg" alt="Maria Wiśniewska" />
-                  </div>
-                  <div class="reviews__box-info">
-                    <div class="reviews__box-quote">
-                      <i class="ti ti-quote"></i>
-                    </div>
-                    <p class="reviews__box-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
-                      blanditiis nulla, voluptatum natus labore at nostrum eligendi
-                      esse sapiente molestias.
-                    </p>
-                    <strong>Maria Wiśniewska</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script
