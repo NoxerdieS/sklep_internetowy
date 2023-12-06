@@ -1,3 +1,6 @@
+const productAdded = document.querySelector('.nav__user--popup');	
+const closeBtn = document.querySelector('.closeBtn');	
+
 $(document).ready(function() {
 	$('.minus').click(function () {
 		var $input = $(this).parent().find('input');
@@ -27,6 +30,10 @@ productToCart.addEventListener('click', () => {
 		method: 'POST',
 		body: formData
 	}).then(
-		// wyświetl popup, o dodaniu do koszyka	
+		productAdded.style.display = 'block'
 	)
+	})
+
+	closeBtn.addEventListener('click', () => {
+		productAdded.style.display = 'none'
 	})

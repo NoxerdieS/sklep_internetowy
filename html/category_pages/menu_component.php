@@ -104,7 +104,14 @@ ob_start()
       </div>
       <a href="<?=$path?>/order/cart.php" class="nav__user--cart"
         ><i class="fa-solid fa-cart-shopping"></i
-      ><p>Koszyk</p></a>
+      ><p>Koszyk</p>
+    </a>
+    <div class="nav__user--popup">
+      <div class="container">
+        <button class="closeBtn"><i class="fa-solid fa-x"></i></button>
+        <p>Produkt został dodany do koszyka</p>
+      </div>
+    </div>
       <?php if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]): ?>
         <a href="<?=$path?>/user_panel/" class="nav__user--cart login-btn">
         <i class="fa-solid fa-user"></i>
