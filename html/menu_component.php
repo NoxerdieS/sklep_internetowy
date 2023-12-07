@@ -120,7 +120,7 @@ ob_start();
             <i class="fa-solid fa-right-from-bracket"></i>
             <p>Wyloguj się</p></a>
           <?php else:?>
-            <a href="./html/login_page.php" class="nav__user--cart login-btn">
+            <a href="<?=$path?>/login_page.php" class="nav__user--cart login-btn">
             <i class="fa-solid fa-right-to-bracket"></i>
             <p>Zaloguj się</p></a>
           <?php endif; ?>
