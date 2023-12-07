@@ -1797,6 +1797,7 @@ p {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: space-between;
 		gap: 5px;
 
 		.addParamBtn {
@@ -1820,6 +1821,12 @@ p {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
 		&--userForm {
 			height: 80%;
@@ -1858,6 +1865,7 @@ p {
 			height: 150px;
 			width: 250px;
 			padding: 10px;
+			color: $main-white;
 			font-size: 1.5rem;
 			background: none;
 			border: 2px solid $bright-button-color;
@@ -1876,6 +1884,8 @@ p {
 			margin-top: 15px;
 			border-radius: 8px;
 			color: $main-white;
+			margin: 0 auto;
+			margin-top: 20px;
 			font-size: 2rem;
 			border: none;
 			background-color: $bright-button-color;

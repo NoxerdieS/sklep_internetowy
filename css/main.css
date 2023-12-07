@@ -1692,6 +1692,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 5px;
 }
 .admin__formContainer .addParamBtn {
@@ -1712,6 +1713,11 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.admin__contentContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .admin__contentContainer--userForm {
   height: 80%;
@@ -1747,6 +1753,7 @@ p {
   height: 150px;
   width: 250px;
   padding: 10px;
+  color: #d4d4d4;
   font-size: 1.5rem;
   background: none;
   border: 2px solid rgb(38, 163, 201);
@@ -1763,6 +1770,8 @@ p {
   margin-top: 15px;
   border-radius: 8px;
   color: #d4d4d4;
+  margin: 0 auto;
+  margin-top: 20px;
   font-size: 2rem;
   border: none;
   background-color: rgb(38, 163, 201);
