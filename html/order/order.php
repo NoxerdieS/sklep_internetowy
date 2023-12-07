@@ -29,7 +29,7 @@
       include '../menu_component.php';
       echo $nav;
       if(isset($_SESSION['cart']) && empty($_SESSION['cart'])){
-        header('../../index.php');
+        header('Location: ../../index.php');
       }
     ?>
     <main class="cart order">
