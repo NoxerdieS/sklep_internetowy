@@ -1,14 +1,19 @@
 <?php
+include '../menu_component.php';
 ob_start();
 require_once('../../php/dblogin.php');
 ?>
 <h1 class="admin__headline">Zamówienia</h1>
 <div class="admin__products">
 <?php
-$sql = 'select user_order.order_id from user_order inner join user on user.id=user_order.user_id';
+$sql = 'select id from user where login like ?';
 $query = $pdo->prepare($sql);
-$query -> execute();
-while ($row = $query->fetch()){
+$query -> execute([$_SESSION['login']]);
+$user_id = $query -> fetchColumn();
+$sql = 'select order_id from user_order where user_id = ?';
+$query = $pdo->prepare($sql);
+$query -> execute([$user_id]);
+while ($row = $query->fetch()):
     $param = http_build_query([
         'item' => $row['order_id']
     ]);
@@ -17,16 +22,15 @@ while ($row = $query->fetch()){
         'table' => 'user_order',
         'column' => 'order_id'
     ]);
-    $html = '<div class="admin__product">
-    <p class="admin__product--name">Numer zamówienia: '.$row['order_id'].'</p>
-    <a href="" class="admin__add--addBtn admin__product--delete">Szczegóły</a>
-    </div>';
-    echo $html;
-}
 ?>
+    <div class="admin__product">
+    <p class="admin__product--name">Numer zamówienia: <?=$row['order_id']?></p>
+    <button class="details admin__add--addBtn admin__product--delete">Szczegóły</button>
+    <input type="hidden" value="<?=$row['order_id']?>">
+    </div>
 <?php
+endwhile;
 $body = ob_get_contents();
 ob_end_clean();
-
 
 require('./user_panel.php');
