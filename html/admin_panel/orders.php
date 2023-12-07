@@ -7,26 +7,25 @@ $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
 <h1 class="admin__headline">Zamówienia</h1>
 <div class="admin__products">
 <?php
-$sql = 'select user_order.order_id, login from user_order inner join user on user.id=user_order.user_id';
+$sql = 'select id from order_details';
 $query = $pdo->prepare($sql);
 $query -> execute();
-while ($row = $query->fetch()){
+while ($row = $query->fetch()):
     $param = http_build_query([
-        'item' => $row['order_id']
+        'item' => $row['id']
     ]);
     $delParams = http_build_query([
-        'item' => $row['order_id'],
-        'table' => 'user_order',
-        'column' => 'order_id'
+        'item' => $row['id'],
+        'table' => 'order_details',
+        'column' => 'id'
     ]);
-    $html = '<div class="admin__product">
-    <p class="admin__product--name">Nr: '.$row['order_id'].', User: '.$row['login'].'</p>
-    <a href="./edit_order.php?'.$param.'" class="admin__add--addBtn admin__product--edit">Edytuj</a>
-    <a href="../../php/admin_panel/delete_item.php?'.$delParams.'" class="admin__add--addBtn admin__product--delete">Usuń</a>
-    </div>';
-    echo $html;
-}
 ?>
+    <div class="admin__product">
+    <p class="admin__product--name">Nr zamówienia: <?=$row['id']?></p>
+    <a href="./edit_order.php?<?=$param?>" class="admin__add--addBtn admin__product--edit">Edytuj</a>
+    <a href="../../php/admin_panel/delete_item.php?<?=$delParams?>" class="admin__add--addBtn admin__product--delete">Usuń</a>
+    </div>
+<?php endwhile; ?>
 
     <div class="admin__popup">
       <div class="admin__contentContainer">

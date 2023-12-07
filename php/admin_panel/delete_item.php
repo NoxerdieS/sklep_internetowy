@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
         $stmt -> execute([$_SESSION['name']]);
         $ids = $stmt -> fetch();
         $product_id = $ids['id'];
-        $photo_id = $ids['$photo_id'];
+        $photo_id = $ids['photo_id'];
     }else if($_SESSION['table'] == 'user'){
         $sql = 'select address_id from user where login like ?';
         $stmt = $pdo ->prepare($sql);

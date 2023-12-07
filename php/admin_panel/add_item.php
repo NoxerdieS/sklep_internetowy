@@ -17,13 +17,30 @@
             $pdo -> prepare($sql) -> execute([$_POST["name"], $_POST["category"], $_POST["price"], $_POST["description"], $_POST["quantity"], $photo_id]);
             $i = 0;
             $product_id = $pdo -> lastInsertId();
+            $sql = 'select id, param_name from parameters';
+            $stmt = $pdo -> prepare($sql);
+            $stmt -> execute();
+            $params = $stmt -> fetchAll();
             $sql_name = 'insert into parameters(param_name) values(?)';
             $sql_value = 'insert into `product-params`(product_id, param_id, param_value) values(?, ?, ?)';
             while(isset($_POST['param_name'.$i]) && isset($_POST['param_value'.$i])){
-                $stmt_name = $pdo -> prepare($sql_name);
+                $temp = false;
+                $j = 0;
+                for ($j; $j < count($params); $j++){
+                    if($params[$j][1] == $_POST['param_name'.$i]){
+                        $temp = true;
+                    }
+                }
+                $param_id = 0;
+                if($temp){
+                    $param_id = $params[$j-1][0];
+                }else{
+                    $stmt_name = $pdo -> prepare($sql_name);
+                    $stmt_name -> execute([$_POST['param_name'.$i]]);
+                    $param_id = $pdo -> lastInsertId();
+
+                }
                 $stmt_value = $pdo -> prepare($sql_value);
-                $stmt_name -> execute([$_POST['param_name'.$i]]);
-                $param_id = $pdo -> lastInsertId();
                 $stmt_value -> execute([$product_id, $param_id, $_POST['param_value'.$i]]);
                 $i++;
             }

@@ -49,7 +49,8 @@ addForm.addEventListener("submit", () => {
         method: 'POST',
         body: formData
     })
-    .then(() =>{
+    .then((res) =>{
+
         window.location.reload()
     })
 })
