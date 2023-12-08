@@ -6,14 +6,18 @@
     $query = $pdo -> prepare($sql);
     $query -> execute([$_GET['id']]);
     $order_info = $query -> fetch();
-    $sql = 'select city, postal, address from order_address inner join address on order_address.address_id=address.id where order_id = ?';
-    $query = $pdo -> prepare($sql);
-    $query -> execute([$_GET['id']]);
-    $address_info = $query -> fetch();
-    $sql = 'select firstname, lastname, mail, telephone from user inner join user_order on user_order.user_id=user.id where order_id = ?';
+    
+    $sql = 'select firstname, lastname, mail, telephone, address_id, order_id, invoice_name, invoice_mail, invoice_telephone, invoice_address_id from order_data where order_id = ?';
     $query = $pdo -> prepare($sql);
     $query -> execute([$_GET['id']]);
     $user_info = $query -> fetch();
+    $sql = 'select city, postal, address from address where id = ?';
+    $query = $pdo -> prepare($sql);
+    $query -> execute([$user_info['address_id']]);
+    $address_info = $query -> fetch();
+
+    $query -> execute([$user_info['invoice_address_id']]);
+    $invoice_address_info = $query -> fetch();
     ob_start();
 ?>
 

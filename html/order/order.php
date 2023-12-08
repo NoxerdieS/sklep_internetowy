@@ -125,15 +125,15 @@
           </form>
           <form id="invoice" class="order__address--invoceData">
             <div class="order__address--inputBox">
-              <input type="text" name="name" id="name" placeholder="Imię i nazwisko lub nazwa firmy" class="address-input">
+              <input type="text" name="invoice_name" id="name" placeholder="Imię i nazwisko lub nazwa firmy" class="address-input">
               <p class="order__address--inputBox--error error error-name">To pole nie możę być puste</p>
             </div>
             <div class="order__address--inputBox">
-              <input type="text" name="address" id="address" placeholder="Ulica i numer domu / mieszkania" class="address-input">
+              <input type="text" name="invoice_address" id="address" placeholder="Ulica i numer domu / mieszkania" class="address-input">
               <p class="order__address--inputBox--error error error-name">To pole nie możę być puste</p>
             </div>
             <div class="order__address--inputBox">
-                <input type="text" name="postcode" id="postcode" placeholder="Kod pocztowy" class="address-input">
+                <input type="text" name="invoice_postcode" id="postcode" placeholder="Kod pocztowy" class="address-input">
                 <p class="order__address--inputBox--error error error-postcode">Niepoprawny kod pocztowy</p>
             </div>
             <div class="order__address--inputBox">

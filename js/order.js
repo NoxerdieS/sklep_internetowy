@@ -38,18 +38,17 @@ orderBtn.addEventListener('click', (e) => {
 
 	const addressData = new FormData(addressForm)
 
+	const formData = new FormData()
+	invoiceData.append('invoice', invoice)
 	if(invoice == 1){
 		const invoiceData = new FormData(invoiceForm)
-		invoiceData.append('invoice', invoice)
-		fetch('../../php/place_order.php', {
-			method: 'POST',
-			body: invoiceData
-		})
+		for (var pair of invoiceData.entries()) {
+			formData.append(pair[0], pair[1]);
+		}
 	}
 
 	const paymentData = new FormData(paymentForm)
 
-	const formData = new FormData()
 	for (var pair of shippingData.entries()) {
 		formData.append(pair[0], pair[1]);
 	}

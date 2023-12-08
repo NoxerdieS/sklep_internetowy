@@ -1,6 +1,6 @@
 const detailsBtns = document.querySelectorAll('.details')
 const popupCloseBtn = document.querySelector('.admin__contentContainer--closeBtn')
-const popup = document.querySelector('.popup')
+const popup = document.querySelector('.user__popup')
 const popupText = document.querySelector('.popup-text')
 
 detailsBtns.forEach(element => {
@@ -10,10 +10,8 @@ detailsBtns.forEach(element => {
         .then(res => {
             return res.text()
         }).then(body => {
-            element.parentElement.parentElement.innerHTML = body;
             popup.innerHTML = body;
             popup.style.display = 'flex';
-            console.log('test')
         })
     })
 })

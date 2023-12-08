@@ -1,3 +1,9 @@
+<?php
+  include '../menu_component.php';
+  if(!isset($_SESSION['cart'])){
+    header('Location: ./cart.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -26,8 +32,17 @@
   </head>
   <body>
     <?php
-      include '../menu_component.php';
       echo $nav;
+
+      require_once('../../php/dblogin.php');
+      $sql;
+      if(isset($_SESSION['login'])){
+        $sql = 'select address_id from order_address where order_id = ?';
+        $sql = 'select city, postal, address from address where id = ?';
+
+        $sql = 'select user.id, firstname, lastname, telephone, mail user where login = ?';
+
+      }
     ?>
     <main class="cart summary">
         <h2>Dziękujemy za złożenie zamówienia!</h2>
