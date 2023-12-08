@@ -1,4 +1,7 @@
 const detailsBtns = document.querySelectorAll('.details')
+const popupCloseBtn = document.querySelector('.admin__contentContainer--closeBtn')
+const popup = document.querySelector('.popup')
+const popupText = document.querySelector('.popup-text')
 
 detailsBtns.forEach(element => {
     element.addEventListener('click', ()=>{
@@ -8,8 +11,13 @@ detailsBtns.forEach(element => {
             return res.text()
         }).then(body => {
             element.parentElement.parentElement.innerHTML = body;
-            //   !!!! wyświetl body jako popup !!!!
+            popup.innerHTML = body;
+            popup.style.visibility = 'visible';
             console.log('test')
         })
     })
+})
+
+popupCloseBtn.addEventListener('click', () => {
+    popup.style.visibility = 'hidden';
 })

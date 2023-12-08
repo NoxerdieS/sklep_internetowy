@@ -25,6 +25,14 @@
     echo $nav;
   ?>
     <main class="user">
+      <div class="user__popup">
+        <div class="user__popupContainer">
+          <div class="popup">
+          <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
+            
+          </div>
+        </div>
+      </div>
           <section class="user__menu">
             <?php if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>
             <a href="../admin_panel/" class="user__menu--adminPanel">Panel administratora <i class="fa-solid fa-arrow-right"></i></a>

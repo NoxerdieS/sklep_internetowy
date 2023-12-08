@@ -5,6 +5,7 @@ const popup = document.querySelector('.admin__popup')
 const searchBtn = document.querySelector('#searchBtn')
 const searchRes = document.querySelectorAll('.admin__product--name')
 const adminProducts = document.querySelector('.admin__products')
+const addForm = document.querySelector("#create-product-form");
 
 searchBtn.addEventListener('click', () => {
     const searchBar = document.querySelector('#searchBar')
@@ -39,7 +40,6 @@ popupCloseBtn.addEventListener('click', () => {
     popup.classList.remove('visible')
     popupShadow.classList.remove('visible')
 })
-const addForm = document.querySelector("#create-product-form");
 
 addForm.addEventListener("submit", () => {
     const formData = new FormData(addForm);
