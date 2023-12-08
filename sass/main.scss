@@ -1674,35 +1674,20 @@ p {
 
 	&__popup {
 		position: absolute;
-		width: 99%;
-		height: 80%;
+		width: 600px;
+		height: 400px;
+		left: 50%;
+		top: 40%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translate(-50%, -50%);
+		background-color: $secondary-color;
+		border-radius: 10px;
+		z-index: 10;
+		display: none;
 	}
-
-	&__popupContainer {
-		position: relative;
-		height: 100%;
-		width: 100%;
-
-		.popup {
-			position: absolute;
-			width: 600px;
-			height: 400px;
-			left: 50%;
-			top: 40%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transform: translate(-50%, -50%);
-			background-color: $secondary-color;
-			border-radius: 10px;
-			z-index: 10;
-			display: none;
-
-			.popup-text {
-				font-size: 2.5rem;
-			}
-		}
-	}
+	
 	&__menu {
 		display: flex;
 		flex-direction: column;

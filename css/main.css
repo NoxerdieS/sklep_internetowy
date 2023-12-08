@@ -1582,16 +1582,6 @@ p {
 }
 .user__popup {
   position: absolute;
-  width: 99%;
-  height: 80%;
-}
-.user__popupContainer {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-.user__popupContainer .popup {
-  position: absolute;
   width: 600px;
   height: 400px;
   left: 50%;
@@ -1604,9 +1594,6 @@ p {
   border-radius: 10px;
   z-index: 10;
   display: none;
-}
-.user__popupContainer .popup .popup-text {
-  font-size: 2.5rem;
 }
 .user__menu {
   display: flex;

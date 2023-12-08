@@ -26,8 +26,7 @@
   ?>
     <main class="user">
       <div class="user__popup">
-        <div class="user__popupContainer">
-          <div class="popup">
+
           <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
             
           </div>
