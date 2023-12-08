@@ -1696,7 +1696,7 @@ p {
 			background-color: $secondary-color;
 			border-radius: 10px;
 			z-index: 10;
-			visibility: hidden;
+			display: none;
 
 			.popup-text {
 				font-size: 2.5rem;

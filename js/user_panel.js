@@ -12,12 +12,12 @@ detailsBtns.forEach(element => {
         }).then(body => {
             element.parentElement.parentElement.innerHTML = body;
             popup.innerHTML = body;
-            popup.style.visibility = 'visible';
+            popup.style.display = 'flex';
             console.log('test')
         })
     })
 })
 
 popupCloseBtn.addEventListener('click', () => {
-    popup.style.visibility = 'hidden';
+    popup.style.display = 'none';
 })
