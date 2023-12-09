@@ -22,7 +22,16 @@
         $sql = 'insert into user_order(user_id, order_id) values(?, ?)';
         $stmt = $pdo -> prepare($sql);
         $stmt -> execute([$_POST['user_id'], $order_id]);
-        $address_id = $_POST['address_id'];
+        $sql = 'select id from address where city = ? and postal = ? and address = ?';
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute([$_POST['city'], $_POST['postcode'], $_POST['address']]);
+        $address_id = $stmt -> fetchColumn();
+        if(is_bool($address_id)){
+            $sql = 'insert into address(city, postal, address) values(?, ?, ?)';
+            $stmt = $pdo -> prepare($sql);
+            $stmt -> execute([$_POST['city'], $_POST['postcode'], $_POST['address']]);
+            $address_id = $pdo -> lastInsertId();
+        }
     }else{
         $sql = 'insert into address(city, postal, address) values(?, ?, ?)';
         $stmt = $pdo -> prepare($sql);
@@ -49,6 +58,6 @@
     $invoice_phone = $_POST['invoice_phone'] ?? $_POST['phone'];
     $stmt -> execute([$firstname, $lastname, $_POST['email'], $_POST['phone'], $address_id, $order_id, $invoice_name, $invoice_mail, $invoice_phone, $invoice_address_id]);
 
-
+    echo $order_id;
     $_SESSION['cart'] = [];
 ?>

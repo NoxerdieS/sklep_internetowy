@@ -1,8 +1,8 @@
 <?php
   include '../menu_component.php';
-  if(!isset($_SESSION['cart'])){
-    header('Location: ./cart.php');
-  }
+  // if(!isset($_SESSION['cart'])){
+  //   header('Location: ./cart.php');
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -36,40 +36,49 @@
 
       require_once('../../php/dblogin.php');
       $sql;
-      if(isset($_SESSION['login'])){
-        $sql = 'select address_id from order_address where order_id = ?';
-        $sql = 'select city, postal, address from address where id = ?';
+      $sql = 'select order_details.id, total, payment_name, shipper_name from order_details inner join payment on order_details.payment_id=payment.id inner join shipping on order_details.shipping_id=shipping.id where order_details.id = ?';
+    $query = $pdo -> prepare($sql);
+    $query -> execute([$_POST['order_id']]);
+    $order_info = $query -> fetch();
+    
+    $sql = 'select firstname, lastname, mail, telephone, address_id, order_id, invoice_name, invoice_mail, invoice_telephone, invoice_address_id from order_data where order_id = ?';
+    $query = $pdo -> prepare($sql);
+    $query -> execute([$_POST['order_id']]);
+    $user_info = $query -> fetch();
+    $sql = 'select city, postal, address from address where id = ?';
+    $query = $pdo -> prepare($sql);
+    $query -> execute([$user_info['address_id']]);
+    $address_info = $query -> fetch();
 
-        $sql = 'select user.id, firstname, lastname, telephone, mail user where login = ?';
-
-      }
+    $query -> execute([$user_info['invoice_address_id']]);
+    $invoice_address_info = $query -> fetch();
     ?>
     <main class="cart summary">
         <h2>Dziękujemy za złożenie zamówienia!</h2>
         <h3>Potwierdzenie zostało wysłane na adres e-mail</h3>
         <div class="order__delivery summary__infoBox">
             <h3>Dane do wysyłki</h3>
-            <p><span>Imię i nazwisko: </span>Jan Kowalski</p>
-            <p><span>Ulica i numer domu / mieszkania: </span>Lorem, ipsum dolor.</p>
-            <p><span>Kod pocztowy: </span>00-000</p>
-            <p><span>Miejscowość: </span>Lorem</p>
-            <p><span>Numer telefonu: </span>000000000</p>
-            <p><span>Adres e-mail: </span>troll@troll.pl</p>
+            <p><span>Imię i nazwisko: </span><?=$user_info['firstname'].' '.$user_info['lastname']?></p>
+            <p><span>Ulica i numer domu / mieszkania: </span><?=$address_info['address']?></p>
+            <p><span>Kod pocztowy: </span><?=$address_info['postal']?></p>
+            <p><span>Miejscowość: </span><?=$address_info['city']?></p>
+            <p><span>Numer telefonu: </span><?=$user_info['telephone']?></p>
+            <p><span>Adres e-mail: </span><?=$user_info['mail']?></p>
         </div>
         <div class="order__delivery summary__infoBox">
             <h3>Dane do faktury</h3>
-            <p><span>Imię i nazwisko: </span>Jan Kowalski</p>
-            <p><span>Ulica i numer domu / mieszkania: </span>Lorem, ipsum dolor.</p>
-            <p><span>Kod pocztowy: </span>00-000</p>
-            <p><span>Miejscowość: </span>Lorem</p>
-            <p><span>Numer telefonu: </span>000000000</p>
-            <p><span>Adres e-mail: </span>troll@troll.pl</p>
+            <p><span>Imię i nazwisko: </span><?=$user_info['invoice_name']?></p>
+            <p><span>Ulica i numer domu / mieszkania: </span><?=$invoice_address_info['address']?></p>
+            <p><span>Kod pocztowy: </span><?=$invoice_address_info['postal']?></p>
+            <p><span>Miejscowość: </span><?=$invoice_address_info['city']?></p>
+            <p><span>Numer telefonu: </span><?=$user_info['invoice_telephone']?></p>
+            <p><span>Adres e-mail: </span><?=$user_info['invoice_mail']?></p>
         </div>
         <div class="order__delivery summary__infoBox">
             <h3>Płatność i dostawa</h3>
-            <p><span>Koszt: </span>2137 zł</p>
-            <p><span>Sposób dostawy: </span>Inpost</p>
-            <p><span>Płatność: </span>BLIK</p>
+            <p><span>Koszt: </span><?=$order_info['total']?></p>
+            <p><span>Sposób dostawy: </span><?=$order_info['shipper_name']?></p>
+            <p><span>Płatność: </span><?=$order_info['payment_name']?></p>
         </div>
         <a href="../../index.php" class="linkButton summary__backButton"><i class="ti ti-chevron-left"></i>Wróć na stronę główną</a>
     </main>
