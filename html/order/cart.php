@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./img/logo_transparent.png"
+      href="../../img/logo_transparent.png"
       type="image/x-icon"
     />
 
@@ -31,6 +31,10 @@
       echo $nav
     ?>
     <main class="cart">
+    <div class="popup">
+          <button class="admin__contentContainer--closeBtn closeBtn" id="closeBtn"><i class="fa-solid fa-x"></i></button>
+          <p>Koszyk jest pusty</p>
+      </div>
       <section class="cart__left">
         <div class="cart__addons">
           <h3>Koszyk  (<span id="productCount"></span>)</h3>

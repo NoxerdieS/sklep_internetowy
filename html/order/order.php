@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./img/logo_transparent.png"
+      href="../../img/logo_transparent.png"
       type="image/x-icon"
     />
 
@@ -36,6 +36,7 @@
       <section class="order__left">
         <div class="order__delivery">
           <form id="delivery" class="order__delivery--form">
+            <p class="error cart-error delivery-error">Nie wybrano sposobu dostawy</p>
             <h2>Dostawa</h2>
             <?php
               require_once('../../php/dblogin.php');
@@ -91,27 +92,27 @@
             <input type="hidden" name="address_id" value="<?=$info['address_id']?>">
             <div class="order__address--inputBox">
               <input type="text" name="name" id="name" placeholder="Imię i nazwisko lub nazwa firmy" value="<?=$fname.$lname?>" class="address-input" required>
-              <p class="order__address--inputBox--error error error-name">To pole nie może być puste</p>
+              <p class="error cart-error">To pole nie może być puste</p>
             </div>
             <div class="order__address--inputBox">
               <input type="text" name="address" id="address" placeholder="Ulica i numer domu / mieszkania" value="<?=$info['address'] ?? ''?>" class="address-input" required>
-              <p class="order__address--inputBox--error error error-name">To pole nie może być puste</p>
+              <p class="error cart-error">To pole nie może być puste</p>
             </div>
             <div class="order__address--inputBox">
                 <input type="text" name="postcode" id="postcode" placeholder="Kod pocztowy" value="<?=$info['postal'] ?? ''?>" class="address-input" required>
-                <p class="order__address--inputBox--error error error-postcode">Niepoprawny kod pocztowy</p>
+                <p class="error cart-error">Niepoprawny kod pocztowy</p>
             </div>
             <div class="order__address--inputBox">
               <input type="text" name="city" id="city" placeholder="Miejscowość" value="<?=$info['city']  ?? ''?>" class="address-input" required>
-              <p class="order__address--inputBox--error error error-name">To pole nie może być puste</p>
+              <p class="error cart-error">To pole nie może być puste</p>
             </div>
             <div class="order__address--inputBox">
               <input type="text" name="phone" id="phone" placeholder="Numer telefonu" value="<?=$info['telephone'] ?? ''?>" class="address-input">
-              <p class="order__address--inputBox--error error error-name">Niepoprawny numer telefonu</p>
+              <p class="error cart-error">Niepoprawny numer telefonu</p>
             </div>
             <div class="order__address--inputBox">
               <input type="email" name="email" id="email" placeholder="Email" value="<?=$info['mail'] ?? ''?>" class="address-input" required>
-              <p class="order__address--inputBox--error error error-name">Niepoprawny adres email</p>
+              <p class="error cart-error">Niepoprawny adres email</p>
             </div>
 
             <h2>Dane do faktury</h2>
@@ -144,6 +145,7 @@
         </div>
         <div class="order__delivery">
           <form id="payment" class="order__delivery--form">
+          <p class="error cart-error payment-error">Nie wybrano sposobu płatności</p>
             <h2>Forma płatności</h2>
             <?php
               $sql = 'select id, payment_name, payment_cost from payment where isActive = 1';
@@ -162,6 +164,7 @@
         </div>
         <div class="order__agreements">
           <h2>Zgody i oświadczenia</h2>
+          <p class="error cart-error">Nie zaakceptowano zgód</p>
           <form>
             <div class="order__address--checkboxBox">
               <input type="checkbox" name="agreements" id="agreement" class="checkbox" required>

@@ -23,47 +23,47 @@
 
 <form class="admin__contentContainer--userForm">
     <div class="admin__formContainer">
-                      <label for="name">Numer zamówienia:</label>
+                      <label for="order_id">Numer zamówienia:</label>
                       <input type="text" name="order_id" id="order_id" class="admin__contentContainer--input" placeholder="Numer zamówienia" value="<?=$order_info['id']?>" disabled>
                   </div>              
     <div class="admin__formContainer">
-                      <label for="name">Wartość zamówienia</label>
+                      <label for="total">Wartość zamówienia</label>
                       <input type="text" name="total" id="total" class="admin__contentContainer--input" placeholder="Wartość zamówienia" value="<?=$order_info['total']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Sposób dostawy:</label>
+                      <label for="shipping">Sposób dostawy:</label>
                       <input type="text" name="shipping" id="shipping" class="admin__contentContainer--input" placeholder="Sposób dostawy" value="<?=$order_info['shipper_name']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Sposób płatności:</label>
+                      <label for="payment">Sposób płatności:</label>
                       <input type="text" name="payment" id="payment" class="admin__contentContainer--input" placeholder="Sposób płatności" value="<?=$order_info['payment_name']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Imię:</label>
+                      <label for="firstname">Imię:</label>
                       <input type="text" name="firstname" id="firstname" class="admin__contentContainer--input" placeholder="Imię" value="<?=$user_info['firstname']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Nazwisko:</label>
+                      <label for="lastname">Nazwisko:</label>
                       <input type="text" name="lastname" id="lastname" class="admin__contentContainer--input" placeholder="Nazwisko" value="<?=$user_info['lastname']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">E-mail:</label>
+                      <label for="email">E-mail:</label>
                       <input type="email" name="email" id="email" class="admin__contentContainer--input" placeholder="Email" value="<?=$user_info['mail']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Telefon:</label>
+                      <label for="phone">Telefon:</label>
                       <input type="number" name="phone" id="phone" class="admin__contentContainer--input" placeholder="Telefon" value="<?=$user_info['telephone']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Ulica i numer:</label>
+                      <label for="address">Ulica i numer:</label>
                       <input type="text" name="address" id="address" class="admin__contentContainer--input" placeholder="Ulica i numer" value="<?=$address_info['address']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Kod pocztowy:</label>
+                      <label for="postcode">Kod pocztowy:</label>
                       <input type="text" name="postcode" id="postcode" class="admin__contentContainer--input" placeholder="Kod pocztowy" value="<?=$address_info['postal']?>" disabled>
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Miasto:</label>
+                      <label for="city">Miasto:</label>
                       <input type="text" name="city" id="city" class="admin__contentContainer--input" placeholder="Miasto" value="<?=$address_info['city']?>" disabled>
                   </div>
 </form>

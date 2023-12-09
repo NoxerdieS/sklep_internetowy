@@ -25,12 +25,9 @@
     echo $nav;
   ?>
     <main class="user">
-      <div class="user__popup">
-
-          <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
-            
-          </div>
-        </div>
+      <div class="user__popup popup">
+          <button class="admin__contentContainer--closeBtn closeBtn" id="closeBtn"><i class="fa-solid fa-x"></i></button>
+      </div>
       </div>
           <section class="user__menu">
             <?php if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>

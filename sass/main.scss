@@ -67,6 +67,7 @@ p {
 .error {
 	font-size: 1.6rem;
 	color: $error-red;
+	margin: 0;
 }
 
 .linkButton {
@@ -1666,6 +1667,26 @@ p {
 
 // USER PANEL
 
+.popup {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	left: 50%;
+	top: 50%;
+	align-items: center;
+	justify-content: center;
+	transform: translate(-50%, -50%);
+	background-color: $secondary-color;
+	border-radius: 10px;
+	z-index: 60;
+	display: none;
+	// display: flex;
+
+	p {
+		font-size: 3rem;
+	}
+}
+
 .user {
 	height: 80vh;
 	width: 100%;
@@ -1673,19 +1694,20 @@ p {
 	padding-top: 20px;
 
 	&__popup {
-		position: absolute;
-		width: 600px;
-		height: 400px;
-		left: 50%;
-		top: 40%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transform: translate(-50%, -50%);
-		background-color: $secondary-color;
-		border-radius: 10px;
-		z-index: 10;
-		display: none;
+		width: 700px;
+		height: 500px;
+
+		form {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 5px;
+			label {
+				font-size: 2rem;
+			}
+		}
 	}
 	
 	&__menu {
@@ -2111,6 +2133,10 @@ p {
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
+			
+			.cart-error {
+				display: none;
+			}
 
 			.delivery-option {
 				position: relative;

@@ -160,6 +160,7 @@ p {
 .error {
   font-size: 1.6rem;
   color: rgb(255, 58, 58);
+  margin: 0;
 }
 
 .linkButton {
@@ -1574,6 +1575,24 @@ p {
   height: 50px;
 }
 
+.popup {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background-color: #24242d;
+  border-radius: 10px;
+  z-index: 60;
+  display: none;
+}
+.popup p {
+  font-size: 3rem;
+}
+
 .user {
   height: 80vh;
   width: 100%;
@@ -1581,19 +1600,19 @@ p {
   padding-top: 20px;
 }
 .user__popup {
-  position: absolute;
-  width: 600px;
-  height: 400px;
-  left: 50%;
-  top: 40%;
+  width: 700px;
+  height: 500px;
+}
+.user__popup form {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(-50%, -50%);
-  background-color: #24242d;
-  border-radius: 10px;
-  z-index: 10;
-  display: none;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.user__popup form label {
+  font-size: 2rem;
 }
 .user__menu {
   display: flex;
@@ -1976,6 +1995,9 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.order__delivery--form .cart-error {
+  display: none;
 }
 .order__delivery--form .delivery-option {
   position: relative;
