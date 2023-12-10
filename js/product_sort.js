@@ -2,7 +2,7 @@ const sortOption = document.querySelector('#sort')
 const productsContainer = document.querySelector('.products__productContainer')
 const sortProducts = () => {
     const products = document.querySelectorAll('.products__product')
-
+    
     let productsData = []
     products.forEach(element => {
         const productId = element.id
@@ -26,12 +26,12 @@ const sortProducts = () => {
             return (a[1] < b[1]) ? -1 : 1;
         }
     }
-    if(sortOption.value == 'priceAsc'){
+    if(sortOption.value == 'price-asc'){
         productsData.sort(comparePrice)
-    }else if(sortOption.value == 'priceDesc'){
+    }else if(sortOption.value == 'price-desc'){
         productsData.sort(comparePrice)
         productsData.reverse()
-    }else if(sortOption.value == 'nameAsc'){
+    }else if(sortOption.value == 'name-asc'){
         productsData.sort(compareName)
     }else{
         productsData.sort(compareName)

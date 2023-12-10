@@ -16,22 +16,12 @@ const showMobileMenuItems = (num) => () => {
 	});
 };
 
-$(document).ready(function() {
-	$('.minus').click(function () {
-		var $input = $(this).parent().find('input');
-		var count = parseInt($input.val()) - 1;
-		count = count < 1 ? 1 : count;
-		$input.val(count);
-		$input.change();
-		return false;
-	});
-	$('.plus').click(function () {
-		var $input = $(this).parent().find('input');
-		$input.val(parseInt($input.val()) + 1);
-		$input.change();
-		return false;
-	});
-});
+const searchBar = document.querySelector('#searchBar')
+const searchBtn = document.querySelector('#searchBtn')
+
+searchBtn.addEventListener('click', () => {
+	window.location.replace(`./html/category_pages/product_search.php?searchValue=${searchBar.value}`)
+})
 
 mobileMenuButton.addEventListener('click', showMenu);
 allMobileMenuItems[0].addEventListener('click', showMobileMenuItems('one'));

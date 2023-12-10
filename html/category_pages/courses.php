@@ -29,18 +29,14 @@
       echo $nav
     ?>
     <main class="productCategories">
-      <?php
-      include './product_filter.php';
-      echo $filters;
-    ?>
       <section class="products__right">
           <div class="products__sortSection">
             <p class="products__sortSection--p">Sortowanie:</p>
             <select name="sort" id="sort" class="products__sortSection--select">
-                <option value="Od najtańszych">Od najtańszych</option>
-                <option value="Od najdroższych">Od najdroższych</option>
-                <option value="Po nazwie rosnąco">Po nazwie rosnąco</option>
-                <option value="Po nazwie malejąco">Po nazwie malejąco</option>
+                <option value="price-asc">Od najtańszych</option>
+                <option value="price-desc">Od najdroższych</option>
+                <option value="name-asc">A - Z</option>
+                <option value="name-desc">Z - A</option>
             </select>
         </div>
         <div class="products__productContainer">

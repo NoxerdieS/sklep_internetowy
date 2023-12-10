@@ -97,11 +97,11 @@ ob_start()
       <a href="<?=$path?>/category_pages/courses.php" class="nav__item link link-animation courses">Kursy</a>
     </div>
     <div class="nav__user">
-      <div class="nav__user--search">
-        <input type="text" placeholder="Wyszukaj..." /><i
-          class="fa-solid fa-magnifying-glass"
-        ></i>
-      </div>
+    <div class="nav__user--search">
+          <input type="text" id="navSearchBar" placeholder="Wyszukaj..." /><i id="navSearchBtn"
+            class="fa-solid fa-magnifying-glass"
+          ></i>
+        </div>
       <a href="<?=$path?>/order/cart.php" class="nav__user--cart"
         ><i class="fa-solid fa-cart-shopping"></i
       ><p>Koszyk</p>
@@ -127,6 +127,14 @@ ob_start()
       <?php endif; ?>
     </div>
   </nav>
+  <script>
+    const navSearchBar = document.querySelector('#navSearchBar')
+    const navSearchBtn = document.querySelector('#navSearchBtn')
+
+    navSearchBtn.addEventListener('click', () => {
+	  window.location.replace(`/html/category_pages/product_search.php?searchValue=${navSearchBar.value}`)
+})
+  </script>
 <?php
   $nav = ob_get_contents();
   ob_end_clean();

@@ -123,7 +123,7 @@
       </div>
       <div class="nav__user">
         <div class="nav__user--search">
-          <input type="text" placeholder="Wyszukaj..." /><i
+          <input type="text" id="searchBar" placeholder="Wyszukaj..." /><i id="searchBtn"
             class="fa-solid fa-magnifying-glass"
           ></i>
         </div>
