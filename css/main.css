@@ -157,6 +157,17 @@ p {
   font-size: 1.8rem;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer a {
+  width: 200px;
+  font-size: 1.5rem;
+  color: #747a99;
+}
+
 .error {
   font-size: 1.6rem;
   color: rgb(255, 58, 58);

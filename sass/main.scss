@@ -64,6 +64,18 @@ p {
 	font-size: 1.8rem;
 }
 
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	a {
+		width: 200px;
+		font-size: 1.5rem;
+		color: $bright-text-color;
+	}
+}
+
 .error {
 	font-size: 1.6rem;
 	color: $error-red;
