@@ -1996,9 +1996,6 @@ p {
   flex-direction: column;
   gap: 10px;
 }
-.order__delivery--form .cart-error {
-  display: none;
-}
 .order__delivery--form .delivery-option {
   position: relative;
   display: flex;
@@ -2071,6 +2068,9 @@ p {
 }
 .order__address--inputBox .address-input::placeholder {
   font-size: 2rem;
+}
+.order__address--inputBox .cart-error {
+  visibility: hidden;
 }
 .order__address--inputBox--error {
   visibility: hidden;

@@ -91,25 +91,31 @@
             <input type="hidden" name="user_id" value="<?=$info['id']?>">
             <input type="hidden" name="address_id" value="<?=$info['address_id']?>">
             <div class="order__address--inputBox">
+
               <input type="text" name="name" id="name" placeholder="Imię i nazwisko lub nazwa firmy" value="<?=$fname.$lname?>" class="address-input" required>
               <p class="error cart-error">To pole nie może być puste</p>
             </div>
+
             <div class="order__address--inputBox">
-              <input type="text" name="address" id="address" placeholder="Ulica i numer domu / mieszkania" value="<?=$info['address'] ?? ''?>" class="address-input" required>
+              <input type="text" name="address" id="address-input" placeholder="Ulica i numer domu / mieszkania" value="<?=$info['address'] ?? ''?>" class="address-input" required>
               <p class="error cart-error">To pole nie może być puste</p>
             </div>
+
             <div class="order__address--inputBox">
                 <input type="text" name="postcode" id="postcode" placeholder="Kod pocztowy" value="<?=$info['postal'] ?? ''?>" class="address-input" required>
                 <p class="error cart-error">Niepoprawny kod pocztowy</p>
             </div>
+
             <div class="order__address--inputBox">
               <input type="text" name="city" id="city" placeholder="Miejscowość" value="<?=$info['city']  ?? ''?>" class="address-input" required>
               <p class="error cart-error">To pole nie może być puste</p>
             </div>
+
             <div class="order__address--inputBox">
               <input type="text" name="phone" id="phone" placeholder="Numer telefonu" value="<?=$info['telephone'] ?? ''?>" class="address-input">
               <p class="error cart-error">Niepoprawny numer telefonu</p>
             </div>
+
             <div class="order__address--inputBox">
               <input type="email" name="email" id="email" placeholder="Email" value="<?=$info['mail'] ?? ''?>" class="address-input" required>
               <p class="error cart-error">Niepoprawny adres email</p>
@@ -126,19 +132,19 @@
           </form>
           <form id="invoice" class="order__address--invoceData">
             <div class="order__address--inputBox">
-              <input type="text" name="invoice_name" id="name" placeholder="Imię i nazwisko lub nazwa firmy" class="address-input">
+              <input type="text" name="invoice_name" id="name-invoice" placeholder="Imię i nazwisko lub nazwa firmy" class="address-input">
               <p class="order__address--inputBox--error error error-name">To pole nie możę być puste</p>
             </div>
             <div class="order__address--inputBox">
-              <input type="text" name="invoice_address" id="address" placeholder="Ulica i numer domu / mieszkania" class="address-input">
+              <input type="text" name="invoice_address" id="address-invoice" placeholder="Ulica i numer domu / mieszkania" class="address-input">
               <p class="order__address--inputBox--error error error-name">To pole nie możę być puste</p>
             </div>
             <div class="order__address--inputBox">
-                <input type="text" name="invoice_postcode" id="postcode" placeholder="Kod pocztowy" class="address-input">
+                <input type="text" name="invoice_postcode" id="postcode-invoice" placeholder="Kod pocztowy" class="address-input">
                 <p class="order__address--inputBox--error error error-postcode">Niepoprawny kod pocztowy</p>
             </div>
             <div class="order__address--inputBox">
-              <input type="text" name="city" id="city" placeholder="Miejscowość" class="address-input">
+              <input type="text" name="city" id="city-invoice" placeholder="Miejscowość" class="address-input">
               <p class="order__address--inputBox--error error error-name">To pole nie możę być puste</p>
             </div>
             </form>
@@ -164,8 +170,8 @@
         </div>
         <div class="order__agreements">
           <h2>Zgody i oświadczenia</h2>
-          <p class="error cart-error">Nie zaakceptowano zgód</p>
           <form>
+            <p class="error cart-error">Nie zaakceptowano zgód</p>
             <div class="order__address--checkboxBox">
               <input type="checkbox" name="agreements" id="agreement" class="checkbox" required>
               <label for="agreement">Akceptuję regulamin sklepu(wymagane)</label>

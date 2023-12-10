@@ -4,8 +4,16 @@ const promoBtn = document.querySelector('.cart__buySection--promoBtn');
 const invoiceCheckbox = document.querySelector('#invoice');
 const invoiceForm = document.querySelector('.order__address--invoceData');
 const promocodeBox = document.querySelector('#promobox');
+const name = document.querySelector('#name');
+const address = document.querySelector('#address-input');
+const postcode = document.querySelector('#postcode');
+const city = document.querySelector('#city');
+const phone = document.querySelector('#phone');
+const email = document.querySelector('#email');
+const agreement = document.querySelector('#agreement');
 let deliveryError = true;
 let paymentError = true;
+let dataError = true;
 
 promoBtn.addEventListener('click', () => {
 	let isPromoCode = 0;
@@ -51,7 +59,6 @@ const validateDeliveryAndPayment = () => {
 	if (delivery == radiosDelivery.length) {
 		deliveryErrorParagraph.style.display = 'block';
 		deliveryError = true;
-		orderBtn.setAttribute('href', '#');
 	} else {
 		deliveryErrorParagraph.style.display = 'none';
 		deliveryError = false;
@@ -60,16 +67,88 @@ const validateDeliveryAndPayment = () => {
 	if (payment == radiosPayment.length) {
 		paymentErrorParagraph.style.display = 'block';
 		paymentError = true;
-		orderBtn.setAttribute('href', '#');
 	} else {
 		paymentErrorParagraph.style.display = 'none';
 		paymentError = false;
 	}
 };
 
+const dataValidation = () => {
+	let notNullInputs = [name, address, postcode, city, email];
+	let errors = 0;
+
+	notNullInputs.forEach((el) => {
+		if (el.value == '') {
+			el.nextElementSibling.style.visibility = 'visible';
+			errors++;
+		} else {
+			el.nextElementSibling.style.visibility = 'hidden';
+		}
+	});
+
+	if (phone.value.length < 11) {
+		phone.nextElementSibling.style.visibility = 'visible';
+		errors++;
+	} else {
+		phone.nextElementSibling.style.visibility = 'hidden';
+	}
+
+	const re =
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if (re.test(email.value)) {
+		email.nextElementSibling.style.visibility = 'hidden';
+	} else {
+		errors++;
+		email.nextElementSibling.style.visibility = 'visible';
+	}
+
+	if(!agreement.checked) {
+		errors++
+		agreement.parentElement.previousElementSibling.style.visibility = 'visible';
+	} else {
+		agreement.parentElement.previousElementSibling.style.visibility = 'hidden';
+	}
+
+	console.log(errors);
+	if (errors == 0) {
+		dataError = false;
+	} else {
+		dataError = true;
+	}
+};
+
+const checkPhoneNumber = () => {
+	let value = phone.value;
+	value = value.replace(/\D+/g, '');
+	if (value.length > 3) {
+		value = value.slice(0, 3) + ' ' + value.slice(3);
+	}
+	if (value.length > 7) {
+		value = value.slice(0, 7) + ' ' + value.slice(7);
+	}
+	if (value.length > 11) {
+		value = value.slice(0, 11);
+	}
+	phone.value = value;
+};
+
+const checkPostCodeNumber = () => {
+	let value = postcode.value;
+	value = value.replace(/\D+/g, '');
+	if (value.length > 2) {
+		value = value.slice(0, 2) + '-' + value.slice(2);
+	}
+	if (value.length > 6) {
+		value = value.slice(0, 6);
+	}
+	postcode.value = value;
+};
+
 orderBtn.addEventListener('mouseover', () => {
 	validateDeliveryAndPayment();
-	if (deliveryError == true || paymentError == true) {
+	dataValidation();
+	if (deliveryError == true || paymentError == true || dataError == true || !agreement.checked) {
 		orderBtn.disabled = true;
 	} else {
 		orderBtn.disabled = false;
@@ -131,3 +210,6 @@ orderBtn.addEventListener('click', (e) => {
 			tempForm.submit();
 		});
 });
+
+phone.addEventListener('input', checkPhoneNumber);
+postcode.addEventListener('input', checkPostCodeNumber);

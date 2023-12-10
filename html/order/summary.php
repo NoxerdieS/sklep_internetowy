@@ -85,6 +85,5 @@
     <footer class="text-light py-4 text-center">
 		  <p class="mb-0"> &copy; 2023 | Sunrise</p>
 	  </footer>
-    <script src="../../js/order.js"></script>
   </body>
 </html>

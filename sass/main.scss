@@ -2134,9 +2134,6 @@ p {
 			flex-direction: column;
 			gap: 10px;
 			
-			.cart-error {
-				display: none;
-			}
 
 			.delivery-option {
 				position: relative;
@@ -2218,6 +2215,10 @@ p {
 				&::placeholder {
 					font-size: 2rem;
 				}
+
+			}
+			.cart-error {
+				visibility: hidden;
 			}
 
 			&--error {
