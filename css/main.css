@@ -960,7 +960,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
   height: 100%;
   width: 30%;
   padding: 30px;
@@ -1018,9 +1017,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-top: 30px;
+  margin-top: 85px;
   gap: 10px;
-  position: fixed;
 }
 .products__right {
   height: 100%;
