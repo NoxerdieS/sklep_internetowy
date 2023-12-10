@@ -63,9 +63,9 @@ $address_info = $address_info -> fetch();
                       <input type="text" name="city" id="city" class="admin__contentContainer--input" placeholder="Miasto" value="<?=$address_info['city']?>">
                   </div>
                   <div class="admin__formContainer">
+                      <button type="submit" id="test" class="admin__contentContainer--addProduct">Zatwierdź</button>
                       </div>
                     </form>
-                    <button type="submit" id="test" class="admin__contentContainer--addProduct">Zatwierdź</button>
             </div>
           </div>
     </section>
