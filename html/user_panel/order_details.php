@@ -66,6 +66,27 @@
                       <label for="city">Miasto:</label>
                       <input type="text" name="city" id="city" class="admin__contentContainer--input" placeholder="Miasto" value="<?=$address_info['city']?>" disabled>
                   </div>
+                  <div class="order__delivery summary__infoBox">
+            <?php
+              $sql = 'select product_id, quantity from order_product where order_id = ?';
+              $query = $pdo -> prepare($sql);
+              $query -> execute([$_GET['id']]);
+              while ($product = $query -> fetch()):
+                $sql = 'select product_name, price, path from product inner join photos on product.photo_id=photos.id where product.id = ?';
+                $query = $pdo -> prepare($sql);
+                $query -> execute([$product['product_id']]);
+                $row = $query -> fetch();
+            ?>
+            <div class="cart__product">
+                <img src="<?=$row['path']?>" alt="" class="cart__product--img">
+                <p class="cart__product--name"><?=$row['product_name']?></p>
+                <p class="cart__product--price"><?=$row['price']?> zł</p>
+                <div class="number">
+                <h4>x <?=$product['quantity']?></h4>
+                </div>
+            </div>
+            <?php endwhile; ?>
+        </div>
 </form>
 <?php
 $details = ob_get_contents();

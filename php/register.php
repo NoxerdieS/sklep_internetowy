@@ -9,7 +9,6 @@
     
     require_once('dblogin.php');
     require_once('maillogin.php');
-    $pdo = new PDO('mysql:host='.$host.';dbname='.$db.';port=3306', $user, $pass);
     
     function cleanData($data){
         $data = trim($data);

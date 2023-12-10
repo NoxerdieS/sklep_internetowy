@@ -110,7 +110,6 @@ const dataValidation = () => {
 		agreement.parentElement.previousElementSibling.style.visibility = 'hidden';
 	}
 
-	console.log(errors);
 	if (errors == 0) {
 		dataError = false;
 	} else {
@@ -156,6 +155,7 @@ orderBtn.addEventListener('mouseover', () => {
 });
 
 orderBtn.addEventListener('click', (e) => {
+	orderBtn.disabled = true
 	const deliveryForm = document.querySelector('#delivery');
 	const addressForm = document.querySelector('#address');
 	const invoiceForm = document.querySelector('#invoice');
@@ -207,6 +207,7 @@ orderBtn.addEventListener('click', (e) => {
 
 			tempForm.appendChild(tempInput);
 			document.body.appendChild(tempForm);
+			console.log(body);
 			tempForm.submit();
 		});
 });

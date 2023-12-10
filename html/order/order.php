@@ -1,3 +1,9 @@
+<?php
+include '../menu_component.php';
+if(isset($_SESSION['cart']) && empty($_SESSION['cart'])){
+  header('Location: ../../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -26,11 +32,8 @@
   </head>
   <body>
     <?php
-      include '../menu_component.php';
       echo $nav;
-      if(isset($_SESSION['cart']) && empty($_SESSION['cart'])){
-        header('Location: ../../index.php');
-      }
+      
     ?>
     <main class="cart order">
       <section class="order__left">

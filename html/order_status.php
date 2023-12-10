@@ -1,5 +1,5 @@
 <?php
-  include '../menu_component.php';
+  include './menu_component.php';
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -24,22 +24,23 @@
     ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Sklep</title>
   </head>
   <body>
     <?php
       echo $nav;
 
-      require_once('../../php/dblogin.php');
-      $sql = 'select order_details.id, total, payment_name, shipper_name from order_details inner join payment on order_details.payment_id=payment.id inner join shipping on order_details.shipping_id=shipping.id where order_details.id = ?';
+      require_once('../php/dblogin.php');
+      $sql;
+      $sql = 'select order_details.id, total, payment_name, shipper_name, status from order_details inner join payment on order_details.payment_id=payment.id inner join shipping on order_details.shipping_id=shipping.id where order_details.id = ?';
     $query = $pdo -> prepare($sql);
-    $query -> execute([$_POST['order_id']]);
+    $query -> execute([$_GET['order_id']]);
     $order_info = $query -> fetch();
     
     $sql = 'select firstname, lastname, mail, telephone, address_id, order_id, invoice_name, invoice_mail, invoice_telephone, invoice_address_id from order_data where order_id = ?';
     $query = $pdo -> prepare($sql);
-    $query -> execute([$_POST['order_id']]);
+    $query -> execute([$_GET['order_id']]);
     $user_info = $query -> fetch();
     $sql = 'select city, postal, address from address where id = ?';
     $query = $pdo -> prepare($sql);
@@ -50,8 +51,7 @@
     $invoice_address_info = $query -> fetch();
     ?>
     <main class="cart summary">
-        <h2>Dziękujemy za złożenie zamówienia!</h2>
-        <h3>Potwierdzenie zostało wysłane na adres e-mail</h3>
+        <h2>Status zamówienia: <?=$order_info['status']?></h2>
         <div class="order__delivery summary__infoBox">
             <h3>Dane do wysyłki</h3>
             <p><span>Imię i nazwisko: </span><?=$user_info['firstname'].' '.$user_info['lastname']?></p>
@@ -72,15 +72,15 @@
         </div>
         <div class="order__delivery summary__infoBox">
             <h3>Płatność i dostawa</h3>
-            <p><span>Koszt: </span><?=$order_info['total']?></p>
             <p><span>Sposób dostawy: </span><?=$order_info['shipper_name']?></p>
             <p><span>Płatność: </span><?=$order_info['payment_name']?></p>
+            <p><span>Łączna wartość: </span><?=$order_info['total']?> zł</p>
         </div>
         <div class="order__delivery summary__infoBox">
             <?php
               $sql = 'select product_id, quantity from order_product where order_id = ?';
               $query = $pdo -> prepare($sql);
-              $query -> execute([$_POST['order_id']]);
+              $query -> execute([$_GET['order_id']]);
               while ($product = $query -> fetch()):
                 $sql = 'select product_name, price, path from product inner join photos on product.photo_id=photos.id where product.id = ?';
                 $query = $pdo -> prepare($sql);
@@ -97,7 +97,7 @@
             </div>
             <?php endwhile; ?>
         </div>
-        <a href="../../index.php" class="linkButton summary__backButton"><i class="ti ti-chevron-left"></i>Wróć na stronę główną</a>
+        <a href="../index.php" class="linkButton summary__backButton"><i class="ti ti-chevron-left"></i>Wróć na stronę główną</a>
     </main>
     <footer class="text-light py-4 text-center">
 		  <p class="mb-0"> &copy; 2023 | Sunrise</p>
