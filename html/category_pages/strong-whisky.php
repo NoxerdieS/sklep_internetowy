@@ -37,10 +37,10 @@
           <div class="products__sortSection">
             <p class="products__sortSection--p">Sortowanie:</p>
             <select name="sort" id="sort" class="products__sortSection--select">
-                <option value="Od najtańszych">Od najtańszych</option>
-                <option value="Od najdroższych">Od najdroższych</option>
-                <option value="Po nazwie rosnąco">Po nazwie rosnąco</option>
-                <option value="Po nazwie malejąco">Po nazwie malejąco</option>
+                <option value="priceAsc">Od najtańszych</option>
+                <option value="priceDesc">Od najdroższych</option>
+                <option value="nameAsc">A - Z</option>
+                <option value="nameDesc">Z - A</option>
             </select>
         </div>
         <div class="products__productContainer">
@@ -69,5 +69,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../../js/filter.js"></script>
     <script src="../../js/category.js"></script>
+    <script src="../../js/product_sort.js"></script>
   </body>
 </html>
