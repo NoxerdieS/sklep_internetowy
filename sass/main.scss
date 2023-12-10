@@ -1852,6 +1852,16 @@ p {
 		select {
 			color: $main-white;
 		}
+
+		&--buttons {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			button {
+				margin-top: 15px;
+			}
+		}
 	}
 
 	&__contentContainer {
@@ -1871,6 +1881,7 @@ p {
 		&--userForm {
 			height: 80%;
 			width: 99%;
+			align-content: center;
 		}
 
 		&--closeBtn {
@@ -2201,6 +2212,7 @@ p {
 
 		&--inputBox {
 			width: 100%;
+
 			.address-input {
 				display: flex;
 				height: 50px;
@@ -2376,15 +2388,18 @@ p {
 			width: 80%;
 			height: 400px;
 			top: 68px;
-
+			
 			&--one {
-				left: 90px;
+				top: 50px;
+				left: 60px;
 			}
 			&--two {
-				left: 230px;
+				top: 50px;
+				left: 190px;
 			}
 			&--three {
-				left: 290px;
+				top: 50px;
+				left: 240px;
 			}
 			&--left {
 				a {

@@ -64,10 +64,6 @@ $address_info = $address_info -> fetch();
                       <input type="email" name="email" id="email" class="admin__contentContainer--input" placeholder="Email" value="<?=$user_info['mail']?>">
                   </div>
                   <div class="admin__formContainer">
-                      <label for="name">Telefon:</label>
-                      <input type="number" name="phone" id="phone" class="admin__contentContainer--input" placeholder="Telefon" value="<?=$user_info['telephone']?>">
-                  </div>
-                  <div class="admin__formContainer">
                       <label for="name">Login:</label>
                       <input type="text" name="login" id="login" class="admin__contentContainer--input" placeholder="Login" value="<?=$user_info['login']?>">
                   </div>
@@ -82,6 +78,10 @@ $address_info = $address_info -> fetch();
                   <div class="admin__formContainer">
                       <label for="name">Ulica i numer:</label>
                       <input type="text" name="address" id="address" class="admin__contentContainer--input" placeholder="Ulica i numer" value="<?=$address_info['address']?>">
+                  </div>
+                  <div class="admin__formContainer">
+                      <label for="name">Telefon:</label>
+                      <input type="number" name="phone" id="phone" class="admin__contentContainer--input" placeholder="Telefon" value="<?=$user_info['telephone']?>">
                   </div>
                   <div class="admin__formContainer">
                       <label for="name">Kod pocztowy:</label>
@@ -105,10 +105,10 @@ $address_info = $address_info -> fetch();
                               <option value="0">Nie</option>
                           </select>
                       </div>
-                  <div class="admin__formContainer">
+                  <div class="admin__formContainer--buttons">
                       <button type="submit" class="admin__contentContainer--addProduct">Zatwierdź</button>
                       <a href="./customers.php" class="linkButton">Wróć</a>
-                    </div>
+                  </div>
               </form>
             </div>
           </div>
