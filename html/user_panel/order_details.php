@@ -16,6 +16,8 @@
     $query -> execute([$user_info['address_id']]);
     $address_info = $query -> fetch();
 
+    $sql = 'select city, postal, address from address where id = ?';
+    $query = $pdo -> prepare($sql);
     $query -> execute([$user_info['invoice_address_id']]);
     $invoice_address_info = $query -> fetch();
     ob_start();
@@ -82,7 +84,7 @@
                 <p class="cart__product--name"><?=$row['product_name']?></p>
                 <p class="cart__product--price"><?=$row['price']?> zł</p>
                 <div class="number">
-                <h4>x <?=$product['quantity']?></h4>
+                <h3>x <?=$product['quantity']?></h3>
                 </div>
             </div>
             <?php endwhile; ?>
