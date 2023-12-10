@@ -1741,6 +1741,14 @@ p {
 .admin__formContainer select {
   color: #d4d4d4;
 }
+.admin__formContainer--buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.admin__formContainer--buttons button {
+  margin-top: 15px;
+}
 .admin__contentContainer {
   position: relative;
   height: 800px;
@@ -1757,6 +1765,7 @@ p {
 .admin__contentContainer--userForm {
   height: 80%;
   width: 99%;
+  align-content: center;
 }
 .admin__contentContainer--closeBtn {
   position: fixed;
@@ -2202,13 +2211,16 @@ p {
     top: 68px;
   }
   .nav__dropdown--one {
-    left: 90px;
+    top: 50px;
+    left: 60px;
   }
   .nav__dropdown--two {
-    left: 230px;
+    top: 50px;
+    left: 190px;
   }
   .nav__dropdown--three {
-    left: 290px;
+    top: 50px;
+    left: 240px;
   }
   .nav__dropdown--left a {
     font-size: 1.7rem;
