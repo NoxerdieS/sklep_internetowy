@@ -36,6 +36,7 @@ while ($row = $query->fetch()){
       <div class="admin__contentContainer">
         <a href="./index.php" class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></a>
         <form id="create-product-form" method="post">
+        <input type="hidden" name="filename" value="shipping">
             <div class="admin__formContainer">
                 <label for="name">Nazwa sposobu dostawy:</label>
                 <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa sposobu dostawy">

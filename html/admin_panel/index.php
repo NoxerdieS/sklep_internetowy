@@ -38,6 +38,7 @@ echo $html;
       <div class="admin__contentContainer admin__contentContainerProduct">
         <button class="admin__contentContainer--closeBtn"><i class="fa-solid fa-x"></i></button>
         <form id="create-product-form" method="post">
+            <input type="hidden" id='filename' name="filename" value="index">
             <div class="admin__formContainer">
                 <label for="name">Nazwa produktu:</label>
                 <input type="text" name="name" id="name" class="admin__contentContainer--input" placeholder="Nazwa produktu">
@@ -75,7 +76,7 @@ echo $html;
                 (Tylko format .png)
                 <input type="file" name="image" id="image" class="admin__contentContainer--file">
             </div>
-            <button type="submit" class="admin__contentContainer--addProduct">Dodaj</button>
+            <button type="submit" id="productSubmitBtn" class="admin__contentContainer--addProduct">Dodaj</button>
         </form>
       </div>
     </div>

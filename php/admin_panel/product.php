@@ -1,3 +1,12 @@
+<?php
+require_once('../dblogin.php');
+$sql = 'select product.id, product_name, category_id,	price, description, stock, path from product inner join photos on product.photo_id=photos.id';
+$query = $pdo -> prepare($sql);
+$query -> execute();
+$sql = 'select param_name, param_value from parameters inner join `product-params` on parameters.id=`product-params`.param_id where product_id = ?';
+while ($row = $query -> fetch()):
+  ob_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -34,25 +43,34 @@
   </head>
   <body>
     <?php
-    include '../category_pages/menu_component.php';
+    $php_xdd = '<?php
+    include \'../category_pages/menu_component.php\';
     echo $nav
     ?>
-        <main class="product">
+    ';
+      echo $php_xdd;
+    ?>
+    <main class="product">
         <div class="product__topSection">
-          <input type="hidden" id="productId" value="19">
-            <div class="product__image" style="background-image: url('../../img/dżimibimi_img.png');">
+          <input type="hidden" id="productId" value="<?=$row['id']?>">
+            <div class="product__image" style="background-image: url('<?=$row['path']?>');">
             </div>
             <div class="product__specs">
-                <p id="productName" class="product__specs--headline">dżimibimi</p>
+                <p id="productName" class="product__specs--headline"><?=$row['product_name']?></p>
                 <div class="product__specs__info">
                     <div class="product__specs__text">
                       <ul>
-                                              <li><b>Rodzaj:</b> Blended shitty whisky</li>
-                                              <li><b>Producent:</b> Jacek Daniel</li>
-                                            </ul>
+                      <?php
+                        $query1 = $pdo -> prepare($sql);
+                        $query1 -> execute([$row['id']]);
+                        while ($params = $query1 -> fetch()):
+                      ?>
+                        <li><b><?=$params['param_name']?>:</b> <?=$params['param_value']?></li>
+                      <?php endwhile; ?>
+                      </ul>
                     </div>
                     <div class="product__specs__price">
-                      <p class="product__specs__price--price">123 zł</p>
+                      <p class="product__specs__price--price"><?=$row['price']?> zł</p>
                       <div class="number">
                         <span class="minus">-</span>
                         <input type="text" value="1" id="quantity"/>
@@ -67,19 +85,21 @@
           <h2 class="product__bottomSection--headline">Opis i cechy</h2>
           <div class="product__bottomSection--text">
           <i class="fa-solid fa-wine-bottle"></i>
-            <p>123</p>
+            <p><?=$row['description']?></p>
           </div>
-          <img src="../../img/dżimibimi_img.png" alt="">
+          <img src="<?=$row['path']?>" alt="">
           <table class="product__bottomSection--table">
-                      <tr>
-              <td class="table-headline">Rodzaj</td>
-              <td>Blended shitty whisky</td>
+          <?php
+            $query1 = $pdo -> prepare($sql);
+            $query1 -> execute([$row['id']]);
+            while ($params = $query1 -> fetch()):
+          ?>
+            <tr>
+              <td class="table-headline"><?=$params['param_name']?></td>
+              <td><?=$params['param_value']?></td>
             </tr>
-                      <tr>
-              <td class="table-headline">Producent</td>
-              <td>Jacek Daniel</td>
-            </tr>
-                    </table>
+          <?php endwhile; ?>
+          </table>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script
@@ -98,3 +118,11 @@
   <script src="../../js/product.js"></script>
   </body>
 </html>
+<?php
+  $content = ob_get_contents();
+  ob_end_clean();
+  $filename = str_replace(' ', '-', $row['product_name']);
+  $file = fopen('../../html/products/'.$filename.'.php', 'w');
+  fwrite($file, $content);
+  endwhile;
+?>

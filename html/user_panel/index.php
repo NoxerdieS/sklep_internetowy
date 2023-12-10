@@ -28,6 +28,7 @@ while ($row = $query->fetch()):
     <button class="details admin__add--addBtn admin__product--delete">Szczegóły</button>
     <input type="hidden" value="<?=$row['order_id']?>">
     </div>
+    <script src="../../js/user_panel.js"></script>
 <?php
 endwhile;
 $body = ob_get_contents();

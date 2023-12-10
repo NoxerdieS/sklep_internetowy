@@ -4,8 +4,8 @@
      header('Location: ../../index.php');
     }
     require_once("../dblogin.php");
-    if(isset($_GET['file'])){
-        $file = $_GET['file'];
+    if(isset($_POST['filename'])){
+        $file = $_POST['filename'];
         if($file == "index"){
             $path = "../../img/".$_POST["name"]."_img.png";
             move_uploaded_file($_FILES['image']['tmp_name'], $path);
@@ -44,6 +44,7 @@
                 $stmt_value -> execute([$product_id, $param_id, $_POST['param_value'.$i]]);
                 $i++;
             }
+            include './product.php';
         }else if ($file == "categories"){
             $sql = 'insert into category(category_name) values(?)';
             $pdo -> prepare($sql) -> execute([$_POST['name']]);

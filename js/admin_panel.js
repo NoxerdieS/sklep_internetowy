@@ -43,14 +43,13 @@ popupCloseBtn.addEventListener('click', () => {
 
 addForm.addEventListener("submit", () => {
     const formData = new FormData(addForm);
-    let filename = window.location.pathname;
-    filename = filename.substring(filename.lastIndexOf('/')+1, filename.lastIndexOf('.'))
-    fetch(`../../php/admin_panel/add_item.php?file=${filename}`, {
+    const filename = document.querySelector('#filename').value
+    formData.append('filename', filename)
+    fetch(`../../php/admin_panel/add_item.php`, {
         method: 'POST',
         body: formData
     })
-    .then((res) =>{
-
+    .then(
         window.location.reload()
-    })
+    )
 })

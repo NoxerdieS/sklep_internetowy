@@ -35,7 +35,6 @@
             <?php endif; ?>
             <a href="./index.php" class="user__menu--item link link-animation-two">Zamówiena</a>
             <a href="./returns.php" class="user__menu--item link link-animation-two">Zwroty i reklamacje</a>
-            <a href="./shipping_info.php" class="user__menu--item link link-animation-two">Dane do zamówienia</a>
             <a href="./settings.php" class="user__menu--item link link-animation-two">Ustawienia konta</a>
           </section>
           <section class="user__section">
@@ -44,4 +43,3 @@
     </main>
 </body>
 </html>
-<script src="../../js/user_panel.js"></script>
