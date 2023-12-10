@@ -116,5 +116,12 @@ $address_info = $address_info -> fetch();
   </main>
   <script src="../../js/admin_panel.js"></script>
 </body>
+<footer class="text-light py-4 text-center">
+		<?php
+			include '../footer_component.php';
+			echo $footer;
+		?>
+		<p class="mb-0"> &copy; 2023 | Sunrise</p>
+	</footer>
 </html>
 
