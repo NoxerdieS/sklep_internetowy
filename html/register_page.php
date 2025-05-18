@@ -63,7 +63,7 @@
         <div class="register__popup">
             <div class="register__popup--container">
                 <button class="register__popup--closeBtn"><i class="fa-solid fa-x"></i></button>
-                <p class="register__popup--p">Link aktywacyjny został wysłany na podany adres email</p>
+                <p class="register__popup--p">Link aktywacyjny został wysłany na podany adres email (początkowo rzeczywiście potwierdzenie było wysyłane. Jednak obecnie biblioteka do wysyłki przestała działać. Użytkownik jest domyślnie aktywowany.)</p>
             </div>
         </div>
     </div>

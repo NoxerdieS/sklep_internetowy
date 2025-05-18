@@ -51,7 +51,7 @@
     ?>
     <main class="cart summary">
         <h2>Dziękujemy za złożenie zamówienia!</h2>
-        <h3>Potwierdzenie zostało wysłane na adres e-mail</h3>
+        <h3>Potwierdzenie zostało wysłane na adres e-mail (biblioteka do maili przestała działać)</h3>
         <div class="order__delivery summary__infoBox">
             <h3>Dane do wysyłki</h3>
             <p><span>Imię i nazwisko: </span><?=$user_info['firstname'].' '.$user_info['lastname']?></p>

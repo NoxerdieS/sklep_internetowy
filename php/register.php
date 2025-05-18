@@ -1,11 +1,11 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+    // use PHPMailer\PHPMailer\PHPMailer;
+    // use PHPMailer\PHPMailer\SMTP;
+    // use PHPMailer\PHPMailer\Exception;
 
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+    // require 'PHPMailer/src/Exception.php';
+    // require 'PHPMailer/src/PHPMailer.php';
+    // require 'PHPMailer/src/SMTP.php';
     
     require_once('dblogin.php');
     require_once('maillogin.php');
@@ -26,7 +26,7 @@
     $postcode = cleanData($_POST['postcode']);
     $city = cleanData($_POST['city']);
 
-    $mail = new PHPMailer();
+    // $mail = new PHPMailer();
 
     $stmt = $pdo -> query('Select login from user where login like "'.$login.'" or mail like "'.$email.'";');
     if($stmt -> rowCount() > 0){
@@ -36,21 +36,21 @@
         $sql = 'insert into address(city, postal, address) values(?, ?, ?);';
         $pdo -> prepare($sql) -> execute([$city, $postcode, $address]);
         $address_id = $pdo -> query('select id from address where address like "'.$address.'";') -> fetchColumn();
-        $sql = 'Insert into user(mail, login, pass, firstname, lastname, address_id, telephone, isAdmin, isActive, activationHash) values(?, ?, ?, ?, ?, ?, ?, 0, 0, ?)';
+        $sql = 'Insert into user(mail, login, pass, firstname, lastname, address_id, telephone, isAdmin, isActive, activationHash) values(?, ?, ?, ?, ?, ?, ?, 0, 1, ?)';
         $pdo -> prepare($sql) -> execute([$email, $login, $password, $name, $lastname, $address_id, $phone, $activationHash]);
-        $mail -> isSMTP();
-        $mail->Host = $mailhost;
-        $mail ->SMTPAuth = true;
-        $mail ->Username = 'noreply@sunrise.j.pl';
-        $mail ->Password = $mailpassword;
-        $mail ->SMTPSecure = 'STARTTLS';
-        $mail ->Port = $mailport;
+        // $mail -> isSMTP();
+        // $mail->Host = $mailhost;
+        // $mail ->SMTPAuth = true;
+        // $mail ->Username = 'noreply@sunrise.j.pl';
+        // $mail ->Password = $mailpassword;
+        // $mail ->SMTPSecure = 'STARTTLS';
+        // $mail ->Port = $mailport;
 
-        $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
-        $mail -> addAddress($email);
-        $mail -> Subject = 'Aktywuj swoje konto w sklepie Sunrise';
-        $mail -> Body = 'Aktywuj swoje konto klikając w ten link: http://localhost/sklep_internetowy/php/authorize.php?login='.$login.'&activationHash='.$activationHash;
-        $mail -> send();
+        // $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
+        // $mail -> addAddress($email);
+        // $mail -> Subject = 'Aktywuj swoje konto w sklepie Sunrise';
+        // $mail -> Body = 'Aktywuj swoje konto klikając w ten link: http://localhost/sklep_internetowy/php/authorize.php?login='.$login.'&activationHash='.$activationHash;
+        // $mail -> send();
         echo "success";
     }
 ?>
