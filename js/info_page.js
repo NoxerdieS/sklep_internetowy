@@ -6,7 +6,6 @@ fetch(`./privacy`)
             holder: 'editorjs',
             tools: {
                 header: Header,
-                list: List,
                 paragraph: Paragraph
             },
             data: body,

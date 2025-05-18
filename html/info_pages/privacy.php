@@ -25,5 +25,5 @@
   <body>
     <div id="editorjs"></div>
   </body>
-  <script type="text/javascript" src="../../js/info_page.js?v=<?=date("h:i:s")?>"></script>
+  <script type="text/javascript" src="../../js/info_page.js"></script>
 </html>

@@ -1,7 +1,7 @@
 <?php
 ob_start();
 ?>
-<h1 class="admin__headline">Sposoby dostawy</h1>
+<h1 class="admin__headline">Strony informacyjne</h1>
 <div class="admin__add">
         <a href="./add_info_page.php" class="admin__add--addBtn admin__product--edit">Dodaj</a>
         <div class="nav__user--search admin__add--search">

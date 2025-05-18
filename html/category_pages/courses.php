@@ -29,16 +29,11 @@
       echo $nav
     ?>
     <main class="productCategories">
+    <?php
+      include './product_filter.php';
+      echo $filters;
+    ?>
       <section class="products__right">
-          <div class="products__sortSection">
-            <p class="products__sortSection--p">Sortowanie:</p>
-            <select name="sort" id="sort" class="products__sortSection--select">
-                <option value="price-asc">Od najtańszych</option>
-                <option value="price-desc">Od najdroższych</option>
-                <option value="name-asc">A - Z</option>
-                <option value="name-desc">Z - A</option>
-            </select>
-        </div>
         <div class="products__productContainer">
         <?php
           require_once('../../php/dblogin.php');

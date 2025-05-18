@@ -1,6 +1,6 @@
 <?php
 session_start();
-$path = '/sklep_internetowy/html';
+$path = '/sunrise/sklep_internetowy/html';
 ob_start();
 ?>
       <nav class="nav__mobile">
@@ -137,3 +137,4 @@ ob_start();
 <?php
   $nav = ob_get_contents();
   ob_end_clean();
+?>
