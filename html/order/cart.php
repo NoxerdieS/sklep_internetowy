@@ -81,7 +81,7 @@
                     <p>Łączna kwota</p>
                     <p class="price"></p>
                 </div>
-                <a href="./login_or_register.php?ver=1.1" class="cart__priceSection--buyBtn">Przejdź do dostawy<i class="ti ti-chevron-right"></i></a>
+                <a href="./login_or_register.php" class="cart__priceSection--buyBtn">Przejdź do dostawy<i class="ti ti-chevron-right"></i></a>
             </div>
         </div>
       </section>

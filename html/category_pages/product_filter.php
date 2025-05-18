@@ -16,7 +16,6 @@ if (count($arr)==1){
 }else{
   $filename = $arr[1];
 }
-echo $filename;
 unset($arr);
 $stmt -> execute([$filename]);
 $category_id = $stmt -> fetchColumn();

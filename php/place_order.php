@@ -1,13 +1,13 @@
 <?php
     session_start();
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+    // use PHPMailer\PHPMailer\PHPMailer;
+    // use PHPMailer\PHPMailer\SMTP;
+    // use PHPMailer\PHPMailer\Exception;
 
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+    // require 'PHPMailer/src/Exception.php';
+    // require 'PHPMailer/src/PHPMailer.php';
+    // require 'PHPMailer/src/SMTP.php';
 
 
     $shipping = $_POST['delivery'];
@@ -68,21 +68,21 @@
     $invoice_phone = $_POST['invoice_phone'] ?? $_POST['phone'];
     $stmt -> execute([$firstname, $lastname, $_POST['email'], $_POST['phone'], $address_id, $order_id, $invoice_name, $invoice_mail, $invoice_phone, $invoice_address_id]);
 
-        require_once('./maillogin.php');
-        $mail = new PHPMailer();
-        $mail -> isSMTP();
-        $mail->Host = $mailhost;
-        $mail ->SMTPAuth = true;
-        $mail ->Username = 'noreply@sunrise.j.pl';
-        $mail ->Password = $mailpassword;
-        $mail ->SMTPSecure = 'STARTTLS';
-        $mail ->Port = $mailport;
+        // require_once('./maillogin.php');
+        // $mail = new PHPMailer();
+        // $mail -> isSMTP();
+        // $mail->Host = $mailhost;
+        // $mail ->SMTPAuth = true;
+        // $mail ->Username = 'noreply@sunrise.j.pl';
+        // $mail ->Password = $mailpassword;
+        // $mail ->SMTPSecure = 'STARTTLS';
+        // $mail ->Port = $mailport;
 
-        $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
-        $mail -> addAddress($_POST['email']);
-        $mail -> Subject = 'Potwierdzenie zamówienia';
-        $mail -> Body = 'Zamówienie nr '.$order_id.' zostało przyjęte. Sprawdź status realizacji zamówienia klikając w ten link: http://localhost/sklep_internetowy/html/order_status.php?order_id='.$order_id;
-        $mail -> send();
+        // $mail -> setFrom('noreply@sunrise.j.pl', 'Sklep Sunrise');
+        // $mail -> addAddress($_POST['email']);
+        // $mail -> Subject = 'Potwierdzenie zamówienia';
+        // $mail -> Body = 'Zamówienie nr '.$order_id.' zostało przyjęte. Sprawdź status realizacji zamówienia klikając w ten link: http://localhost/sklep_internetowy/html/order_status.php?order_id='.$order_id;
+        // $mail -> send();
 
     echo $order_id;
     $_SESSION['cart'] = [];
