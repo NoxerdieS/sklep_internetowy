@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']){
-    header('Location: ./order.php');
+    header('Location: ./order.php?ver=1.1');
   }
 ?>
 <!DOCTYPE html>

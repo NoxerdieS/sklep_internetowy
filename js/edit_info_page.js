@@ -10,7 +10,6 @@ let editor
                 autofocus: true,
                 tools: {
                     header: Header,
-                    list: List,
                     paragraph: Paragraph
                 },
                 data: body

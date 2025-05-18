@@ -211,15 +211,12 @@ if(isset($_SESSION['cart']) && empty($_SESSION['cart'])){
       </section>
     </main>
     <footer class="text-light py-4 text-center">
-		  <p class="mb-0"> &copy; 2023 | Sunrise</p>
-	  </footer>
-    <script src="../../js/order.js"></script>
-  </body>
-  <footer class="text-light py-4 text-center">
 		<?php
-			include './html/footer_component.php';
+			include '../footer_component.php';
 			echo $footer;
 		?>
-		<p class="mb-0"> &copy; 2023 | Sunrise</p>
+    <script src="../../js/order.js"></script>
+		<p class="mb-0"> &copy; 2025 | Sunrise</p>
 	</footer>
+  </body>
 </html>

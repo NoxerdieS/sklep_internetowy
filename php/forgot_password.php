@@ -24,7 +24,7 @@
         $mail -> isSMTP();
         $mail->Host = $mailhost;
         $mail ->SMTPAuth = true;
-        $mail ->Username = 'noreply@sunrise.j.pl';  
+        $mail ->Username = 'jseroka08@gmail.com'; 
         $mail ->Password = $mailpassword;
         $mail ->SMTPSecure = 'STARTTLS';
         $mail ->Port = $mailport;
