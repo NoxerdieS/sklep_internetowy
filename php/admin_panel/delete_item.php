@@ -86,13 +86,13 @@ if(isset($_POST['submit'])){
   <div class="admin__popup--shadow"></div>
   <main class="user admin">
     <section class="user__menu admin__menu">
-      <a href="./index.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie produktami</a>
-      <a href="./categories.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie kategoriami</a>
-      <a href="./customers.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie klientami</a>
-      <a href="./orders.php" class="user__menu--item admin__menu--item link link-animation-two">Zamówienia użytkowników</a>
-      <a href="./shipping.php" class="user__menu--item admin__menu--item link link-animation-two">Ustawienia dostawy</a>
-      <a href="./payment.php" class="user__menu--item admin__menu--item link link-animation-two">Ustawienia płatności</a>
-      <a href="./info_editor.php" class="user__menu--item admin__menu--item link link-animation-two">Edytuj strony informacyjne</a>
+      <a href="../../html/admin_panel/index.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie produktami</a>
+      <a href="../../html/admin_panel/categories.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie kategoriami</a>
+      <a href="../../html/admin_panel/customers.php" class="user__menu--item admin__menu--item link link-animation-two">Zarządzanie klientami</a>
+      <a href="../../html/admin_panel/orders.php" class="user__menu--item admin__menu--item link link-animation-two">Zamówienia użytkowników</a>
+      <a href="../../html/admin_panel/shipping.php" class="user__menu--item admin__menu--item link link-animation-two">Ustawienia dostawy</a>
+      <a href="../../html/admin_panel/payment.php" class="user__menu--item admin__menu--item link link-animation-two">Ustawienia płatności</a>
+      <a href="../../html/admin_panel/info_editor.php" class="user__menu--item admin__menu--item link link-animation-two">Edytuj strony informacyjne</a>
     </section>
     <section class="user__section admin__section admin__section--delete">
         <form action="<?=$_SERVER['PHP_SELF']?>" method="post">

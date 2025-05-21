@@ -1,6 +1,6 @@
 <?php
 session_start();
-$path = '/sunrise/sklep_internetowy/html';
+$path = '/sklep_internetowy/html';
 ob_start()
 ?>
 <nav class="nav__mobile">

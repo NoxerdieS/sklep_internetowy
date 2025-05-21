@@ -6,7 +6,7 @@
     }else{
         include '../../php/dblogin.php';
     }
-    $path = '/sunrise/sklep_internetowy/html/info_pages/';
+    $path = '/sklep_internetowy/html/info_pages/';
     $sql = 'select name, path from info_pages';
     $query = $pdo -> prepare($sql);
     $query -> execute();
